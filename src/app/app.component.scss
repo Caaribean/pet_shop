@@ -90,6 +90,184 @@
 }
 
 .section {
-    background-color: #FDFDFD;
-    padding: 0 138px;
+    background-color: #fdfdfd;
+    padding: 0 138px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 28px;
+        padding-top: 60px;
+
+        &__txt--small {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+        }
+
+        &__txt {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            text-transform: capitalize;
+            color: #003459;
+        }
+
+        &__btn--light {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #003459;
+            padding: 12px 28px;
+            border: 1.5px solid #003459;
+            border-radius: 57px;
+            background-color: transparent;
+        }
+    }
+
+    &__product-card {
+        max-width: 264px;
+
+        &__img {
+            max-width: 100%;
+            margin-bottom: 16px;
+        }
+
+        &__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #00171f;
+            margin-bottom: 4px;
+        }
+
+        &__box-txt {
+            display: flex;
+            gap: 4px;
+
+            &__txt--medium {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                color: #667479;
+            }
+
+            &__txt--bold {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 18px;
+                color: #667479;
+            }
+        }
+
+        &__price {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            align-items: flex-end;
+            color: #00171f;
+            margin-top: 4px;
+        }
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+        padding-bottom: 60px;
+    }
+
+    .banner {
+        display: flex;
+        border-radius: 20px;
+
+        &.blue {
+            background: #003459;
+        }
+
+        &.orange {
+            background: #ffb775;
+        }
+
+        &__img {
+            max-width: 50%;
+        }
+
+        &__box-txt {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 14px 28px 10px;
+
+            &.rectangle-left {
+                background: url("../assets/img/yellow-rectangle.png");
+                justify-content: end;
+                align-items: end;
+            }
+
+            &.rectangle-right {
+                background: url("../assets/img/yellow-rectangle2.png");
+                justify-content: center;
+                align-items: start
+            }
+
+            &__header {
+                font-family: GilroyBold;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 52px;
+                line-height: 68px;
+                text-transform: capitalize;
+                color: #003459;
+                margin-bottom: 2px;
+            }
+
+            &__header--small {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 54px;
+                text-transform: capitalize;
+                color: #003459;
+                margin-bottom: 8px;
+            }
+
+            &__txt {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                text-align: right;
+                color: #242b33;
+                margin-bottom: 24px;
+            }
+
+            &__btn--dark {
+                padding: 14px 28px 10px;
+                background: #003459;
+                border-radius: 57px;
+                border: none;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #fdfdfd;
+            }
+        }
+    }
 }
