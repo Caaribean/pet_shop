@@ -4,3 +4,9 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+@import 'styles/fonts.scss';
+
+
+ * {
+    font-family: GilroyLight;
+ }
