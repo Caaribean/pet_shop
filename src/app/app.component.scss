@@ -223,7 +223,7 @@
             &.rectangle-right {
                 background: url("../assets/img/yellow-rectangle2.png");
                 justify-content: center;
-                align-items: start
+                align-items: start;
             }
 
             &__header {
@@ -267,6 +267,165 @@
                 font-size: 16px;
                 line-height: 24px;
                 color: #fdfdfd;
+            }
+        }
+    }
+
+    &__sellers-txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        &__txt--small {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 31px;
+            color: #000000;
+        }
+
+        &__txt--big {
+            font-family: GilroyBold;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            text-transform: capitalize;
+            color: #003459;
+        }
+    }
+
+    &__sellers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 25px;
+
+        &__img {
+            max-width: 151px;
+        }
+    }
+
+    &.sellers {
+        padding: 45px 138px 39px;
+    }
+}
+
+.footer {
+    background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+    border-radius: 40px 40px 0px 0px;
+    padding: 80px 130px 40px;
+
+    &__newsletter {
+        background: #003459;
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        margin-bottom: 40px;
+
+        &__txt {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            text-transform: capitalize;
+            color: #fdfdfd;
+            max-width: 389px;
+        }
+
+        &__form {
+            width: 707px;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 12px;
+            display: flex;
+            gap: 12px;
+
+            &__input {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: #99a2a5;
+                background: #ffffff;
+                border: 1px solid #99a2a5;
+                border-radius: 8px;
+                padding: 14px 28px;
+                width: 70%;
+            }
+
+            &__btn--dark {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #fdfdfd;
+                padding: 14px 28px 10px;
+                background: #003459;
+                border-radius: 8px;
+                border: none;
+            }
+        }
+    }
+
+    &__innerfooter {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #667479;
+        padding-bottom: 40px; 
+
+        &__links {
+            display: flex;
+            gap: 60px;
+
+            &__txt {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #00171f;
+                text-decoration: none;
+            }
+        }
+
+        &__media {
+            display: flex;
+            gap: 40px;
+
+            &__img {
+                max-width: 24px;
+            }
+        }
+    }
+
+    &__copy {
+        display: flex;
+        justify-content: space-between;
+
+        &__img {
+            max-width: 115px;
+        }
+
+        &__txt {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #667479;
+        }
+
+        &__box-txt {
+            display: flex; 
+            gap: 20px;
+
+            &__txt {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: #667479;
             }
         }
     }
