@@ -1,9 +1,14 @@
+@use "../styles/mixins.scss" as m;
+@use "../styles/variables.scss" as v;
+
 .header {
-    background-color: #fceed5;
+    background-color: v.$light-yellow;
     padding: 28px 138px 16px;
+
     &__navmenu {
         display: flex;
         justify-content: center;
+
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -11,18 +16,14 @@
             list-style-type: none;
 
             &__item {
+
                 &__logo {
                     width: 115px;
                     height: 40px;
                 }
 
                 &__txt {
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: #003459;
-                    text-decoration: none;
+                    @include m.text-middle;
                 }
             }
         }
@@ -30,7 +31,7 @@
 }
 
 .section-welcome {
-    background-color: #fceed5;
+    background-color: v.$light-yellow;
     padding: 0 138px;
     display: flex;
 
@@ -39,50 +40,28 @@
         flex-direction: column;
 
         &__header {
-            font-family: GilroyBold;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 60px;
-            line-height: 68px;
-            text-transform: capitalize;
-            color: #002a48;
+            @include m.text-header-big;
             margin-bottom: 4px;
         }
 
         &__header--small {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 46px;
-            line-height: 60px;
-            text-transform: capitalize;
-            color: #002a48;
+            @include m.text-header-small;
             margin-bottom: 24px;
         }
 
         &__txt {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #242b33;
+            @include m.text-basic;
             margin-bottom: 32px;
         }
 
         &__btn--dark {
-            padding: 10px 30px 10px;
-            background: #003459;
-            border-radius: 57px;
-            border: none;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #fdfdfd;
+            @include m.button-dark;
             max-width: 163px;
         }
     }
 
     &__box-img {
+
         &__img {
             width: 100%;
         }
@@ -90,7 +69,7 @@
 }
 
 .section {
-    background-color: #fdfdfd;
+    background-color: v.$white;
     padding: 0 138px 0;
 
     &__wrapper {
@@ -100,42 +79,21 @@
         padding-top: 60px;
 
         &__txt--small {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #000000;
+            @include m.text-basic;
+            color: v.$neutral;
         }
 
         &__txt {
-            font-family: "SVN-Gilroy";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 36px;
-            text-transform: capitalize;
-            color: #003459;
+            @include m.text-subtitle;
         }
 
         &__btn--light {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 20px;
-            color: #003459;
-            padding: 12px 28px;
-            border: 1.5px solid #003459;
-            border-radius: 57px;
-            background-color: transparent;
+            @include m.button-light;
         }
     }
 
     &__product-card {
-        max-width: 264px;
-        background: #fdfdfd;
-        box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        padding: 8px 8px 20px;
+        @include m.box-card;
 
         &__img {
             max-width: 100%;
@@ -143,11 +101,8 @@
         }
 
         &__title {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 24px;
-            color: #00171f;
+            @include m.text-middle;
+            color: v.$black;
             margin-bottom: 4px;
         }
 
@@ -156,30 +111,17 @@
             gap: 4px;
 
             &__txt--medium {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 18px;
-                color: #667479;
+                @include m.text-very-small;
             }
 
             &__txt--bold {
-                font-style: normal;
+                @include m.text-very-small;
                 font-weight: 700;
-                font-size: 12px;
-                line-height: 18px;
-                color: #667479;
             }
         }
 
         &__price {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 20px;
-            display: flex;
-            align-items: flex-end;
-            color: #00171f;
+            @include m.text-number-price; 
             margin-top: 4px;
         }
     }
@@ -200,14 +142,6 @@
         display: flex;
         border-radius: 20px;
 
-        &.blue {
-            background: #003459;
-        }
-
-        &.orange {
-            background: #ffb775;
-        }
-
         &__img {
             max-width: 50%;
             border-radius: 20px;
@@ -219,6 +153,34 @@
             flex-direction: column;
             padding: 14px 28px 10px;
             width: 100%;
+
+            &__header {
+                @include m.text-header-big;               
+                font-size: 52px;
+                color: v.$dark-blue;
+                margin-bottom: 2px;
+            }
+
+            &__header--small {
+                @include m.text-header-thin; 
+                margin-bottom: 8px;
+            }
+
+            &__img {
+                width: 42px;
+                height: 38px;
+            }
+
+            &__txt {
+                @include m.text-very-small; 
+                color: v.$dark;
+                margin-bottom: 24px;
+                max-width: 394px;
+            }
+
+            &__btn--dark {
+                @include m.button-dark; 
+            }
 
             &.shape-left {
                 background: url("../assets/img/yellow-rectangle.png");
@@ -235,60 +197,20 @@
                 align-items: start;
                 border-radius: 20px;
             }
+        }
 
-            &__header {
-                font-family: GilroyBold;
-                font-style: normal;
-                font-weight: 800;
-                font-size: 52px;
-                line-height: 68px;
-                text-transform: capitalize;
-                color: #003459;
-                margin-bottom: 2px;
-            }
+        &.blue {
+            background: v.$dark-blue;
+        }
 
-            &__header--small {
-                font-style: normal;
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 54px;
-                text-transform: capitalize;
-                color: #003459;
-                margin-bottom: 8px;
-            }
-
-            &__img {
-                width: 42px;
-                height: 38px;
-            }
-
-            &__txt {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 18px;
-                color: #242b33;
-                margin-bottom: 24px;
-                max-width: 394px;
-            }
-
-            &__btn--dark {
-                padding: 10px 30px 10px;
-                background: #003459;
-                border-radius: 57px;
-                border: none;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                color: #fdfdfd;
-            }
+        &.orange {
+            background: v.$orange;
         }
 
         .wrapper-icon {
-            display: flex; 
+            display: flex;
             align-items: center;
-            gap: 16px; 
+            gap: 16px;
         }
 
         .right {
@@ -303,21 +225,11 @@
         gap: 8px;
 
         &__txt--small {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 31px;
-            color: #000000;
+            @include m.text-small; 
         }
 
         &__txt--big {
-            font-family: GilroyBold;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 36px;
-            text-transform: capitalize;
-            color: #003459;
+            @include m.text-subtitle; 
         }
     }
 
@@ -338,12 +250,12 @@
 }
 
 .footer {
-    background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+    background: v.$linear-gradient;
     border-radius: 40px 40px 0px 0px;
     padding: 80px 130px 40px;
 
     &__newsletter {
-        background: #003459;
+        background: v.$dark-blue;
         border-radius: 16px;
         padding: 32px;
         display: flex;
@@ -351,46 +263,26 @@
         margin-bottom: 40px;
 
         &__txt {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 36px;
-            text-transform: capitalize;
-            color: #fdfdfd;
+            @include m.text-subtitle; 
+            color: v.$white;
             max-width: 389px;
         }
 
         &__form {
             width: 707px;
-            background: #ffffff;
+            background: v.$light;
             border-radius: 14px;
             padding: 12px;
             display: flex;
             gap: 12px;
 
             &__input {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 20px;
-                color: #99a2a5;
-                background: #ffffff;
-                border: 1px solid #99a2a5;
-                border-radius: 8px;
-                padding: 14px 28px;
-                width: 70%;
+                @include m.input-email; 
             }
 
             &__btn--dark {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                color: #fdfdfd;
-                padding: 10px 30px 10px; 
-                background: #003459;
+                @include m.button-dark; 
                 border-radius: 8px;
-                border: none;
             }
         }
     }
@@ -399,7 +291,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
-        border-bottom: 1px solid #667479;
+        border-bottom: 1px solid v.$very-dark-gray;
         padding-bottom: 40px;
 
         &__links {
@@ -407,11 +299,8 @@
             gap: 60px;
 
             &__txt {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                color: #00171f;
+                @include m.text-basic; 
+                color: v.$black;
                 text-decoration: none;
             }
         }
@@ -436,11 +325,7 @@
         }
 
         &__txt {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 20px;
-            color: #667479;
+            @include m.text-thin; 
         }
 
         &__box-txt {
@@ -448,11 +333,7 @@
             gap: 20px;
 
             &__txt {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 20px;
-                color: #667479;
+                @include m.text-thin; 
             }
         }
     }

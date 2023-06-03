@@ -1,0 +1,133 @@
+@use "../styles/variables.scss" as v;
+
+@mixin text-middle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: v.$dark-blue;
+    text-decoration: none;
+}
+
+@mixin text-header-big {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 68px;
+    text-transform: capitalize;
+    color: v.$very-dark-blue;
+}
+
+@mixin text-header-small {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: v.$very-dark-blue;
+}
+
+@mixin text-header-thin {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    text-transform: capitalize;
+    color: v.$dark-blue;
+}
+
+@mixin text-basic {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: v.$dark;
+}
+
+@mixin text-subtitle {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: v.$dark-blue;
+}
+
+@mixin text-small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 31px;
+    color: v.$neutral;
+}
+
+@mixin text-very-small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: v.$very-dark-gray;
+}
+
+@mixin text-number-price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: v.$black;
+}
+
+@mixin text-thin {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: v.$very-dark-gray;
+}
+
+@mixin button-dark {
+    padding: 10px 30px 10px;
+    background: v.$dark-blue;
+    border-radius: 57px;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: v.$white;
+}
+
+@mixin button-light {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: v.$dark-blue;
+    padding: 12px 28px;
+    border: 1.5px solid v.$dark-blue;
+    border-radius: 57px;
+    background-color: transparent;
+}
+
+@mixin box-card {
+    max-width: 264px;
+    background: v.$white;
+    box-shadow: v.$shadow-white;
+    border-radius: 12px;
+    padding: 8px 8px 20px;
+}
+
+@mixin input-email {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: v.$dark-gray;
+    background: v.$light;
+    border: 1px solid v.$dark-gray;
+    border-radius: 8px;
+    padding: 14px 28px;
+    width: 70%;
+}
