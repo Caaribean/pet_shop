@@ -21,13 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateHttpLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-    })
+    TranslateModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
