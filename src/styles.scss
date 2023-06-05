@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'styles/mixins.scss' as m;
 @use 'styles/variables.scss' as v;
+@use 'styles/functions.scss' as f;
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 

@@ -1,9 +1,10 @@
 @use "../styles/mixins.scss" as m;
 @use "../styles/variables.scss" as v;
+@use '../styles/functions.scss' as f;
 
 .header {
     background-color: v.$light-yellow;
-    padding: 28px 138px 16px;
+    padding: f.calculateRem(28px) f.calculateRem(138px) f.calculateRem(16px);
 
     &__navmenu {
         display: flex;
@@ -12,14 +13,14 @@
         &__list {
             display: flex;
             flex-wrap: wrap;
-            gap: 48px;
+            gap: f.calculateRem(48px);
             list-style-type: none;
 
             &__item {
 
                 &__logo {
-                    width: 115px;
-                    height: 40px;
+                    width: f.calculateRem(115px);
+                    height: f.calculateRem(40px);
                 }
 
                 &__txt {
@@ -32,7 +33,7 @@
 
 .section-welcome {
     background-color: v.$light-yellow;
-    padding: 0 138px;
+    padding: 0 f.calculateRem(138px);
     display: flex;
 
     &__box-txt {
@@ -41,22 +42,22 @@
 
         &__header {
             @include m.text-header-big;
-            margin-bottom: 4px;
+            margin-bottom: f.calculateRem(4px);
         }
 
         &__header--small {
             @include m.text-header-small;
-            margin-bottom: 24px;
+            margin-bottom: f.calculateRem(24px);
         }
 
         &__txt {
             @include m.text-basic;
-            margin-bottom: 32px;
+            margin-bottom: f.calculateRem(32px);
         }
 
         &__btn--dark {
             @include m.button-dark;
-            max-width: 163px;
+            max-width: f.calculateRem(163px);
         }
     }
 
@@ -70,13 +71,13 @@
 
 .section {
     background-color: v.$white;
-    padding: 0 138px 0;
+    padding: 0 f.calculateRem(138px) 0;
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 28px;
-        padding-top: 60px;
+        padding-bottom: f.calculateRem(28px);
+        padding-top: f.calculateRem(60px);
 
         &__txt--small {
             @include m.text-basic;
@@ -103,12 +104,12 @@
         &__title {
             @include m.text-middle;
             color: v.$black;
-            margin-bottom: 4px;
+            margin-bottom: f.calculateRem(4px);
         }
 
         &__box-txt {
             display: flex;
-            gap: 4px;
+            gap: f.calculateRem(4px);
 
             &__txt--medium {
                 @include m.text-very-small;
@@ -122,7 +123,7 @@
 
         &__price {
             @include m.text-number-price; 
-            margin-top: 4px;
+            margin-top: f.calculateRem(4px);
         }
     }
 
@@ -135,47 +136,47 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 60px;
+        padding-bottom: f.calculateRem(60px);
     }
 
     .banner {
         display: flex;
-        border-radius: 20px;
+        border-radius: f.calculateRem(20px);
 
         &__img {
             max-width: 50%;
-            border-radius: 20px;
+            border-radius: f.calculateRem(20px);
         }
 
         &__box-txt {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            padding: 14px 28px 10px;
+            padding: f.calculateRem(14px) f.calculateRem(28px) f.calculateRem(10px);
             width: 100%;
 
             &__header {
                 @include m.text-header-big;               
-                font-size: 52px;
+                font-size: f.calculateRem(52px);
                 color: v.$dark-blue;
-                margin-bottom: 2px;
+                margin-bottom: f.calculateRem(2px);
             }
 
             &__header--small {
                 @include m.text-header-thin; 
-                margin-bottom: 8px;
+                margin-bottom: f.calculateRem(8px);
             }
 
             &__img {
-                width: 42px;
-                height: 38px;
+                width: f.calculateRem(42px);
+                height: f.calculateRem(38px);
             }
 
             &__txt {
                 @include m.text-very-small; 
                 color: v.$dark;
-                margin-bottom: 24px;
-                max-width: 394px;
+                margin-bottom: f.calculateRem(24px);
+                max-width: f.calculateRem(394px);
             }
 
             &__btn--dark {
@@ -187,7 +188,7 @@
                 background-position: left;
                 justify-content: end;
                 align-items: end;
-                border-radius: 20px;
+                border-radius: f.calculateRem(20px);
             }
 
             &.shape-right {
@@ -195,7 +196,7 @@
                 background-position: right;
                 justify-content: center;
                 align-items: start;
-                border-radius: 20px;
+                border-radius: f.calculateRem(20px);
             }
         }
 
@@ -210,7 +211,7 @@
         .wrapper-icon {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: f.calculateRem(16px);
         }
 
         .right {
@@ -222,7 +223,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: f.calculateRem(8px);
 
         &__txt--small {
             @include m.text-small; 
@@ -237,44 +238,44 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 25px;
+        padding-top: f.calculateRem(25px);
 
         &__img {
-            max-width: 151px;
+            max-width: f.calculateRem(151px);
         }
     }
 
     &.sellers {
-        padding: 45px 138px 39px;
+        padding: f.calculateRem(45px) f.calculateRem(138px) f.calculateRem(39px);
     }
 }
 
 .footer {
     background: v.$linear-gradient;
-    border-radius: 40px 0px;
-    padding: 80px 130px 40px;
+    border-radius: f.calculateRem(40px) 0;
+    padding: f.calculateRem(80px) f.calculateRem(130px) f.calculateRem(40px);
 
     &__newsletter {
         background: v.$dark-blue;
-        border-radius: 16px;
-        padding: 32px;
+        border-radius: f.calculateRem(16px);
+        padding: f.calculateRem(32px);
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: f.calculateRem(40px);
 
         &__txt {
             @include m.text-subtitle; 
             color: v.$white;
-            max-width: 389px;
+            max-width: f.calculateRem(398px);
         }
 
         &__form {
-            width: 707px;
+            width: f.calculateRem(707px);
             background: v.$light;
-            border-radius: 14px;
-            padding: 12px;
+            border-radius: f.calculateRem(14px);
+            padding: f.calculateRem(12px);
             display: flex;
-            gap: 12px;
+            gap: f.calculateRem(12px);
 
             &__input {
                 @include m.input-email; 
@@ -282,7 +283,7 @@
 
             &__btn--dark {
                 @include m.button-dark; 
-                border-radius: 8px;
+                border-radius: f.calculateRem(8px);
             }
         }
     }
@@ -290,13 +291,13 @@
     &__innerfooter {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
-        border-bottom: 1px solid v.$very-dark-gray;
-        padding-bottom: 40px;
+        margin-bottom: f.calculateRem(40px);
+        border-bottom: f.calculateRem(1px) solid v.$very-dark-gray;
+        padding-bottom: f.calculateRem(40px);
 
         &__links {
             display: flex;
-            gap: 60px;
+            gap: f.calculateRem(60px);
 
             &__txt {
                 @include m.text-basic; 
@@ -307,10 +308,10 @@
 
         &__media {
             display: flex;
-            gap: 40px;
+            gap: f.calculateRem(40px);
 
             &__img {
-                max-width: 24px;
+                max-width: f.calculateRem(24px);
                 cursor: pointer;
             }
         }
@@ -321,7 +322,7 @@
         justify-content: space-between;
 
         &__img {
-            max-width: 115px;
+            max-width: f.calculateRem(115px);
         }
 
         &__txt {
@@ -330,7 +331,7 @@
 
         &__box-txt {
             display: flex;
-            gap: 20px;
+            gap: f.calculateRem(20px);
 
             &__txt {
                 @include m.text-thin; 
