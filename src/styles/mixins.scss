@@ -1,0 +1,134 @@
+@use "../styles/variables.scss" as v;
+@use "../styles/functions.scss" as f;
+
+@mixin text-middle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(24px);
+    color: v.$dark-blue;
+    text-decoration: none;
+}
+
+@mixin text-header-big {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: f.calculateRem(60px);
+    line-height: f.calculateRem(68px);
+    text-transform: capitalize;
+    color: v.$very-dark-blue;
+}
+
+@mixin text-header-small {
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(46px);
+    line-height: f.calculateRem(60px);
+    text-transform: capitalize;
+    color: v.$very-dark-blue;
+}
+
+@mixin text-header-thin {
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(36px);
+    line-height: f.calculateRem(54px);
+    text-transform: capitalize;
+    color: v.$dark-blue;
+}
+
+@mixin text-basic {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(24px);
+    color: v.$dark;
+}
+
+@mixin text-subtitle {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(24px);
+    line-height: f.calculateRem(36px);
+    text-transform: capitalize;
+    color: v.$dark-blue;
+}
+
+@mixin text-small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(31px);
+    color: v.$neutral;
+}
+
+@mixin text-very-small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(12px);
+    line-height: f.calculateRem(18px);
+    color: v.$very-dark-gray;
+}
+
+@mixin text-number-price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(14px);
+    line-height: f.calculateRem(20px);
+    color: v.$black;
+}
+
+@mixin text-thin {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(14px);
+    line-height: f.calculateRem(20px);
+    color: v.$very-dark-gray;
+}
+
+@mixin button-dark {
+    padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
+    background: v.$dark-blue;
+    border-radius: f.calculateRem(57px);
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(24px);
+    color: v.$white;
+}
+
+@mixin button-light {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(14px);
+    line-height: f.calculateRem(20px);
+    color: v.$dark-blue;
+    padding: f.calculateRem(12px) f.calculateRem(28px);
+    border: f.calculateRem(1.5px) solid v.$dark-blue;
+    border-radius: f.calculateRem(57px);
+    background-color: transparent;
+}
+
+@mixin box-card {
+    max-width: f.calculateRem(264px);
+    background: v.$white;
+    box-shadow: v.$shadow-white;
+    border-radius: f.calculateRem(12px);
+    padding: f.calculateRem(8px) f.calculateRem(8px) f.calculateRem(20px);
+}
+
+@mixin input-email {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(14px);
+    line-height: f.calculateRem(20px);
+    color: v.$dark-gray;
+    background: v.$light;
+    border: f.calculateRem(1px) solid v.$dark-gray;
+    border-radius: f.calculateRem(8px);
+    padding: f.calculateRem(14px) f.calculateRem(28px);
+    width: 70%;
+}
