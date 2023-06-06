@@ -1,7 +1,50 @@
 {
-    "welcomeMessage": "Thanks for joining, {{ firstName }}! It's great to have you!",
-    "login": {
-      "username": "Enter your user name",
-      "password": "Password here"
+    "header" : {
+      "home": "Home",
+      "pets": "Pets",
+      "petProducts": "Pet products"
+    },
+
+    "sectionWelcome" : {
+      "title": "One more friend",
+      "subTitle": "Thousands more fun!",
+      "text": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!",
+      "btn": "Explore Now"
+    },
+
+    "sectionWithPets" : {
+      "question": "Whats new?",
+      "title": "Take a look at some of our pets",
+      "btn": "View more"
+    },
+
+    "bannerBlue" : {
+      "title": "One more friend",
+      "subTitle": "Thousands more fun!",
+      "text": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!",
+      "btn": "Explore Now"
+    },
+
+    "bannerOrange" : {
+      "title": "Adoption",
+      "subTitle": "We need help. so do they.",
+      "text": "Adopt a pet and give it a home, it will be love you back unconditionally.",
+      "btn": "Explore Now"
+    },
+
+    "petSellers" : {
+      "text": "Proud to be part of",
+      "textBold" : "Pet Sellers"
+    },
+
+    "footer": {
+      "newsletterText": "Register now so you don't miss our programs",
+      "btn": "Subscribe Now",
+      "home": "Home",
+      "pets": "Pets",
+      "petProducts":"Pet products",
+      "copyright": "&copy; 2022 Monito. All rights reserved.",
+      "service": "Terms of Service",
+      "policy": "Privacy Policy"
     }
   } 
