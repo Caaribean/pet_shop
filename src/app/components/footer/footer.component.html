@@ -1,31 +1,30 @@
 <footer class="footer">
     <div class="footer__newsletter">
-        <h3 class="footer__newsletter__txt">Register now so you don't miss our programs</h3>
+        <h3 class="footer__newsletter__txt">{{'footer.newsletterText' | translate}}</h3>
         <div class="footer__newsletter__form">
             <input class="footer__newsletter__form__input" type="text" placeholder="Enter your Email">
-            <button class="footer__newsletter__form__btn--dark">Subscribe Now</button>
+            <button class="footer__newsletter__form__btn--dark">{{'footer.btn' | translate}}</button>
         </div>
     </div>
     <div class="footer__innerfooter">
         <div class="footer__innerfooter__links">
-            <a class="footer__innerfooter__links__txt" href="">Home</a>
-            <a class="footer__innerfooter__links__txt" href="">Category</a>
-            <a class="footer__innerfooter__links__txt" href="">About</a>
-            <a class="footer__innerfooter__links__txt" href="">Contact</a>
+            <a class="footer__innerfooter__links__txt" routerLink="home">{{'footer.home' | translate}}</a>
+            <a class="footer__innerfooter__links__txt" routerLink="pets">{{'footer.pets' | translate}}</a>
+            <a class="footer__innerfooter__links__txt" routerLink="pet-products">{{'footer.petProducts' | translate}}</a>
         </div>
         <div class="footer__innerfooter__media">
             <img class="footer__innerfooter__media__img" src="../assets/img/logo-facebook.png" alt="">
             <img class="footer__innerfooter__media__img" src="../assets/img/logo-twitter.png" alt="">
             <img class="footer__innerfooter__media__img" src="../assets/img/logo-instagram.png" alt="">
             <img class="footer__innerfooter__media__img" src="../assets/img/logo-youtube.png" alt="">
-        </div>
+        </div> 
     </div>
     <div class="footer__copy">
-        <span class="footer__copy__txt">&copy; 2022 Monito. All rights reserved.</span>
+        <span class="footer__copy__txt">&copy; {{'footer.copyright' | translate}}</span>
         <img class="footer__copy__img" src="../assets/img/logo-monito.png" alt="">
         <div class="footer__copy__box-txt">
-            <span class="footer__copy__box-txt__txt">Terms of Service</span>
-            <span class="footer__copy__box-txt__txt">Privacy Policy</span>
+            <span class="footer__copy__box-txt__txt">{{'footer.service' | translate}}</span>
+            <span class="footer__copy__box-txt__txt">{{'footer.policy' | translate}}</span>
         </div>
     </div>
 </footer>
