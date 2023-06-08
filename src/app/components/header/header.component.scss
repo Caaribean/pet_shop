@@ -1,0 +1,32 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use '../../../styles/functions.scss' as f;
+
+.header {
+    background-color: v.$light-yellow;
+    padding: f.calculateRem(28px) f.calculateRem(138px) f.calculateRem(16px);
+
+    &__navmenu {
+        display: flex;
+        justify-content: center;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: f.calculateRem(48px);
+            list-style-type: none;
+
+            &__item {
+
+                &__logo {
+                    width: f.calculateRem(115px);
+                    height: f.calculateRem(40px);
+                }
+
+                &__txt {
+                    @include m.text-middle;
+                }
+            }
+        }
+    }
+}
