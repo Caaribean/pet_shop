@@ -81,6 +81,38 @@
     padding-top: 35px;
 
     &__filters {
+        &__title {
+            @include m.text-subtitle;
+        }
+
+        &__category {
+            display: flex;
+            flex-direction: column;
+            border-bottom: f.calculateRem(1px) solid v.$gray;
+            padding-bottom: f.calculateRem(10px);
+
+
+            &__title {
+                @include m.text-title-category;
+                margin-bottom: 10px; 
+                margin-top: 14px; 
+            }
+
+            &__option {
+                @include m.text-thin;
+                color: v.$black;
+                margin-bottom: 8px; 
+            }
+
+            &__options {
+                display: flex; 
+                gap: 20px; 
+
+                &__input {
+                    width: 40%; 
+                }
+            }
+        }
     }
 
     &__txt {
