@@ -38,6 +38,16 @@
     color: v.$dark-blue;
 }
 
+@mixin text-header-white {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 68px;
+    text-transform: capitalize;
+    color: v.$white;
+}
+
 @mixin text-basic {
     font-style: normal;
     font-weight: 500;
@@ -88,6 +98,16 @@
     color: v.$very-dark-gray;
 }
 
+@mixin text-numbers {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: v.$very-dark-blue;
+    text-decoration: none; 
+}
+
 @mixin button-dark {
     padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
     background: v.$dark-blue;
@@ -110,6 +130,17 @@
     border: f.calculateRem(1.5px) solid v.$dark-blue;
     border-radius: f.calculateRem(57px);
     background-color: transparent;
+}
+
+@mixin button-white {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: v.$black;
+    padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
+    background: v.$white;
+    border-radius: 57px;
 }
 
 @mixin box-card {

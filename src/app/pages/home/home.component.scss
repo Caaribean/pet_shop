@@ -114,11 +114,6 @@
         border-radius: f.calculateRem(20px); 
         height: f.calculateRem(378px);
 
-        &__img {
-            max-width: 50%;
-            border-radius: f.calculateRem(20px);
-        }
-
         &__box-txt {
             display: flex;
             flex-wrap: wrap;
@@ -157,7 +152,7 @@
 
         &.blue {
             background: v.$dark-blue;
-            background-image: url("../../../assets/img/banner1.png");
+            background-image: url("../../../assets/img/banner-kiss.png");
             background-size: cover;
 
             .banner__box-txt {
@@ -167,7 +162,7 @@
 
         &.orange {
             background: v.$orange;
-            background-image: url("../../../assets/img/banner2.png");
+            background-image: url("../../../assets/img/banner-paw.png");
             background-size: cover;
 
             .banner__box-txt {

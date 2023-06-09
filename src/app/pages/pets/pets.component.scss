@@ -1,4 +1,162 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use '../../../styles/functions.scss' as f;
+@use "../../../styles/functions.scss" as f;
 
+.section {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+
+    &__txt {
+        @include m.text-thin;
+        margin: 0;
+    }
+
+    &__icon {
+        width: f.calculateRem(24px);
+        height: f.calculateRem(24px);
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .banner {
+        display: flex;
+        border-radius: f.calculateRem(20px);
+        height: f.calculateRem(378px);
+
+        &__img {
+            max-width: 50%;
+            border-radius: f.calculateRem(20px);
+        }
+
+        &__box-txt {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: f.calculateRem(14px) f.calculateRem(28px) f.calculateRem(10px);
+            width: 100%;
+
+            &__header {
+                @include m.text-header-white;
+                margin-bottom: f.calculateRem(2px);
+            }
+
+            &__header--small {
+                @include m.text-header-thin;
+                color: v.$white;
+                margin-bottom: f.calculateRem(8px);
+            }
+
+            &__txt {
+                @include m.text-very-small;
+                color: v.$white;
+                margin-bottom: f.calculateRem(24px);
+                max-width: f.calculateRem(394px);
+            }
+
+            &__btn--dark {
+                @include m.button-white;
+            }
+        }
+
+        &.light {
+            background: v.$light-yellow;
+            background-image: url("../../../assets/img/banner-pets.png");
+            background-size: cover;
+
+            .banner__box-txt {
+                align-items: end;
+            }
+        }
+    }
+}
+
+.section-pets {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+    display: flex;
+    padding-top: 35px;
+
+    &__filters {
+    }
+
+    &__txt {
+        @include m.text-subtitle;
+        margin-right: 14px;
+    }
+
+    &__txt--small {
+        @include m.text-thin;
+    }
+
+    &__product-card {
+        @include m.box-card;
+
+        &__img {
+            max-width: 100%;
+        }
+        &__title {
+            @include m.text-middle;
+            color: v.$black;
+            margin-bottom: f.calculateRem(4px);
+        }
+
+        &__box-txt {
+            display: flex;
+            gap: f.calculateRem(4px);
+
+            &__txt--medium {
+                @include m.text-very-small;
+            }
+
+            &__txt--bold {
+                @include m.text-very-small;
+                font-weight: 700;
+            }
+        }
+
+        &__price {
+            @include m.text-number-price;
+            margin-top: f.calculateRem(4px);
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        padding-top: 40px;
+        padding-bottom: 60px; 
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        &__page-number {
+            @include m.text-numbers;
+        }
+
+        &__page-number--checked {
+            @include m.text-numbers;
+            color: v.$white;
+            padding: 6px 13px 4px;
+            background: v.$dark-blue;
+            border-radius: 8px;
+        }
+    }
+
+    .pets-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .box {
+        margin-bottom: 14px; 
+    }
+}
