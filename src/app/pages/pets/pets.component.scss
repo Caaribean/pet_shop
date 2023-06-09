@@ -37,6 +37,7 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
+            justify-content: center;
             padding: f.calculateRem(14px) f.calculateRem(28px) f.calculateRem(10px);
             width: 100%;
 
