@@ -20,7 +20,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        padding-bottom: 11px; 
+        padding-bottom: f.calculateRem(11px); 
     }
 
     .banner {
@@ -164,38 +164,6 @@
 
     &__txt--small {
         @include m.text-thin;
-    }
-
-    &__product-card {
-        @include m.box-card;
-
-        &__img {
-            max-width: 100%;
-        }
-        &__title {
-            @include m.text-middle;
-            color: v.$black;
-            margin-bottom: f.calculateRem(4px);
-        }
-
-        &__box-txt {
-            display: flex;
-            gap: f.calculateRem(4px);
-
-            &__txt--medium {
-                @include m.text-very-small;
-            }
-
-            &__txt--bold {
-                @include m.text-very-small;
-                font-weight: 700;
-            }
-        }
-
-        &__price {
-            @include m.text-number-price;
-            margin-top: f.calculateRem(4px);
-        }
     }
 
     &__pagination {
