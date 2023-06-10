@@ -52,5 +52,35 @@
       "explore": "Explore Now",
       "view": "View more",
       "subscribe": "Subscribe"
+    },
+
+    "additionalText": {
+      "home": "Home",
+      "dog": "Dog",
+      "smallDog": "Small Dog"
+    },
+
+    "sectionWithSmallPets": {
+      "title": "Small Dog",
+      "text": "52 puppies"
+    },
+
+    "filters": {
+      "title": "Filter",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "color": "Color",
+      "red": "Red",
+      "apricot": "Apricot",
+      "black": "Black",
+      "blackWhite": "Black & White",
+      "silver": "Silver",
+      "tan": "Tan",
+      "price": "Price",
+      "breed": "Breed",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
     }
   } 

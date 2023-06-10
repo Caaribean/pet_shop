@@ -38,6 +38,16 @@
     color: v.$dark-blue;
 }
 
+@mixin text-header-white {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: f.calculateRem(52px);
+    line-height: f.calculateRem(68px);
+    text-transform: capitalize;
+    color: v.$white;
+}
+
 @mixin text-basic {
     font-style: normal;
     font-weight: 500;
@@ -88,6 +98,24 @@
     color: v.$very-dark-gray;
 }
 
+@mixin text-numbers {
+    font-family: GilroyBold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(18px);
+    line-height: f.calculateRem(24px);
+    color: v.$very-dark-blue;
+    text-decoration: none;
+}
+
+@mixin text-title-category {
+    font-style: normal;
+    font-weight: 700;
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(20px);
+    color: v.$black;
+}
+
 @mixin button-dark {
     padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
     background: v.$dark-blue;
@@ -112,6 +140,17 @@
     background-color: transparent;
 }
 
+@mixin button-white {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(24px);
+    color: v.$black;
+    padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
+    background: v.$white;
+    border-radius: f.calculateRem(57px);
+}
+
 @mixin box-card {
     max-width: f.calculateRem(264px);
     background: v.$white;
@@ -131,4 +170,18 @@
     border-radius: f.calculateRem(8px);
     padding: f.calculateRem(14px) f.calculateRem(28px);
     width: 70%;
+}
+
+@mixin checkbox {
+    &::before {
+        content: "";
+        width: f.calculateRem(16px);
+        height: f.calculateRem(16px);
+        background: v.$light;
+        border: f.calculateRem(1px) solid v.$gray;
+        border-radius: f.calculateRem(4px);
+        margin-right: f.calculateRem(10px);
+        display: inline-block;
+        cursor: pointer;
+    }
 }

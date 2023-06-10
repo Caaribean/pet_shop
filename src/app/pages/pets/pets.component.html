@@ -1,1 +1,99 @@
-LISTA PIESKÓW
+<div class="section">
+    <div class="text-wrapper">
+        <span class="section__txt">{{'additionalText.home' | translate}}</span>
+        <img class="section__icon" src="../../../assets/img/icon-arrow.png" alt="">
+        <span class="section__txt">{{'additionalText.dog' | translate}}</span>
+        <img class="section__icon" src="../../../assets/img/icon-arrow.png" alt="">
+        <span class="section__txt">{{'additionalText.smallDog' | translate}}</span>
+    </div>
+    <div class="banner light">
+        <div class="banner__box-txt">
+            <h1 class="banner__box-txt__header">{{'bannerBlue.title' | translate}}</h1>
+            <h2 class="banner__box-txt__header--small">{{'bannerBlue.subTitle' | translate}}</h2>
+            <span class="banner__box-txt__txt right">{{'bannerBlue.text' | translate}}</span>
+            <button class="banner__box-txt__btn--dark">{{'buttons.explore' | translate}}</button>
+        </div>
+    </div>
+</div>
+<div class="section-pets">
+    <div class="section-pets__filters col-3">
+        <div class="section-pets__filters__title">{{'filters.title' | translate}}</div>
+        <div class="section-pets__filters__category">
+            <span class="section-pets__filters__category__title">{{'filters.gender' | translate}}</span>
+            <span class="section-pets__filters__category__option checkbox">{{'filters.male' | translate}}</span>
+            <span class="section-pets__filters__category__option checkbox">{{'filters.female' | translate}}</span>
+        </div>
+        <div class="section-pets__filters__category">
+            <span class="section-pets__filters__category__title">{{'filters.color' | translate}}</span>
+            <div class="category-box checkbox">
+                <span class="section-pets__filters__category__color red"></span>
+                <span class="section-pets__filters__category__option">{{'filters.red' | translate}}</span>
+            </div>
+            <div class="category-box checkbox">
+                <span class="section-pets__filters__category__color apricot"></span>
+                <span class="section-pets__filters__category__option">{{'filters.apricot' | translate}}</span>
+            </div>
+            <div class="category-box checkbox">
+                <span class="section-pets__filters__category__color black"></span>
+                <span class="section-pets__filters__category__option">{{'filters.black' | translate}}</span>
+            </div>
+            <div class="category-box checkbox">
+                <span class="section-pets__filters__category__color black-white"></span>
+                <span class="section-pets__filters__category__option">{{'filters.blackWhite' | translate}}</span>
+            </div>
+            <div class="category-box checkbox">
+                <span class="section-pets__filters__category__color silver"></span>
+                <span class="section-pets__filters__category__option">{{'filters.silver' | translate}}</span>
+            </div>
+            <div class="category-box checkbox">
+                <span class="section-pets__filters__category__color tan"></span>
+                <span class="section-pets__filters__category__option">{{'filters.tan' | translate}}</span>
+            </div>
+        </div>
+        <div class="section-pets__filters__category">
+            <span class="section-pets__filters__category__title">{{'filters.price' | translate}}</span>
+            <div class="section-pets__filters__category__options">
+                <input class="section-pets__filters__category__options__input" type="number" placeholder="Min">
+                <input class="section-pets__filters__category__options__input" type="number" placeholder="Max">
+            </div>
+        </div>
+        <div class="section-pets__filters__category">
+            <span class="section-pets__filters__category__title">{{'filters.breed' | translate}}</span>
+            <span class="section-pets__filters__category__option checkbox">{{'filters.small' | translate}}</span>
+            <span class="section-pets__filters__category__option checkbox">{{'filters.medium' | translate}}</span>
+            <span class="section-pets__filters__category__option checkbox">{{'filters.large' | translate}}</span>
+        </div>
+    </div>
+    <div class="box col-9">
+        <span class="section-pets__txt">{{'sectionWithSmallPets.title' | translate}}</span>
+        <span class="section-pets__txt--small">{{'sectionWithSmallPets.text' | translate}}</span>
+        <div class="pets-wrapper">
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+            <app-pet-card></app-pet-card>
+        </div>
+        <div class="section-pets__pagination">
+            <img class="section-pets__pagination__icon" src="../../../assets/img/arrow-left.png">
+            <a class="section-pets__pagination__page-number"></a>
+            <a class="section-pets__pagination__page-number--checked" href="">1</a>
+            <a class="section-pets__pagination__page-number" href="">2</a>
+            <a class="section-pets__pagination__page-number" href="">3</a>
+            <a class="section-pets__pagination__page-number" href="">4</a>
+            <a class="section-pets__pagination__page-number" href="">...</a>
+            <a class="section-pets__pagination__page-number" href="">28</a>
+            <img class="section-pets__pagination__icon" src="../../../assets/img/arrow-right.png">
+        </div>
+    </div>
+</div>

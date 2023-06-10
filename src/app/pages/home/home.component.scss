@@ -1,6 +1,6 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use '../../../styles/functions.scss' as f;
+@use "../../../styles/functions.scss" as f;
 
 .section-welcome {
     background-color: v.$light-yellow;
@@ -33,7 +33,6 @@
     }
 
     &__box-img {
-
         &__img {
             width: 100%;
         }
@@ -93,7 +92,7 @@
         }
 
         &__price {
-            @include m.text-number-price; 
+            @include m.text-number-price;
             margin-top: f.calculateRem(4px);
         }
     }
@@ -112,29 +111,26 @@
 
     .banner {
         display: flex;
-        border-radius: f.calculateRem(20px);
-
-        &__img {
-            max-width: 50%;
-            border-radius: f.calculateRem(20px);
-        }
+        border-radius: f.calculateRem(20px); 
+        height: f.calculateRem(378px);
 
         &__box-txt {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
+            justify-content: center;
             padding: f.calculateRem(14px) f.calculateRem(28px) f.calculateRem(10px);
             width: 100%;
 
             &__header {
-                @include m.text-header-big;               
+                @include m.text-header-big;
                 font-size: f.calculateRem(52px);
                 color: v.$dark-blue;
                 margin-bottom: f.calculateRem(2px);
             }
 
             &__header--small {
-                @include m.text-header-thin; 
+                @include m.text-header-thin;
                 margin-bottom: f.calculateRem(8px);
             }
 
@@ -144,39 +140,35 @@
             }
 
             &__txt {
-                @include m.text-very-small; 
+                @include m.text-very-small;
                 color: v.$dark;
                 margin-bottom: f.calculateRem(24px);
                 max-width: f.calculateRem(394px);
             }
 
             &__btn--dark {
-                @include m.button-dark; 
-            }
-
-            &.shape-left {
-                background: url("../../../assets/img/yellow-rectangle.png");
-                background-position: left;
-                justify-content: end;
-                align-items: end;
-                border-radius: f.calculateRem(20px);
-            }
-
-            &.shape-right {
-                background: url("../../../assets/img/yellow-rectangle2.png");
-                background-position: right;
-                justify-content: center;
-                align-items: start;
-                border-radius: f.calculateRem(20px);
+                @include m.button-dark;
             }
         }
 
         &.blue {
             background: v.$dark-blue;
+            background-image: url("../../../assets/img/banner-kiss.png");
+            background-size: cover;
+
+            .banner__box-txt {
+                align-items: end;
+            }
         }
 
         &.orange {
             background: v.$orange;
+            background-image: url("../../../assets/img/banner-paw.png");
+            background-size: cover;
+
+            .banner__box-txt {
+                align-items: start;
+            }
         }
 
         .wrapper-icon {
@@ -197,11 +189,11 @@
         gap: f.calculateRem(8px);
 
         &__txt--small {
-            @include m.text-small; 
+            @include m.text-small;
         }
 
         &__txt--big {
-            @include m.text-subtitle; 
+            @include m.text-subtitle;
         }
     }
 
@@ -235,7 +227,7 @@
         margin-bottom: f.calculateRem(40px);
 
         &__txt {
-            @include m.text-subtitle; 
+            @include m.text-subtitle;
             color: v.$white;
             max-width: f.calculateRem(398px);
         }
@@ -249,11 +241,11 @@
             gap: f.calculateRem(12px);
 
             &__input {
-                @include m.input-email; 
+                @include m.input-email;
             }
 
             &__btn--dark {
-                @include m.button-dark; 
+                @include m.button-dark;
                 border-radius: f.calculateRem(8px);
             }
         }
@@ -271,7 +263,7 @@
             gap: f.calculateRem(60px);
 
             &__txt {
-                @include m.text-basic; 
+                @include m.text-basic;
                 color: v.$black;
                 text-decoration: none;
             }
@@ -297,7 +289,7 @@
         }
 
         &__txt {
-            @include m.text-thin; 
+            @include m.text-thin;
         }
 
         &__box-txt {
@@ -305,7 +297,7 @@
             gap: f.calculateRem(20px);
 
             &__txt {
-                @include m.text-thin; 
+                @include m.text-thin;
             }
         }
     }

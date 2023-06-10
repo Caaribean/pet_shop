@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PetsComponent } from './pages/pets/pets.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PetProductsComponent } from './pages/pet-products/pet-products.component';
+import { PetCardComponent } from './components/pet-card/pet-card.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -22,6 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    PetCardComponent,
     PetsComponent,
     PetProductsComponent
   ],
