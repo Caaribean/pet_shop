@@ -9,6 +9,7 @@ export class BannerComponent {
     @Input() title: string = '';
     @Input() subtitle: string = '';
     @Input() text: string = '';
-    @Input() backgroundImg: string = '';
+    @Input() img: string = '';
+    @Input() className:string = '';
     @Input() isRightContent: boolean = false;
 }

@@ -1,3 +1,77 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
 @use '../../../styles/functions.scss' as f;
+
+
+.banner {
+    display: flex;
+    border-radius: f.calculateRem(20px);
+    height: f.calculateRem(378px);
+
+    &__box-txt {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: f.calculateRem(14px) f.calculateRem(28px) f.calculateRem(10px);
+        width: 100%;
+
+        &__header {
+            @include m.text-header-big;
+            font-size: f.calculateRem(52px);
+            color: v.$dark-blue;
+            margin-bottom: f.calculateRem(2px);
+        }
+
+        &__header--small {
+            @include m.text-header-thin;
+            margin-bottom: f.calculateRem(8px);
+        }
+
+        &__img {
+            width: f.calculateRem(42px);
+            height: f.calculateRem(38px);
+        }
+
+        &__txt {
+            @include m.text-very-small;
+            color: v.$dark;
+            margin-bottom: f.calculateRem(24px);
+            max-width: f.calculateRem(394px);
+        }
+
+        &__btn--dark {
+            @include m.button-dark;
+        }
+    }
+
+    &.blue {
+        background: v.$dark-blue;
+        background-image: url("../../../assets/img/banner-kiss.png");
+        background-size: cover;
+
+        .banner__box-txt {
+            align-items: end;
+        }
+    }
+
+    &.orange {
+        background: v.$orange;
+        background-image: url("../../../assets/img/banner-paw.png");
+        background-size: cover;
+
+        .banner__box-txt {
+            align-items: start;
+        }
+    }
+
+    .wrapper-icon {
+        display: flex;
+        align-items: center;
+        gap: f.calculateRem(16px);
+    }
+
+    .right {
+        text-align: right;
+    }
+}
