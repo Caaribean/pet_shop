@@ -65,6 +65,32 @@
         }
     }
 
+    &.light {
+        background: v.$light-yellow;
+        background-image: url("../../../assets/img/banner-pets.png");
+        background-size: cover;
+
+        .banner__box-txt {
+            align-items: end;
+        }
+
+        .banner__box-txt__header {
+            @include m.text-header-white;
+        }
+
+        .banner__box-txt__header--small {
+            color: v.$white; 
+        }
+
+        .banner__box-txt__txt {
+            color: v.$white;
+        }
+
+        .banner__box-txt__btn--dark {
+            @include m.button-white;
+        }
+    }
+
     .wrapper-icon {
         display: flex;
         align-items: center;
