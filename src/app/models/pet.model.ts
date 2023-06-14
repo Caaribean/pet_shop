@@ -1,27 +1,20 @@
-export class Pet {
-    name: string;    
-    price: number;
-    gene: string;
-    age: number;
-    breed: string;
-    color: string;
-    vaccinated: boolean;
-    dewormed: boolean; 
-    cert: boolean;
-    microchip: boolean;
-    location: string
+import { Gender } from "../enums/gender";
+import { Breed } from "../enums/breed";
+import { Color } from "../enums/color"
 
-    constructor(name: string, gene: string, age: number, price: number, breed: string, color: string, vaccinated: boolean, dewormed: boolean, cert: boolean, microchip: boolean, location: string) {
-        this.name = name;       
-        this.price = price;
-        this.gene = gene;
-        this.age = age;
-        this.breed = breed; 
-        this.color = color; 
-        this.vaccinated = vaccinated;
-        this.dewormed = dewormed;
-        this.cert = cert;
-        this.microchip = microchip;
-        this.location = location
-    } 
+export class Pet {
+    constructor(
+        public id: number,
+        public name: string,
+        public price: number,
+        public gender: string,
+        public age: number,
+        public breed: string,
+        public color: string,
+        public vaccinated: boolean,
+        public dewormed: boolean,
+        public cert: boolean,
+        public microchip: boolean,
+        public location: string
+    ) { }
 }
