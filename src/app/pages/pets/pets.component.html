@@ -6,14 +6,7 @@
         <img class="section__icon" src="../../../assets/img/icon-arrow.png" alt="">
         <span class="section__txt">{{'additionalText.smallDog' | translate}}</span>
     </div>
-    <div class="banner light">
-        <div class="banner__box-txt">
-            <h1 class="banner__box-txt__header">{{'bannerBlue.title' | translate}}</h1>
-            <h2 class="banner__box-txt__header--small">{{'bannerBlue.subTitle' | translate}}</h2>
-            <span class="banner__box-txt__txt right">{{'bannerBlue.text' | translate}}</span>
-            <button class="banner__box-txt__btn--dark">{{'buttons.explore' | translate}}</button>
-        </div>
-    </div>
+    <app-banner [className]="'light'" [title]="'bannerBlue.title'" [subtitle]="'bannerBlue.subTitle'" [text]="'bannerBlue.text'"></app-banner>
 </div>
 <div class="section-pets">
     <div class="section-pets__filters col-3">
@@ -68,21 +61,9 @@
         <span class="section-pets__txt">{{'sectionWithSmallPets.title' | translate}}</span>
         <span class="section-pets__txt--small">{{'sectionWithSmallPets.text' | translate}}</span>
         <div class="pets-wrapper">
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
-            <app-pet-card></app-pet-card>
+            <div *ngFor="let pet of pets">
+                <app-pet-card [pet]="pet"></app-pet-card>
+             </div> 
         </div>
         <div class="section-pets__pagination">
             <img class="section-pets__pagination__icon" src="../../../assets/img/arrow-left.png">

@@ -1,0 +1,13 @@
+<div class="banner" [class]="className">
+    <div class="banner__box-txt">
+        <div class="wrapper-icon">
+            <h1 class="banner__box-txt__header">{{title | translate}}</h1>
+            <img *ngIf="img" class="banner__box-txt__img" [src]="img">
+        </div>
+        <h2 class="banner__box-txt__header--small">{{subtitle | translate}}</h2>
+        <span class="banner__box-txt__txt">
+            {{text | translate}}
+        </span>
+        <button class="banner__box-txt__btn--dark">{{'buttons.explore' | translate}}</button>
+    </div>
+</div>
