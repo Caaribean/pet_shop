@@ -29,4 +29,8 @@
             }
         }
     }
+
+    &.bg-white {
+        background-color: v.$white;
+    }
 }
