@@ -3,25 +3,7 @@ import { Breed } from "../enums/breed";
 import { Color } from "../enums/color"
 
 export class Pet {
-    constructor(
-        public id: number,
-        public name: string,
-        public price: number,
-        public gender: Gender,
-        public age: number,
-        public breed: Breed,
-        public color: Color,
-        public vaccinated: boolean,
-        public dewormed: boolean,
-        public cert: boolean,
-        public microchip: boolean,
-        public location: string,
-        /* public countOfCustomerImg: number = 5,
-        public countOfPreviewImg: number = 3, */
-
-    ) { }
-
-   /*  private allPets = [
+    private allPets = [
         { id: 1, name: 'Poodle Yellow', price: 1200, gender: Gender.Female, age: 3, breed: Breed.Small, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Londyn' },
         { id: 2, name: 'Poodle Brown', price: 1500, gender: Gender.Male, age: 3, breed: Breed.Small, color: Color.Red, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Londyn' },
         { id: 3, name: 'Alaskan Malamute', price: 2500, gender: Gender.Male, age: 12, breed: Breed.Large, color: Color.BlackWhite, vaccinated: true, dewormed: true, cert: true, microchip: false, location: 'Liverpool' },
@@ -52,5 +34,38 @@ export class Pet {
         { id: 28, name: 'Samoyed', price: 4000, gender: Gender.Female, age: 10, breed: Breed.Large, color: Color.Tan, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Manchester' },
         { id: 29, name: 'Shiba Inu', price: 3100, gender: Gender.Male, age: 12, breed: Breed.Medium, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Newcastle' },
         { id: 30, name: 'Golden Retriever White', price: 2450, gender: Gender.Female, age: 13, breed: Breed.Large, color: Color.Tan, vaccinated: true, dewormed: false, cert: true, microchip: true, location: 'Birmingham' },
-    ] */ 
+    ];
+
+    constructor(
+        public id?: number,
+        public name?: string,
+        public price?: number,
+        public gender?: Gender,
+        public age?: number,
+        public breed?: Breed,
+        public color?: Color,
+        public vaccinated?: boolean,
+        public dewormed?: boolean,
+        public cert?: boolean,
+        public microchip?: boolean,
+        public location?: string,
+        public countOfCustomerImg: number = 5,
+        public countOfPreviewImg: number = 3,
+    ) { }
+
+    public getAllPets() {
+        return this.allPets;
+    }
+
+    public getPetById(id: number) {
+        return this.allPets.find(pet => pet.id === id);
+    }
+
+    public filterByColor(color: any) {
+        return this.allPets.filter(pet => pet.color === color);
+    }
+    //breed
+    //gender
+
+
 }

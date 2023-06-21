@@ -61,7 +61,7 @@
         <span class="section-pets__txt">{{'sectionWithSmallPets.title' | translate}}</span>
         <span class="section-pets__txt--small">{{'sectionWithSmallPets.text' | translate}}</span>
         <div class="pets-wrapper">
-            <div *ngFor="let pet of pets">
+            <div *ngFor="let pet of pets.getAllPets()">
                 <app-pet-card [pet]="pet"></app-pet-card>
              </div> 
         </div>

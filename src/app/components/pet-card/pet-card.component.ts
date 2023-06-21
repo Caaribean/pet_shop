@@ -1,5 +1,4 @@
 import { Component, Input } from "@angular/core";
-import { Pet } from "src/app/models/pet.model";
 
 @Component({
   selector: 'app-pet-card',
@@ -7,5 +6,10 @@ import { Pet } from "src/app/models/pet.model";
   styleUrls: ['./pet-card.component.scss']
 })
 export class PetCardComponent {
-  @Input() pet: Pet | null = null;
+  @Input() pet: any;
+  public photoUrl: string = '';
+
+  ngOnInit() {
+    this.photoUrl = '../assets/img/dog/' + this.pet.id + '/preview/1.png';
+  }
 }

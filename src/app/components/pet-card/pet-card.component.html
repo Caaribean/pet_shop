@@ -1,5 +1,5 @@
-<div class="section-pets__product-card">
-    <img class="section-pets__product-card__img" src="../assets/img/poodle-yellow.png" alt="">
+<div [routerLink]="['/pet-preview',pet.id]" class="section-pets__product-card">
+    <img class="section-pets__product-card__img" [src]="photoUrl" alt="">
     <h3 class="section-pets__product-card__title">{{pet?.name}}</h3>
     <div class="section-pets__product-card__box-txt">
         <span class="section-pets__product-card__box-txt__txt--medium">Gene:</span>
@@ -9,4 +9,4 @@
         <span class="section-pets__product-card__box-txt__txt--bold">{{pet?.age}}</span>
     </div>
     <span class="section-pets__product-card__price">{{pet?.price}}</span>
-</div> 
+</div>

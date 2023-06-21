@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PetProductsComponent } from './pages/pet-products/pet-products.component';
 import { PetCardComponent } from './components/pet-card/pet-card.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { PetPreviewComponent } from './pages/pet-preview/pet-preview.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -27,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PetCardComponent,
     PetsComponent,
     PetProductsComponent,
-    BannerComponent
+    BannerComponent,
+    PetPreviewComponent
   ],
   imports: [
     BrowserModule,
