@@ -13,34 +13,56 @@
         <div class="section-pets__filters__title">{{'filters.title' | translate}}</div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.gender' | translate}}</span>
-            <span class="section-pets__filters__category__option checkbox">{{'filters.male' | translate}}</span>
-            <span class="section-pets__filters__category__option checkbox">{{'filters.female' | translate}}</span>
+            <label class="section-pets__filters__category__option">
+               <input class="checkbox" type="checkbox" name="checkbox">{{'filters.male' | translate}}
+            </label>
+            <label class="section-pets__filters__category__option">
+                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.female' | translate}}
+             </label>
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.color' | translate}}</span>
-            <div class="category-box checkbox">
-                <span class="section-pets__filters__category__color red"></span>
-                <span class="section-pets__filters__category__option">{{'filters.red' | translate}}</span>
+            <div class="category-box">
+                <label class="section-pets__filters__category__option">
+                    <input class="checkbox" type="checkbox" name="checkbox">
+                    <span class="section-pets__filters__category__color red"></span>
+                    {{'filters.red' | translate}}
+                </label>
             </div>
-            <div class="category-box checkbox">
-                <span class="section-pets__filters__category__color apricot"></span>
-                <span class="section-pets__filters__category__option">{{'filters.apricot' | translate}}</span>
+            <div class="category-box">
+                <label class="section-pets__filters__category__option">
+                    <input class="checkbox" type="checkbox" name="checkbox">
+                    <span class="section-pets__filters__category__color apricot"></span>
+                    {{'filters.apricot' | translate}}
+                </label>
             </div>
-            <div class="category-box checkbox">
-                <span class="section-pets__filters__category__color black"></span>
-                <span class="section-pets__filters__category__option">{{'filters.black' | translate}}</span>
+            <div class="category-box">
+                <label class="section-pets__filters__category__option">
+                    <input class="checkbox" type="checkbox" name="checkbox">
+                    <span class="section-pets__filters__category__color black"></span>
+                    {{'filters.black' | translate}}
+                </label>
             </div>
-            <div class="category-box checkbox">
-                <span class="section-pets__filters__category__color black-white"></span>
-                <span class="section-pets__filters__category__option">{{'filters.blackWhite' | translate}}</span>
+            <div class="category-box">
+                <label class="section-pets__filters__category__option">
+                    <input class="checkbox" type="checkbox" name="checkbox">
+                    <span class="section-pets__filters__category__color black-white"></span>
+                    {{'filters.blackWhite' | translate}}
+                </label>
             </div>
-            <div class="category-box checkbox">
-                <span class="section-pets__filters__category__color silver"></span>
-                <span class="section-pets__filters__category__option">{{'filters.silver' | translate}}</span>
+            <div class="category-box">
+                <label class="section-pets__filters__category__option">
+                    <input class="checkbox" type="checkbox" name="checkbox">
+                    <span class="section-pets__filters__category__color silver"></span>
+                    {{'filters.silver' | translate}}
+                </label>
             </div>
-            <div class="category-box checkbox">
-                <span class="section-pets__filters__category__color tan"></span>
-                <span class="section-pets__filters__category__option">{{'filters.tan' | translate}}</span>
+            <div class="category-box">
+                <label class="section-pets__filters__category__option">
+                    <input class="checkbox" type="checkbox" name="checkbox">
+                    <span class="section-pets__filters__category__color tan"></span>
+                    {{'filters.tan' | translate}}
+                </label>
             </div>
         </div>
         <div class="section-pets__filters__category">
@@ -52,9 +74,15 @@
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.breed' | translate}}</span>
-            <span class="section-pets__filters__category__option checkbox">{{'filters.small' | translate}}</span>
-            <span class="section-pets__filters__category__option checkbox">{{'filters.medium' | translate}}</span>
-            <span class="section-pets__filters__category__option checkbox">{{'filters.large' | translate}}</span>
+            <label class="section-pets__filters__category__option">
+                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.small' | translate}}
+             </label>
+             <label class="section-pets__filters__category__option">
+                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.medium' | translate}}
+             </label>
+             <label class="section-pets__filters__category__option">
+                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.large' | translate}}
+             </label>
         </div>
     </div>
     <div class="box col-9">

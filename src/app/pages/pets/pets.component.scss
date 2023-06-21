@@ -52,7 +52,6 @@
                 height: f.calculateRem(15px);
                 border-radius: f.calculateRem(10px);
                 display: inline-block;
-                margin-right: f.calculateRem(10px);
 
                 &.red {
                     background: v.$red;
@@ -84,8 +83,13 @@
                 color: v.$black;
                 margin-bottom: f.calculateRem(8px);
 
-                &.checkbox {
-                    @include m.checkbox;
+                .checkbox {
+                    width: f.calculateRem(16px);
+                    height: f.calculateRem(16px);
+                    background: v.$light;
+                    border: f.calculateRem(1px) solid v.$gray;
+                    border-radius: f.calculateRem(4px);
+                    margin-right: f.calculateRem(5px);
                 }
             }
 
@@ -149,11 +153,5 @@
 
     .box {
         margin-bottom: f.calculateRem(14px);
-    }
-
-    .category-box {
-        &.checkbox {
-            @include m.checkbox;
-        }
     }
 }

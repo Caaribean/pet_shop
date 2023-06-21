@@ -49,6 +49,7 @@
         background: v.$dark-blue;
         background-image: url("../../../assets/img/banner-kiss.png");
         background-size: cover;
+        background-position: bottom;
 
         .banner__box-txt {
             align-items: end;
@@ -59,6 +60,7 @@
         background: v.$orange;
         background-image: url("../../../assets/img/banner-paw.png");
         background-size: cover;
+        background-position: bottom;
 
         .banner__box-txt {
             align-items: start;
@@ -69,6 +71,7 @@
         background: v.$light-yellow;
         background-image: url("../../../assets/img/banner-pets.png");
         background-size: cover;
+        background-position: bottom;
 
         .banner__box-txt {
             align-items: end;

@@ -7,7 +7,9 @@
         @include m.box-card;
 
         &__img {
-            max-width: 100%;
+            width: 264px;
+            height: 264px;
+            //max-width: 100%;
         }
         &__title {
             @include m.text-middle;

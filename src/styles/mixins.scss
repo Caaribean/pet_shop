@@ -171,17 +171,3 @@
     padding: f.calculateRem(14px) f.calculateRem(28px);
     width: 70%;
 }
-
-@mixin checkbox {
-    &::before {
-        content: "";
-        width: f.calculateRem(16px);
-        height: f.calculateRem(16px);
-        background: v.$light;
-        border: f.calculateRem(1px) solid v.$gray;
-        border-radius: f.calculateRem(4px);
-        margin-right: f.calculateRem(10px);
-        display: inline-block;
-        cursor: pointer;
-    }
-}
