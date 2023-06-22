@@ -9,7 +9,9 @@
         &__img {
             width: 264px;
             height: 264px;
-            //max-width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         &__title {
             @include m.text-middle;

@@ -1,5 +1,5 @@
 <div [routerLink]="['/pet-preview',pet.id]" class="section-pets__product-card">
-    <div class="section-pets__product-card__img" [ngStyle]="{'background': ' url(' + photoUrl  + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'}"></div>
+    <div class="section-pets__product-card__img" [ngStyle]="{'background-image': ' url(' + photoUrl  + ')'}"></div>
     <h3 class="section-pets__product-card__title">{{pet?.name}}</h3>
     <div class="section-pets__product-card__box-txt">
         <span class="section-pets__product-card__box-txt__txt--medium">Gene:</span>

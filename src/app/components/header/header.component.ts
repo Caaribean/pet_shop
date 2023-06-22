@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
@@ -6,7 +6,7 @@ import { NavigationEnd, Router } from "@angular/router";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isOrange: boolean = true;
 
   constructor(private router: Router) { }
