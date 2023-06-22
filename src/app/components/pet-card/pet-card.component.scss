@@ -7,7 +7,11 @@
         @include m.box-card;
 
         &__img {
-            max-width: 100%;
+            width: 264px;
+            height: 264px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         &__title {
             @include m.text-middle;
