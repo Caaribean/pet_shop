@@ -64,8 +64,12 @@ export class Pet {
     public filterByColor(color: any) {
         return this.allPets.filter(pet => pet.color === color);
     }
-    //breed
-    //gender
 
+    public filterByBreed(breed: any) {
+        return this.allPets.filter(pet => pet.breed === breed);
+    }
 
+    public filterByGender(gender: any) {
+        return this.allPets.filter(pet => pet.gender === gender);
+    }
 }
