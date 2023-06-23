@@ -73,12 +73,24 @@
         }
 
         &__price {
-            @include m.text-price; 
+            @include m.text-price;
+            margin-bottom: 18px;
         }
 
-        &__table {
+        &__features {
             &__txt {
                 @include m.text-thin;
+            }
+
+            &__txt--value {
+                @include m.text-thin;
+            }
+
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid v.$light-gray;
+                padding-bottom: 10px;
             }
         }
 
@@ -87,6 +99,35 @@
             flex-wrap: wrap;
             align-items: center;
             padding-bottom: f.calculateRem(11px);
+        }
+
+        .box-about-pet {
+            width: 100%;
+        }
+    }
+
+    &__pet-customers {
+        padding-top: 44px;
+        padding-bottom: 26px; 
+
+        &__title {
+            @include m.text-subtitle;
+            color: v.$black;
+        }
+
+        &__img {
+            width: 328px;
+            height: 353px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+        }
+
+        .img-box {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
         }
     }
 }
