@@ -73,16 +73,23 @@
     <div class="section__pet-customers">
         <h2 class="section__pet-customers__title">Our lovely customer</h2>
         <div class="img-box">
-            <!-- <img class="section__pet-customers__img" src="../../../assets/img/dog/1/customer/1.png">
-            <img class="section__pet-customers__img" src="../../../assets/img/dog/1/customer/2.png">
-            <img class="section__pet-customers__img" src="../../../assets/img/dog/1/customer/3.png">
-            <img class="section__pet-customers__img" src="../../../assets/img/dog/1/customer/4.png">
-            <img class="section__pet-customers__img" src="../../../assets/img/dog/1/customer/5.png"> -->
             <div class="section__pet-customers__img" [ngStyle]="{'background-image': 'url(../../../assets/img/dog/1/customer/1.png)'}"></div>
             <div class="section__pet-customers__img" [ngStyle]="{'background-image': 'url(../../../assets/img/dog/1/customer/2.png)'}"></div>
             <div class="section__pet-customers__img" [ngStyle]="{'background-image': 'url(../../../assets/img/dog/1/customer/3.png)'}"></div>
             <div class="section__pet-customers__img" [ngStyle]="{'background-image': 'url(../../../assets/img/dog/1/customer/4.png)'}"></div>
             <div class="section__pet-customers__img" [ngStyle]="{'background-image': 'url(../../../assets/img/dog/1/customer/5.png)'}"></div>
         </div>
+    </div>
+    <div class="section__wrapper">
+        <div class="box">
+            <span class="section__wrapper__txt--small">{{'sectionWithPets.question' | translate}}</span>
+            <span class="section__wrapper__txt">See more puppies</span>
+        </div>
+    </div>
+    <div class="section__pets-wrapper">
+        <app-pet-card></app-pet-card>
+        <app-pet-card></app-pet-card>
+        <app-pet-card></app-pet-card>
+        <app-pet-card></app-pet-card>
     </div>
 </div>

@@ -130,4 +130,31 @@
             gap: 10px;
         }
     }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: f.calculateRem(28px);
+        padding-top: f.calculateRem(60px);
+
+        &__txt--small {
+            @include m.text-basic;
+            color: v.$neutral;
+        }
+
+        &__txt {
+            @include m.text-subtitle;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__pets-wrapper {
+        padding-bottom: 80px;
+        display: flex;
+        gap: 20px;
+    }
 }
