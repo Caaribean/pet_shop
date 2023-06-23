@@ -10,8 +10,6 @@ export class PetCardComponent implements OnInit {
   public photoUrl: string = '';
 
   ngOnInit() {
-  //this.photoUrl = '../assets/img/dog/' + this.pet.id + '/preview/1.png';
   this.photoUrl = `../assets/img/dog/${this.pet.id}/preview/1.png`;  
-  console.log(this.photoUrl);
   }
 }

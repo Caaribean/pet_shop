@@ -1,0 +1,92 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/functions.scss" as f;
+
+.section {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+
+    &__pet-container {
+        display: flex;
+        gap: 34px;
+        border-radius: 20px;
+        border: 1px solid v.$light-gray;
+        background: v.$white;
+        padding: 22px 20px;
+
+        &__main-img {
+            width: 560px;
+            height: 476px;
+            background-image: url("../../../assets/img/dog/1/preview/1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        &__small-img {
+            width: 94px;
+            height: 94px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        &__banner {
+            display: flex;
+            gap: 18px;
+            max-width: 560px;
+            padding: 9px 12px;
+            border-radius: 10px;
+            background: v.$gradient-banner;
+            margin-top: 27px;
+
+            &__icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            &__info {
+                @include m.text-small-banner;
+            }
+        }
+
+        &__txt {
+            @include m.text-thin;
+            margin: 0;
+        }
+
+        &__icon {
+            width: f.calculateRem(24px);
+            height: f.calculateRem(24px);
+        }
+
+        &__caption {
+            @include m.text-thin;
+            color: v.$dark-gray;
+        }
+
+        &__title {
+            @include m.text-subtitle;
+            color: v.$black;
+        }
+
+        &__price {
+            @include m.text-price; 
+        }
+
+        &__table {
+            &__txt {
+                @include m.text-thin;
+            }
+        }
+
+        .text-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-bottom: f.calculateRem(11px);
+        }
+    }
+}
