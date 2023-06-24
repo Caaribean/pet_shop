@@ -1,11 +1,12 @@
 <div class="section">
     <div class="section__pet-container">
         <div class="box-preview-img">
-            <div class="section__pet-container__main-img" [ngStyle]="{'background-image': ' url(' + photoMainUrl  + ')'}"></div>
-            <div class="box-small-img">
-                <div class="section__pet-container__small-img" [ngStyle]="{'background-image': ' url(' + photoOneUrl  + ')'}"></div>
-                <div class="section__pet-container__small-img" [ngStyle]="{'background-image': ' url(' + photoTwoUrl  + ')'}"></div>
-            </div>  
+            <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__main-img"></div>
+           <div class="box-small-img">
+                <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__small-img"></div>
+                <div [ngStyle]="{'background-image': ' url(' + previewPhotos[1]  + ')'}" class="section__pet-container__small-img"></div>
+                <div [ngStyle]="{'background-image': ' url(' + previewPhotos[2]  + ')'}" class="section__pet-container__small-img"></div>
+            </div>
             <div class="section__pet-container__banner">
                 <div class="banner-box">
                     <img class="section__pet-container__banner__icon" src="../../../assets/img/icon-heart.png">
@@ -25,47 +26,47 @@
                 <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
                 <span class="section__pet-container__txt">Large Dog</span>
                 <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
-                <span class="section__pet-container__txt">Shiba Inu Sepia</span>
+                <span class="section__pet-container__txt">{{singlePet?.name}}</span>
             </div>
             <span class="section__pet-container__caption">SKU #1000078</span>
-            <h2 class="section__pet-container__title">{{singlePet.name}}</h2>
-            <h3 class="section__pet-container__price">34.000.000 VND</h3>
+            <h2 class="section__pet-container__title">{{singlePet?.name}}</h2>
+            <h3 class="section__pet-container__price">{{singlePet?.price}}</h3>
             <div class="section__pet-container__features">
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Gender</span>
-                    <span class="section__pet-container__features__txt--value">{{singlePet.gender}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.gender}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Age</span>
-                    <span class="section__pet-container__features__txt--value">2 Months</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.age}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Size</span>
-                    <span class="section__pet-container__features__txt--value">Small</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.breed}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Color</span>
-                    <span class="section__pet-container__features__txt--value">Apricot</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.color}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Vaccinated</span>
-                    <span class="section__pet-container__features__txt--value">Yes</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.vaccinated}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Dewormed</span>
-                    <span class="section__pet-container__features__txt--value">Yes</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.dewormed}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Cert</span>
-                    <span class="section__pet-container__features__txt--value">Yes</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.cert}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Microchip</span>
-                    <span class="section__pet-container__features__txt--value">Yes</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.microchip}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">Location</span>
-                    <span class="section__pet-container__features__txt--value">Londyn</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.location}}</span>
                 </div>
             </div>
         </div>
@@ -73,11 +74,11 @@
     <div class="section__pet-customers">
         <h2 class="section__pet-customers__title">Our lovely customer</h2>
         <div class="img-box">
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + photoCustomerOneUrl  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + photoCustomerTwoUrl  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + photoCustomerThreeUrl  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + photoCustomerFourUrl  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + photoCustomerFiveUrl  + ')'}"></div>
+            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[0]  + ')'}"></div>
+            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[1]  + ')'}"></div>
+            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[2]  + ')'}"></div>
+            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[3]  + ')'}"></div>
+            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[4]  + ')'}"></div>
         </div>
     </div>
     <div class="section__wrapper">
@@ -87,9 +88,9 @@
         </div>
     </div>
     <div class="section__pets-wrapper">
+        <!-- <app-pet-card></app-pet-card>
         <app-pet-card></app-pet-card>
         <app-pet-card></app-pet-card>
-        <app-pet-card></app-pet-card>
-        <app-pet-card></app-pet-card>
+        <app-pet-card></app-pet-card> -->
     </div>
 </div>
