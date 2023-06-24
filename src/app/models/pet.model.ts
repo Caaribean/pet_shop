@@ -57,7 +57,10 @@ export class Pet {
         return this.allPets;
     }
 
+
     public getPetById(id: number) {
+        console.log("funkcja id");
+        console.log(id);
         return this.allPets.find(pet => pet.id === id);
     }
 

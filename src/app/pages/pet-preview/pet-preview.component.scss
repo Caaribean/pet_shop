@@ -8,43 +8,48 @@
 
     &__pet-container {
         display: flex;
-        gap: 34px;
-        border-radius: 20px;
-        border: 1px solid v.$light-gray;
+        gap: f.calculateRem(34px);
+        border-radius: f.calculateRem(20px);
+        border: f.calculateRem(1px) solid v.$light-gray;
         background: v.$white;
-        padding: 22px 20px;
+        padding: f.calculateRem(22px) f.calculateRem(20px);
 
         &__main-img {
-            width: 560px;
-            height: 476px;
-            background-image: url("../../../assets/img/dog/1/preview/1.png");
+            width: f.calculateRem(560px);
+            height: f.calculateRem(476px);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            border-radius: 10px;
-            margin-bottom: 12px;
+            border-radius: f.calculateRem(10px);
+            margin-bottom: f.calculateRem(12px);
         }
 
         &__small-img {
-            width: 94px;
-            height: 94px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-right: 10px;
+            width: f.calculateRem(94px);
+            height: f.calculateRem(94px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: f.calculateRem(6px);
+            margin-right: f.calculateRem(10px);
+        }
+
+        .box-small-img {
+            display: flex;
         }
 
         &__banner {
             display: flex;
-            gap: 18px;
-            max-width: 560px;
-            padding: 9px 12px;
-            border-radius: 10px;
+            gap: f.calculateRem(18px);
+            max-width: f.calculateRem(560px);
+            padding: f.calculateRem(9px) f.calculateRem(12px);
+            border-radius: f.calculateRem(10px);
             background: v.$gradient-banner;
-            margin-top: 27px;
+            margin-top: f.calculateRem(27px);
 
             &__icon {
-                width: 24px;
-                height: 24px;
+                width: f.calculateRem(24px);
+                height: f.calculateRem(24px);
             }
 
             &__info {
@@ -74,7 +79,7 @@
 
         &__price {
             @include m.text-price;
-            margin-bottom: 18px;
+            margin-bottom: f.calculateRem(18px);
         }
 
         &__features {
@@ -89,8 +94,8 @@
             .wrapper {
                 display: flex;
                 justify-content: space-between;
-                border-bottom: 1px solid v.$light-gray;
-                padding-bottom: 10px;
+                border-bottom: f.calculateRem(1px) solid v.$light-gray;
+                padding-bottom: f.calculateRem(10px);
             }
         }
 
@@ -107,8 +112,8 @@
     }
 
     &__pet-customers {
-        padding-top: 44px;
-        padding-bottom: 26px; 
+        padding-top: f.calculateRem(44px);
+        padding-bottom: f.calculateRem(26px); 
 
         &__title {
             @include m.text-subtitle;
@@ -116,18 +121,18 @@
         }
 
         &__img {
-            width: 328px;
-            height: 353px;
+            width: f.calculateRem(328px);
+            height: f.calculateRem(353px);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            border-radius: 10px;
+            border-radius: f.calculateRem(10px);
         }
 
         .img-box {
             display: flex;
             flex-wrap: nowrap;
-            gap: 10px;
+            gap: f.calculateRem(10px);
         }
     }
 
@@ -153,8 +158,8 @@
     }
 
     &__pets-wrapper {
-        padding-bottom: 80px;
+        padding-bottom: f.calculateRem(80px);
         display: flex;
-        gap: 20px;
+        gap: f.calculateRem(20px);
     }
 }
