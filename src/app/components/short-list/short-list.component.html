@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <div class="box">
+        <span class="wrapper__txt--small">{{'sectionWithPets.question' | translate}}</span>
+        <span class="wrapper__txt">{{'sectionWithPets.title' | translate}}</span>
+    </div>
+    <button class="wrapper__btn--light">{{'buttons.view' | translate}}</button>
+</div>
+<div class="products-wrapper">
+    <div *ngFor="let pet of pets.getAllPets()">
+        <app-pet-card [pet]="pet"></app-pet-card>
+     </div> 
+</div>
