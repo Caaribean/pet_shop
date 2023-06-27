@@ -3,10 +3,10 @@
         <span class="wrapper__txt--small">{{text | translate}}</span>
         <span class="wrapper__txt">{{title | translate}}</span>
     </div>
-    <button [class]="addClassButton">{{'buttons.view' | translate}}</button>
+    <a routerLink="pets"><button [class]="addClassButton">{{'buttons.view' | translate}}</button></a>
 </div>
 <div class="products-wrapper">
-    <div *ngFor="let pet of pets.getAllPets()">
+    <div *ngFor="let pet of pets.getRequiredNumberPets(countOfItems)">
         <app-pet-card [pet]="pet"></app-pet-card>
      </div> 
 </div>

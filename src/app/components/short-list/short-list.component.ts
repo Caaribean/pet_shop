@@ -10,6 +10,8 @@ export class ShortListComponent {
     @Input() title: string = '';
     @Input() text: string = '';
     @Input() addClassButton: string = '';
+    @Input() countOfItems: number = 0;
     
     public pets = new Pet();
+
 }

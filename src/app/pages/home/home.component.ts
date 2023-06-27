@@ -6,10 +6,4 @@ import { Component } from "@angular/core";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public howMuchPet: any;
-
-  ngOnInit(): void {
-    this.howMuchPet = this.howMuchPet.getRequiredNumberPets(0,8);
-  }
-
 }

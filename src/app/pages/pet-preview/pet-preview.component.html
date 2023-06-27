@@ -2,7 +2,7 @@
     <div class="section__pet-container">
         <div class="box-preview-img">
             <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__main-img"></div>
-           <div class="box-small-img">
+            <div class="box-small-img">
                 <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__small-img"></div>
                 <div [ngStyle]="{'background-image': ' url(' + previewPhotos[1]  + ')'}" class="section__pet-container__small-img"></div>
                 <div [ngStyle]="{'background-image': ' url(' + previewPhotos[2]  + ')'}" class="section__pet-container__small-img"></div>
@@ -81,7 +81,10 @@
             <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[4]  + ')'}"></div>
         </div>
     </div>
-    <div class="section__wrapper">
-        <app-short-list [addClassButton]="'button-no-exist'" [title]="'shortList.titlePreview'" [text]="'shortList.text'"></app-short-list>
-    </div>
+    <app-short-list
+        [addClassButton]="'button-no-exist'"
+        [title]="'shortList.titlePreview'"
+        [text]="'shortList.text'"
+        [countOfItems]="4"
+    ></app-short-list>
 </div>
