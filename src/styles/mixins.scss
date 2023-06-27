@@ -116,6 +116,20 @@
     color: v.$black;
 }
 
+@mixin text-small-banner {
+    font-size: f.calculateRem(14px);
+    font-weight: 700;
+    line-height: f.calculateRem(20px);
+    color: v.$very-dark-blue;
+}
+
+@mixin text-price {
+    font-size: f.calculateRem(20px);
+    font-weight: 700;
+    line-height: f.calculateRem(32px);
+    color: v.$very-dark-blue;
+}
+
 @mixin button-dark {
     padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
     background: v.$dark-blue;

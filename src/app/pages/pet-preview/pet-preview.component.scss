@@ -1,0 +1,165 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/functions.scss" as f;
+
+.section {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+
+    &__pet-container {
+        display: flex;
+        gap: f.calculateRem(34px);
+        border-radius: f.calculateRem(20px);
+        border: f.calculateRem(1px) solid v.$light-gray;
+        background: v.$white;
+        padding: f.calculateRem(22px) f.calculateRem(20px);
+
+        &__main-img {
+            width: f.calculateRem(560px);
+            height: f.calculateRem(476px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: f.calculateRem(10px);
+            margin-bottom: f.calculateRem(12px);
+        }
+
+        &__small-img {
+            width: f.calculateRem(94px);
+            height: f.calculateRem(94px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: f.calculateRem(6px);
+            margin-right: f.calculateRem(10px);
+        }
+
+        .box-small-img {
+            display: flex;
+        }
+
+        &__banner {
+            display: flex;
+            gap: f.calculateRem(18px);
+            max-width: f.calculateRem(560px);
+            padding: f.calculateRem(9px) f.calculateRem(12px);
+            border-radius: f.calculateRem(10px);
+            background: v.$gradient-banner;
+            margin-top: f.calculateRem(27px);
+
+            &__icon {
+                width: f.calculateRem(24px);
+                height: f.calculateRem(24px);
+            }
+
+            &__info {
+                @include m.text-small-banner;
+            }
+        }
+
+        &__txt {
+            @include m.text-thin;
+            margin: 0;
+        }
+
+        &__icon {
+            width: f.calculateRem(24px);
+            height: f.calculateRem(24px);
+        }
+
+        &__caption {
+            @include m.text-thin;
+            color: v.$dark-gray;
+        }
+
+        &__title {
+            @include m.text-subtitle;
+            color: v.$black;
+        }
+
+        &__price {
+            @include m.text-price;
+            margin-bottom: f.calculateRem(18px);
+        }
+
+        &__features {
+            &__txt {
+                @include m.text-thin;
+            }
+
+            &__txt--value {
+                @include m.text-thin;
+            }
+
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: f.calculateRem(1px) solid v.$light-gray;
+                padding-bottom: f.calculateRem(10px);
+            }
+        }
+
+        .text-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-bottom: f.calculateRem(11px);
+        }
+
+        .box-about-pet {
+            width: 100%;
+        }
+    }
+
+    &__pet-customers {
+        padding-top: f.calculateRem(44px);
+        padding-bottom: f.calculateRem(26px); 
+
+        &__title {
+            @include m.text-subtitle;
+            color: v.$black;
+        }
+
+        &__img {
+            width: f.calculateRem(328px);
+            height: f.calculateRem(353px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: f.calculateRem(10px);
+        }
+
+        .img-box {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: f.calculateRem(10px);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: f.calculateRem(28px);
+        padding-top: f.calculateRem(60px);
+
+        &__txt--small {
+            @include m.text-basic;
+            color: v.$neutral;
+        }
+
+        &__txt {
+            @include m.text-subtitle;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__pets-wrapper {
+        padding-bottom: f.calculateRem(80px);
+        display: flex;
+        gap: f.calculateRem(20px);
+    }
+}

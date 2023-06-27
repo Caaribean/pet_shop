@@ -1,0 +1,39 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/functions.scss" as f;
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: f.calculateRem(28px);
+    padding-top: f.calculateRem(60px);
+
+    &__txt--small {
+        @include m.text-basic;
+        color: v.$neutral;
+    }
+
+    &__txt {
+        @include m.text-subtitle;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: f.calculateRem(60px);
+}
+
+.button-exist {
+    @include m.button-light;
+}
+
+.button-no-exist {
+    display: none;
+}

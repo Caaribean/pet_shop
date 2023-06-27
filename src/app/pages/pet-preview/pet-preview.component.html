@@ -1,1 +1,83 @@
-PET PREVIEW!!!!!
+<div class="section">
+    <div class="section__pet-container">
+        <div class="box-preview-img">
+            <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__main-img"></div>
+            <div class="box-small-img">
+                <div *ngFor="let photo of previewPhotos" [ngStyle]="{'background-image': ' url(' + photo + ')'}" class="section__pet-container__small-img"></div>
+            </div>
+            <div class="section__pet-container__banner">
+                <div class="banner-box">
+                    <img class="section__pet-container__banner__icon" src="../../../assets/img/icon-heart.png">
+                    <span class="section__pet-container__banner__info">{{'petPreview.bannerInfoHealth' | translate}}</span>
+                </div> 
+                <div class="banner-box">
+                    <img class="section__pet-container__banner__icon" src="../../../assets/img/icon-pets.png">
+                    <span class="section__pet-container__banner__info">{{'petPreview.bannerInfoId' | translate}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="box-about-pet">
+            <div class="text-wrapper">
+                <span class="section__pet-container__txt">{{'additionalText.home' | translate}}</span>
+                <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
+                <span class="section__pet-container__txt">{{'additionalText.dog' | translate}}</span>
+                <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
+                <span class="section__pet-container__txt">{{'additionalText.largeDog' | translate}}</span>
+                <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
+                <span class="section__pet-container__txt">{{singlePet?.name}}</span>
+            </div>
+            <h2 class="section__pet-container__title">{{singlePet?.name}}</h2>
+            <h3 class="section__pet-container__price">{{singlePet?.price}}</h3>
+            <div class="section__pet-container__features">
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.gender}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.age}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.size' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.breed}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.color' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.color}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.vaccinat' | translate}}ed</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.vaccinated}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.dewormed' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.dewormed}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.cert}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.microchip' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.microchip}}</span>
+                </div>
+                <div class="wrapper">
+                    <span class="section__pet-container__features__txt">{{'characteristics.location' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.location}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section__pet-customers">
+        <h2 class="section__pet-customers__title">{{'additionalText.headerCustomers' | translate}}r</h2>
+        <div class="img-box">
+            <div *ngFor="let photo of customersPhotos" [ngStyle]="{'background-image': ' url(' + photo + ')'}" class="section__pet-customers__img"></div>
+        </div>
+    </div>
+    <app-short-list
+        [addClassButton]="'button-no-exist'"
+        [title]="'shortList.titlePreview'"
+        [text]="'shortList.text'"
+        [countOfItems]="4"
+    ></app-short-list>
+</div>

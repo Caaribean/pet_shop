@@ -72,4 +72,8 @@ export class Pet {
     public filterByGender(gender: any) {
         return this.allPets.filter(pet => pet.gender === gender);
     }
+
+    public getRequiredNumberPets(number: number) {
+        return this.allPets.slice(0,number);
+    }
 }
