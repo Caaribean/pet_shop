@@ -13,5 +13,4 @@ export class ShortListComponent {
     @Input() countOfItems: number = 0;
     
     public pets = new Pet();
-
 }

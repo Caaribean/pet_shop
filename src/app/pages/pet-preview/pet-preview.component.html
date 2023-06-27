@@ -3,9 +3,7 @@
         <div class="box-preview-img">
             <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__main-img"></div>
             <div class="box-small-img">
-                <div [ngStyle]="{'background-image': ' url(' + previewPhotos[0]  + ')'}" class="section__pet-container__small-img"></div>
-                <div [ngStyle]="{'background-image': ' url(' + previewPhotos[1]  + ')'}" class="section__pet-container__small-img"></div>
-                <div [ngStyle]="{'background-image': ' url(' + previewPhotos[2]  + ')'}" class="section__pet-container__small-img"></div>
+                <div *ngFor="let photo of previewPhotos" [ngStyle]="{'background-image': ' url(' + photo + ')'}" class="section__pet-container__small-img"></div>
             </div>
             <div class="section__pet-container__banner">
                 <div class="banner-box">
@@ -74,11 +72,7 @@
     <div class="section__pet-customers">
         <h2 class="section__pet-customers__title">Our lovely customer</h2>
         <div class="img-box">
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[0]  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[1]  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[2]  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[3]  + ')'}"></div>
-            <div class="section__pet-customers__img" [ngStyle]="{'background-image': ' url(' + customersPhotos[4]  + ')'}"></div>
+            <div *ngFor="let photo of customersPhotos" [ngStyle]="{'background-image': ' url(' + photo + ')'}" class="section__pet-customers__img"></div>
         </div>
     </div>
     <app-short-list

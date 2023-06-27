@@ -4,40 +4,33 @@
       "pets": "Pets",
       "petProducts": "Pet products"
     },
-
     "sectionWelcome" : {
       "title": "One more friend",
       "subTitle": "Thousands more fun!",
       "text": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!"
     },
-
     "sectionWithPets" : {
       "question": "Whats new?",
       "title": "Take a look at some of our pets"
     },
-
     "sectionWithProducts" : {
       "question": "Hard to choose right products for your pets?",
       "title": "Our Products"
     },
-
     "bannerBlue" : {
       "title": "One more friend",
       "subTitle": "Thousands more fun!",
       "text": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!"
     },
-
     "bannerOrange" : {
       "title": "Adoption",
       "subTitle": "We need help. so do they.",
       "text": "Adopt a pet and give it a home, it will be love you back unconditionally."
     },
-
     "petSellers" : {
       "text": "Proud to be part of",
       "textBold" : "Pet Sellers"
     },
-
     "footer": {
       "newsletterText": "Register now so you don't miss our programs",
       "home": "Home",
@@ -47,24 +40,20 @@
       "service": "Terms of Service",
       "policy": "Privacy Policy"
     },
-
     "buttons": {
       "explore": "Explore Now",
       "view": "View more",
       "subscribe": "Subscribe"
     },
-
     "additionalText": {
       "home": "Home",
       "dog": "Dog",
       "smallDog": "Small Dog"
     },
-
     "sectionWithSmallPets": {
       "title": "Small Dog",
       "text": "52 puppies"
     },
-
     "filters": {
       "title": "Filter",
       "gender": "Gender",
@@ -83,7 +72,6 @@
       "medium": "Medium",
       "large": "Large"
     },
-
     "shortList": {
       "titleHome": "Take a look at some of our pets",
       "titlePreview": "See more puppies",

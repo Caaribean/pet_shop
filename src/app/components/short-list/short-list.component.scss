@@ -2,10 +2,6 @@
 @use "../../../styles/variables.scss" as v;
 @use "../../../styles/functions.scss" as f;
 
-/* .section {
-    background-color: v.$white;
-    padding: 0 f.calculateRem(138px) 0; */
-
 .wrapper {
     display: flex;
     justify-content: space-between;
