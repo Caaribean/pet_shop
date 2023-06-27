@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Pet } from "src/app/models/pet.model";
 
 @Component({
@@ -7,5 +7,9 @@ import { Pet } from "src/app/models/pet.model";
     styleUrls: ['./short-list.component.scss']
 })
 export class ShortListComponent {
+    @Input() title: string = '';
+    @Input() text: string = '';
+    @Input() addClassButton: string = '';
+    
     public pets = new Pet();
 }

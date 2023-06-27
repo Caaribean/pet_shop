@@ -82,5 +82,11 @@
       "small": "Small",
       "medium": "Medium",
       "large": "Large"
+    },
+
+    "shortList": {
+      "titleHome": "Take a look at some of our pets",
+      "titlePreview": "See more puppies",
+      "text": "Whats new?"
     }
   } 

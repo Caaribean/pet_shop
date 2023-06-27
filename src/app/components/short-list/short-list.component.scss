@@ -21,10 +21,6 @@
         @include m.text-subtitle;
     }
 
-    &__btn--light {
-        @include m.button-light;
-    }
-
     .box {
         display: flex;
         flex-direction: column;
@@ -36,4 +32,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: f.calculateRem(60px);
+}
+
+.button-exist {
+    @include m.button-light;
+}
+
+.button-no-exist {
+    display: none;
 }
