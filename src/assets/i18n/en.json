@@ -48,7 +48,9 @@
     "additionalText": {
       "home": "Home",
       "dog": "Dog",
-      "smallDog": "Small Dog"
+      "smallDog": "Small Dog",
+      "largeDog": "Large Dog",
+      "headerCustomers": "Our lovely customer"
     },
     "sectionWithSmallPets": {
       "title": "Small Dog",
@@ -76,5 +78,20 @@
       "titleHome": "Take a look at some of our pets",
       "titlePreview": "See more puppies",
       "text": "Whats new?"
+    },
+    "characteristics": {
+      "gender": "Gender",
+      "age": "Age",
+      "size": "Size",
+      "color": "Color",
+      "vaccinat": "Vaccinat",
+      "dewormed": "Dewormed",
+      "cert": "Cert",
+      "microchip": "Microchip",
+      "location": "Location"
+    },
+    "petPreview": {
+      "bannerInfoHealth": "100% health guarantee for pets",
+      "bannerInfoId": "100% guarantee of pet identification"
     }
   } 

@@ -2,10 +2,12 @@
     <div class="section-pets__product-card__img" [ngStyle]="{'background-image': ' url(' + photoUrl  + ')'}"></div>
     <h3 class="section-pets__product-card__title">{{pet?.name}}</h3>
     <div class="section-pets__product-card__box-txt">
-        <span class="section-pets__product-card__box-txt__txt--medium">Gene:</span>
+        <span class="section-pets__product-card__box-txt__txt--medium">{{'characteristics.gender' |
+            translate}}</span>
         <span class="section-pets__product-card__box-txt__txt--bold">{{pet?.gender}}</span>
         <span class="section-pets__product-card__box-txt__txt--bold">-</span>
-        <span class="section-pets__product-card__box-txt__txt--medium">Age:</span>
+        <span class="section-pets__product-card__box-txt__txt--medium">{{'characteristics.age' |
+            translate}}</span>
         <span class="section-pets__product-card__box-txt__txt--bold">{{pet?.age}}</span>
     </div>
     <span class="section-pets__product-card__price">{{pet?.price}}</span>

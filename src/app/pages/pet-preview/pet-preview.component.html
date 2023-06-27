@@ -8,69 +8,68 @@
             <div class="section__pet-container__banner">
                 <div class="banner-box">
                     <img class="section__pet-container__banner__icon" src="../../../assets/img/icon-heart.png">
-                    <span class="section__pet-container__banner__info">100% health guarantee for pets</span>
-                </div>
+                    <span class="section__pet-container__banner__info">{{'petPreview.bannerInfoHealth' | translate}}</span>
+                </div> 
                 <div class="banner-box">
                     <img class="section__pet-container__banner__icon" src="../../../assets/img/icon-pets.png">
-                    <span class="section__pet-container__banner__info">100% guarantee of pet identification</span>
+                    <span class="section__pet-container__banner__info">{{'petPreview.bannerInfoId' | translate}}</span>
                 </div>
             </div>
         </div>
         <div class="box-about-pet">
             <div class="text-wrapper">
-                <span class="section__pet-container__txt">Home</span>
+                <span class="section__pet-container__txt">{{'additionalText.home' | translate}}</span>
                 <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
-                <span class="section__pet-container__txt">Dog</span>
+                <span class="section__pet-container__txt">{{'additionalText.dog' | translate}}</span>
                 <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
-                <span class="section__pet-container__txt">Large Dog</span>
+                <span class="section__pet-container__txt">{{'additionalText.largeDog' | translate}}</span>
                 <img class="section__pet-container__icon" src="../../../assets/img/icon-arrow.png">
                 <span class="section__pet-container__txt">{{singlePet?.name}}</span>
             </div>
-            <span class="section__pet-container__caption">SKU #1000078</span>
             <h2 class="section__pet-container__title">{{singlePet?.name}}</h2>
             <h3 class="section__pet-container__price">{{singlePet?.price}}</h3>
             <div class="section__pet-container__features">
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Gender</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.gender}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Age</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.age}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Size</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.size' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.breed}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Color</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.color' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.color}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Vaccinated</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.vaccinat' | translate}}ed</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.vaccinated}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Dewormed</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.dewormed' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.dewormed}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Cert</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.cert}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Microchip</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.microchip' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.microchip}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">Location</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.location' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.location}}</span>
                 </div>
             </div>
         </div>
     </div>
     <div class="section__pet-customers">
-        <h2 class="section__pet-customers__title">Our lovely customer</h2>
+        <h2 class="section__pet-customers__title">{{'additionalText.headerCustomers' | translate}}r</h2>
         <div class="img-box">
             <div *ngFor="let photo of customersPhotos" [ngStyle]="{'background-image': ' url(' + photo + ')'}" class="section__pet-customers__img"></div>
         </div>
