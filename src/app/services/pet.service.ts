@@ -10,37 +10,36 @@ import { Pet } from '../models/pet.model';
 export class PetService {
     private allPets: Pet[] = [
         new Pet(1, 'Poodle Yellow', 1200, Gender.Female, 3, Breed.Small, Color.Apricot, true, true, true, true, 'Londyn'),
-        // { id: 2, name: 'Poodle Brown', price: 1500, gender: Gender.Male, age: 3, breed: Breed.Small, color: Color.Red, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Londyn' },
-        // { id: 3, name: 'Alaskan Malamute', price: 2500, gender: Gender.Male, age: 12, breed: Breed.Large, color: Color.BlackWhite, vaccinated: true, dewormed: true, cert: true, microchip: false, location: 'Liverpool' },
-        // { id: 4, name: 'Poodle Black', price: 1700, gender: Gender.Male, age: 3, breed: Breed.Small, color: Color.Black, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Londyn' },
-        // { id: 5, name: 'Pomeranian', price: 3000, gender: Gender.Female, age: 4, breed: Breed.Small, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Birmingham' },
-        // { id: 6, name: 'Chihuahua Yellow', price: 1250, gender: Gender.Female, age: 6, breed: Breed.Small, color: Color.Tan, vaccinated: true, dewormed: true, cert: false, microchip: false, location: 'Bristol' },
-        // { id: 7, name: 'Chihuahua Black', price: 1350, gender: Gender.Male, age: 5, breed: Breed.Small, color: Color.Black, vaccinated: true, dewormed: true, cert: false, microchip: false, location: 'Bristol' },
-        // { id: 8, name: 'Maltese', price: 3200, gender: Gender.Male, age: 5, breed: Breed.Small, color: Color.Tan, vaccinated: true, dewormed: true, cert: false, microchip: true, location: 'Nottingham' },
-        // { id: 9, name: 'Akita', price: 2000, gender: Gender.Male, age: 10, breed: Breed.Large, color: Color.Apricot, vaccinated: false, dewormed: false, cert: false, microchip: false, location: 'Sheffield' },
-        // { id: 10, name: 'Beagle', price: 2200, gender: Gender.Female, age: 7, breed: Breed.Medium, color: Color.Apricot, vaccinated: true, dewormed: false, cert: true, microchip: true, location: 'Londyn' },
-        // { id: 11, name: 'Border Collie', price: 1800, gender: Gender.Female, age: 8, breed: Breed.Medium, color: Color.BlackWhite, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Bradford' },
-        // { id: 12, name: 'Buldog Black-White', price: 1000, gender: Gender.Male, age: 10, breed: Breed.Medium, color: Color.BlackWhite, vaccinated: true, dewormed: true, cert: true, microchip: false, location: 'Bradford' },
-        // { id: 13, name: 'Buldog Brown', price: 1100, gender: Gender.Male, age: 12, breed: Breed.Medium, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: false, location: 'Bradford' },
-        // { id: 14, name: 'Spaniel', price: 2650, gender: Gender.Female, age: 7, breed: Breed.Medium, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Sheffield' },
-        // { id: 15, name: 'Doberman', price: 4000, gender: Gender.Female, age: 10, breed: Breed.Large, color: Color.Black, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Nottingham' },
-        // { id: 16, name: 'Golden Retriever Gold', price: 2500, gender: Gender.Female, age: 14, breed: Breed.Large, color: Color.Apricot, vaccinated: true, dewormed: false, cert: true, microchip: true, location: 'Birmingham' },
-        // { id: 17, name: 'Jack Russel Terrier', price: 2770, gender: Gender.Male, age: 10, breed: Breed.Medium, color: Color.Tan, vaccinated: true, dewormed: true, cert: false, microchip: false, location: 'Bristol' },
-        // { id: 18, name: 'Labrador Retriever', price: 2950, gender: Gender.Female, age: 11, breed: Breed.Large, color: Color.Black, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Londyn' },
-        // { id: 19, name: 'German Shepherd', price: 3700, gender: Gender.Female, age: 15, breed: Breed.Large, color: Color.Red, vaccinated: false, dewormed: true, cert: true, microchip: true, location: 'Bristol' },
-        // { id: 20, name: 'Husky', price: 4000, gender: Gender.Male, age: 10, breed: Breed.Large, color: Color.Black, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Southampton' },
-        // { id: 21, name: 'Shih Tzu', price: 1890, gender: Gender.Male, age: 3, breed: Breed.Small, color: Color.Tan, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Liverpool' },
-        // { id: 22, name: 'Yorkshire Terrier', price: 2050, gender: Gender.Male, age: 6, breed: Breed.Small, color: Color.Red, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Liverpool' },
-        // { id: 23, name: 'Bernese Mountain', price: 2100, gender: Gender.Male, age: 15, breed: Breed.Large, color: Color.BlackWhite, vaccinated: true, dewormed: true, cert: false, microchip: false, location: 'Leeds' },
-        // { id: 24, name: 'Dalmatian', price: 4000, gender: Gender.Female, age: 10, breed: Breed.Large, color: Color.BlackWhite, vaccinated: true, dewormed: true, cert: false, microchip: true, location: 'Manchester' },
-        // { id: 25, name: 'Norfolk Terrier', price: 1500, gender: Gender.Male, age: 11, breed: Breed.Small, color: Color.Red, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Bristol' },
-        // { id: 26, name: 'Pembroke Welsh Corgi', price: 2500, gender: Gender.Male, age: 12, breed: Breed.Medium, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: false, location: 'Londyn' },
-        // { id: 27, name: 'Rottweiler', price: 4060, gender: Gender.Female, age: 10, breed: Breed.Large, color: Color.Black, vaccinated: true, dewormed: true, cert: true, microchip: false, location: 'Bradford' },
-        // { id: 28, name: 'Samoyed', price: 4000, gender: Gender.Female, age: 10, breed: Breed.Large, color: Color.Tan, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Manchester' },
-        // { id: 29, name: 'Shiba Inu', price: 3100, gender: Gender.Male, age: 12, breed: Breed.Medium, color: Color.Apricot, vaccinated: true, dewormed: true, cert: true, microchip: true, location: 'Newcastle' },
-        // { id: 30, name: 'Golden Retriever White', price: 2450, gender: Gender.Female, age: 13, breed: Breed.Large, color: Color.Tan, vaccinated: true, dewormed: false, cert: true, microchip: true, location: 'Birmingham' },
+        new Pet(2, 'Poodle Brown', 1500, Gender.Male, 3, Breed.Small, Color.Red, true, true, true, true, 'Londyn'),
+        new Pet(3, 'Alaskan Malamute', 2500, Gender.Male, 12, Breed.Large, Color.BlackWhite, true, true, true, false, 'Liverpool'),
+        new Pet(4, 'Poodle Black', 1700, Gender.Male, 3, Breed.Small, Color.Black, true, true, true, true, 'Londyn'),
+        new Pet(5, 'Pomeranian', 3000, Gender.Female, 4, Breed.Small, Color.Apricot, true, true, true, true, 'Birmingham'),
+        new Pet(6, 'Chihuahua Yellow', 1250, Gender.Female, 6, Breed.Small, Color.Tan, true, true, false, false, 'Bristol'),
+        new Pet(7, 'Chihuahua Black', 1350, Gender.Male, 5, Breed.Small, Color.Black, true, true, false, false, 'Bristol'),
+        new Pet(8, 'Maltese', 3200, Gender.Male, 5, Breed.Small, Color.Tan, true, true, false, true, 'Nottingham'),
+        new Pet(9, 'Akita', 2000, Gender.Male, 10, Breed.Large, Color.Apricot, false, false, false, false, 'Sheffield'),
+        new Pet(10, 'Beagle', 2200, Gender.Female, 7, Breed.Medium, Color.Apricot, true, false, true, true, 'Londyn'),
+        new Pet(11, 'Border Collie', 1800, Gender.Female, 8, Breed.Medium, Color.BlackWhite, true, true, true, true, 'Bradford'),
+        new Pet(12, 'Buldog Black-White', 1000, Gender.Male, 10, Breed.Medium, Color.BlackWhite, true, true, true, false, 'Bradford'),
+        new Pet(13, 'Buldog Brown', 1100, Gender.Male, 12, Breed.Medium, Color.Apricot, true, true, true, false, 'Bradford'),
+        new Pet(14, 'Spaniel', 2650, Gender.Female, 7, Breed.Medium, Color.Apricot, true, true, true, true, 'Sheffield'),
+        new Pet(15, 'Doberman', 4000, Gender.Female, 10, Breed.Large, Color.Black, true, true, true, true, 'Nottingham'),
+        new Pet(16, 'Golden Retriever Gold', 2500, Gender.Female, 14, Breed.Large, Color.Apricot, true, false, true, true, 'Birmingham'),
+        new Pet(17, 'Jack Russel Terrier', 2770, Gender.Male, 10, Breed.Medium, Color.Tan, true, true, false, false, 'Bristol'),
+        new Pet(18, 'Labrador Retriever', 2950, Gender.Female, 11, Breed.Large, Color.Black, true, true, true, true, 'Londyn'),
+        new Pet(19, 'German Shepherd', 3700, Gender.Female, 15, Breed.Large, Color.Red, false, true, true, true, 'Bristol'),
+        new Pet(20, 'Husky', 4000, Gender.Male, 10, Breed.Large, Color.Black, true, true, true, true, 'Southampton'),
+        new Pet(21, 'Shih Tzu', 1890, Gender.Male, 3, Breed.Small, Color.Tan, true, true, true, true, 'Liverpool'),
+        new Pet(22, 'Yorkshire Terrier', 2050, Gender.Male, 6, Breed.Small, Color.Red, true, true, true, true, 'Liverpool'),
+        new Pet(23, 'Bernese Mountain', 2100, Gender.Male, 15, Breed.Large, Color.BlackWhite, true, true, false, false, 'Leeds'),
+        new Pet(24, 'Dalmatian', 4000, Gender.Female, 10, Breed.Large, Color.BlackWhite, true, true, false, true, 'Manchester'),
+        new Pet(25, 'Norfolk Terrier', 1500, Gender.Male, 11, Breed.Small, Color.Red, true, true, true, true, 'Bristol'),
+        new Pet(26, 'Pembroke Welsh Corgi', 2500, Gender.Male, 12, Breed.Medium, Color.Apricot, true, true, true, false, 'Londyn'),
+        new Pet(27, 'Rottweiler', 4060, Gender.Female, 10, Breed.Large, Color.Black, true, true, true, false, 'Bradford'),
+        new Pet(28, 'Samoyed', 4000, Gender.Female, 10, Breed.Large, Color.Tan, true, true, true, true, 'Manchester'),
+        new Pet(29, 'Shiba Inu', 3100, Gender.Male, 12, Breed.Medium, Color.Apricot, true, true, true, true, 'Newcastle'),
+        new Pet(30, 'Golden Retriever White', 2450, Gender.Female, 13, Breed.Large, Color.Tan, true, false, true, true, 'Birmingham'),
     ];
-
 
     public getAllPets(): Pet[] {
         return this.allPets;
@@ -65,5 +64,4 @@ export class PetService {
     public getRequiredNumberPets(number: number) {
         return this.allPets.slice(0, number);
     }
-
 } 
