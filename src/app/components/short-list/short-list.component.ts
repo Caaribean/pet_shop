@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { Pet } from "src/app/models/pet.model";
+import { PetService } from "src/app/services/pet.service";
 
 @Component({
     selector: 'app-short-list',
@@ -11,6 +11,6 @@ export class ShortListComponent {
     @Input() text: string = '';
     @Input() addClassButton: string = '';
     @Input() countOfItems: number = 0;
-    
-    public pets = new Pet();
+
+    constructor(public petService: PetService) { }
 }
