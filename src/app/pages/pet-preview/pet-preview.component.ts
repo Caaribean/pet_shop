@@ -11,6 +11,8 @@ export class PetPreviewComponent {
     public id: number | null = null;
     public previewPhotos:string[] = [];
     public customersPhotos:string[] = [];
+    public mainPhoto: string = '';
+    public firstPhoto: string = '';
  
     public singlePet: any = new Pet();
  
@@ -18,6 +20,8 @@ export class PetPreviewComponent {
  
     ngOnInit(): void {
         this.id = Number(this.route.snapshot.paramMap.get('id'));
+
+        this.mainPhoto = `../assets/img/dog/${this.id}/preview/1.png`;
  
         this.previewPhotos=[
             `../assets/img/dog/${this.id}/preview/1.png`,
@@ -32,6 +36,11 @@ export class PetPreviewComponent {
             `../assets/img/dog/${this.id}/customer/5.png`
         ];
  
+        this.firstPhoto = this.previewPhotos[0];
         this.singlePet = this.singlePet.getPetById(this.id);
+    }
+
+    public changeFirstPhoto(url: string) {
+        this.firstPhoto = url;
     }
 }  
