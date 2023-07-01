@@ -1,4 +1,5 @@
 <div class="section">
+    <div class="container">
     <div class="section__pet-container">
         <div class="box-preview-img">
             <div [ngStyle]="{'background-image': ' url(' + firstPhoto  + ')'}" class="section__pet-container__main-img">
@@ -38,7 +39,7 @@
                     <span class="section__pet-container__features__txt--value">{{singlePet?.gender}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.age' | translate}}</span>
                     <span class="section__pet-container__features__txt--value">{{singlePet?.age}}</span>
                 </div>
                 <div class="wrapper">
@@ -51,22 +52,22 @@
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.vaccinat' |
-                        translate}}ed</span>
-                    <span class="section__pet-container__features__txt--value">{{singlePet?.vaccinated}}</span>
+                        translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.vaccinated | yesNo}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.dewormed' |
                         translate}}</span>
-                    <span class="section__pet-container__features__txt--value">{{singlePet?.dewormed}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.dewormed | yesNo}}</span>
                 </div>
                 <div class="wrapper">
-                    <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
-                    <span class="section__pet-container__features__txt--value">{{singlePet?.cert}}</span>
+                    <span class="section__pet-container__features__txt">{{'characteristics.cert' | translate}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.cert | yesNo}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.microchip' |
                         translate}}</span>
-                    <span class="section__pet-container__features__txt--value">{{singlePet?.microchip}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.microchip | yesNo}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.location' |
@@ -85,4 +86,5 @@
     </div>
     <app-short-list [addClassButton]="'button-no-exist'" [title]="'shortList.titlePreview'" [text]="'shortList.text'"
         [countOfItems]="4"></app-short-list>
+</div>
 </div>
