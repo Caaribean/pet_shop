@@ -28,8 +28,8 @@
         <span class="section-pets__txt">Products for pets</span>
         <span class="section-pets__txt--small">18 products</span>
         <div class="pets-wrapper">
-            <div>
-                <app-pet-card></app-pet-card>
+            <div *ngFor="let product of listOfProducts">
+                <app-product-card [product]="product"></app-product-card>
             </div>
         </div>
         <div class="section-pets__pagination">

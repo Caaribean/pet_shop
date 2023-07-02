@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from "@angular/core";
 export class PetCardComponent implements OnInit {
   @Input() pet: any;
   public photoUrl: string = '';
+  @Input() product: any; 
 
   ngOnInit() {
   this.photoUrl = `../assets/img/dog/${this.pet.id}/preview/1.png`;  

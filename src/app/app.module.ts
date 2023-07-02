@@ -18,6 +18,8 @@ import { ShortListComponent } from './components/short-list/short-list.component
 import { PetService } from './services/pet.service';
 import { YesNoPipe } from './pipe/yes-no.pipe';
 import { ProductPreviewComponent } from './pages/product-preview/product-preview.component';
+import { ProductService } from './services/product.service';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -36,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PetPreviewComponent,
     ShortListComponent,
     YesNoPipe,
-    ProductPreviewComponent
+    ProductPreviewComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
   ],
   providers: [
-    PetService
+    PetService,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })

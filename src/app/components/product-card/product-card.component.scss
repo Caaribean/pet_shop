@@ -1,0 +1,41 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/functions.scss" as f;
+
+.section-products {
+    &__product-card {
+        @include m.box-card;
+
+        &__img {
+            width: 250px;
+            height: 264px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &__title {
+            @include m.text-middle;
+            color: v.$black;
+            margin-bottom: f.calculateRem(4px);
+        }
+
+        &__box-txt {
+            display: flex;
+            gap: f.calculateRem(4px);
+
+            &__txt--medium {
+                @include m.text-very-small;
+            }
+
+            &__txt--bold {
+                @include m.text-very-small;
+                font-weight: 700;
+            }
+        }
+
+        &__price {
+            @include m.text-number-price;
+            margin-top: f.calculateRem(4px);
+        }
+    }
+}
