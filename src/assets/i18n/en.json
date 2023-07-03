@@ -55,7 +55,11 @@
     "sectionWithSmallPets": {
       "title": "Small Dog",
       "text": "52 puppies"
-    },
+    },  
+    "sectionWithPetProducts": {
+      "title": "Product for pets",
+      "text": "18 products"
+    }, 
     "filters": {
       "title": "Filter",
       "gender": "Gender",
@@ -72,7 +76,10 @@
       "breed": "Breed",
       "small": "Small",
       "medium": "Medium",
-      "large": "Large"
+      "large": "Large",
+      "toys": "Toys",
+      "food": "Food",
+      "accessories": "Accessories"
     },
     "shortList": {
       "titleHome": "Take a look at some of our pets",
@@ -88,7 +95,8 @@
       "dewormed": "Dewormed",
       "cert": "Cert",
       "microchip": "Microchip",
-      "location": "Location"
+      "location": "Location",
+      "type": "Product Type"
     },
     "petPreview": {
       "bannerInfoHealth": "100% health guarantee for pets",

@@ -1,0 +1,35 @@
+<div class="section">
+    <div class="container">
+    <div class="section__product-container">
+        <div class="box-preview-img">
+            <div [ngStyle]="{'background-image': ' url(' + firstPhoto  + ')'}" class="section__product-container__main-img">
+            </div>
+            <div class="box-small-img">
+                <div *ngFor="let photo of previewPhotos" (click)="changeFirstPhoto(photo)"
+                    [ngStyle]="{'background-image': ' url(' + photo + ')'}" class="section__product-container__small-img">
+                </div>
+            </div>
+        </div>
+        <div class="box-about-pet">
+            <div class="text-wrapper">
+                <span class="section__product-container__txt">{{'additionalText.home' | translate}}</span>
+                <img class="section__product-container__icon" src="../../../assets/img/icon-arrow.png">
+                <span class="section__product-container__txt">Product</span>
+                <img class="section__product-container__icon" src="../../../assets/img/icon-arrow.png">
+                <span class="section__product-container__txt">Product Type</span>
+                <img class="section__product-container__icon" src="../../../assets/img/icon-arrow.png">
+                <span class="section__product-container__txt">{{singleProduct?.name}}</span>
+            </div>
+            <h2 class="section__product-container__title">{{singleProduct?.name}}</h2>
+            <h3 class="section__product-container__price">{{singleProduct?.price}}</h3>
+            <div class="section__product-container__features"> 
+                <div class="wrapper">
+                    <span class="section__product-container__features__txt">{{'characteristics.type' |
+            translate}}</span>
+                    <span class="section__product-container__features__txt--value">{{singleProduct?.type}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

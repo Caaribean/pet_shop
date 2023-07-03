@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PetsComponent } from './pages/pets/pets.component';
 import { PetProductsComponent } from './pages/pet-products/pet-products.component';
 import { PetPreviewComponent } from './pages/pet-preview/pet-preview.component';
+import { ProductPreviewComponent } from './pages/product-preview/product-preview.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'pets', component: PetsComponent },
   { path: 'pet-preview/:id', component: PetPreviewComponent },
   { path: 'pet-products', component: PetProductsComponent },
+  { path: 'product-preview/:id', component: ProductPreviewComponent },
 ];
 
 @NgModule({
