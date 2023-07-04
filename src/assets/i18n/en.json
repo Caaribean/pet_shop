@@ -84,7 +84,9 @@
     "shortList": {
       "titleHome": "Take a look at some of our pets",
       "titlePreview": "See more puppies",
-      "text": "Whats new?"
+      "titleProducts": "Our Products", 
+      "text": "Whats new?",
+      "textProducts": "Hard to choose right products for your pets?"
     },
     "characteristics": {
       "gender": "Gender",
