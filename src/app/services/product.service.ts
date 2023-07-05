@@ -37,10 +37,6 @@ export class ProductService {
         return this.allProducts.find(product => product.id === id);
     }
 
-    public filterByColor(type: any): Product[] {
-        return this.allProducts.filter(product => type.ProductType === type);
-    }
-
     public getRequiredNumberProducts(number: number) {
         return this.allProducts.slice(0, number);
     }

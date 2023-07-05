@@ -102,6 +102,8 @@
     },
     "petPreview": {
       "bannerInfoHealth": "100% health guarantee for pets",
-      "bannerInfoId": "100% guarantee of pet identification"
+      "bannerInfoId": "100% guarantee of pet identification",
+      "product": "Product",
+      "productType": "Product Type"
     }
   } 
