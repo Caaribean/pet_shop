@@ -1,0 +1,135 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/functions.scss" as f;
+
+.section-pets {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+    display: flex;
+    padding-top: f.calculateRem(35px);
+
+    &__filters {
+        &__title {
+            @include m.text-subtitle;
+        }
+
+        &__category {
+            display: flex;
+            flex-direction: column;
+            border-bottom: f.calculateRem(1px) solid v.$gray;
+            padding-bottom: f.calculateRem(10px);
+
+            &__title {
+                @include m.text-title-category;
+                margin-bottom: f.calculateRem(10px);
+                margin-top: f.calculateRem(14px);
+            }
+
+            &__color {
+                width: f.calculateRem(15px);
+                height: f.calculateRem(15px);
+                border-radius: f.calculateRem(10px);
+                display: inline-block;
+
+                &.red {
+                    background: v.$red;
+                }
+
+                &.apricot {
+                    background: v.$apricot;
+                }
+
+                &.black {
+                    background: v.$very-black;
+                }
+
+                &.black-white {
+                    background: v.$black-white;
+                }
+
+                &.silver {
+                    background: v.$silver;
+                }
+
+                &.tan {
+                    background: v.$tan;
+                }
+            }
+
+            &__option {
+                @include m.text-thin;
+                color: v.$black;
+                margin-bottom: f.calculateRem(8px);
+
+                .checkbox {
+                    width: f.calculateRem(16px);
+                    height: f.calculateRem(16px);
+                    background: v.$light;
+                    border: f.calculateRem(1px) solid v.$gray;
+                    border-radius: f.calculateRem(4px);
+                    margin-right: f.calculateRem(5px);
+                }
+            }
+
+            &__options {
+                display: flex;
+                gap: f.calculateRem(20px);
+
+                &__input {
+                    @include m.text-thin;
+                    width: 40%;
+                    outline: 0;
+                    border-width: 0 0 f.calculateRem(1px);
+                    border-color: v.$gray;
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    &__txt {
+        @include m.text-subtitle;
+        margin-right: f.calculateRem(14px);
+    }
+
+    &__txt--small {
+        @include m.text-thin;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: f.calculateRem(30px);
+        padding-top: f.calculateRem(40px);
+        padding-bottom: f.calculateRem(60px);
+
+        &__icon {
+            width: f.calculateRem(24px);
+            height: f.calculateRem(24px);
+        }
+
+        &__page-number {
+            @include m.text-numbers;
+        }
+
+        &__page-number--checked {
+            @include m.text-numbers;
+            color: v.$white;
+            padding: f.calculateRem(6px) f.calculateRem(13px) f.calculateRem(4px);
+            background: v.$dark-blue;
+            border-radius: f.calculateRem(8px);
+        }
+    }
+
+    .pets-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: f.calculateRem(14px);
+    }
+
+    .box {
+        margin-bottom: f.calculateRem(14px);
+    }
+}

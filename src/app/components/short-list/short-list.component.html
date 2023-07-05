@@ -8,5 +8,8 @@
 <div class="products-wrapper">
     <div *ngFor="let pet of petService.getRequiredNumberPets(countOfItems)">
         <app-pet-card [pet]="pet"></app-pet-card>
-     </div> 
+     </div>
+    <div *ngFor="let product of productService.getRequiredNumberProducts(countOfProducts)">
+        <app-product-card [product]="product"></app-product-card>
+     </div>
 </div>
