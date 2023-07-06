@@ -154,4 +154,15 @@
     .box {
         margin-bottom: f.calculateRem(14px);
     }
+
+    .category-box {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .btn-dark {
+        @include m.button-dark; 
+        text-transform: uppercase;
+        margin-top: f.calculateRem(10px);
+    }
 }

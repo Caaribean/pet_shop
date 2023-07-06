@@ -45,6 +45,15 @@ export class PetService {
         return this.allPets;
     }
 
+
+    public filter(genderFilters: string[], breedFilters: string[], colorFilters: string[]): Pet[] {
+        return this.allPets
+            .filter(pet => genderFilters.length ? genderFilters.findIndex(x => x === pet.gender) !== -1 : true)
+            .filter(pet => breedFilters.length ? breedFilters.findIndex(x => x === pet.breed) !== -1 : true)
+            .filter(pet => colorFilters.length ? colorFilters.findIndex(x => x === pet.color) !== -1 : true);
+
+    }
+
     public getPetById(id: number) {
         return this.allPets.find(pet => pet.id === id);
     }
@@ -55,10 +64,6 @@ export class PetService {
 
     public filterByBreed(breed: any) {
         return this.allPets.filter(pet => pet.breed === breed);
-    }
-
-    public filterByGender(gender: any) {
-        return this.allPets.filter(pet => pet.gender === gender);
     }
 
     public getRequiredNumberPets(number: number) {

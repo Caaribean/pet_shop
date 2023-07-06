@@ -43,7 +43,8 @@
     "buttons": {
       "explore": "Explore Now",
       "view": "View more",
-      "subscribe": "Subscribe"
+      "subscribe": "Subscribe",
+      "filter": "Filter"
     },
     "additionalText": {
       "home": "Home",
