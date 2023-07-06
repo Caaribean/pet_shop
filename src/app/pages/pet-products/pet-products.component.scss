@@ -137,4 +137,10 @@
     .box {
         margin-bottom: f.calculateRem(14px);
     }
+
+    .btn-dark {
+        @include m.button-dark; 
+        text-transform: uppercase;
+        margin-top: f.calculateRem(10px);
+    }
 }
