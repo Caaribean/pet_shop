@@ -27,6 +27,11 @@
       "subTitle": "We need help. so do they.",
       "text": "Adopt a pet and give it a home, it will be love you back unconditionally."
     },
+    "bannerToys" : {
+      "title": "Useful products",
+      "subTitle": "Everything your pet needs.",
+      "text": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!"
+    },
     "petSellers" : {
       "text": "Proud to be part of",
       "textBold" : "Pet Sellers"
@@ -58,7 +63,7 @@
       "text": "52 puppies"
     },  
     "sectionWithPetProducts": {
-      "title": "Product for pets",
+      "title": "Products for pets",
       "text": "18 products"
     }, 
     "filters": {

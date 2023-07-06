@@ -2,6 +2,11 @@
 @use "../../../styles/variables.scss" as v;
 @use "../../../styles/functions.scss" as f;
 
+.section {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+}
+
 .section-pets {
     background-color: v.$white;
     padding: 0 f.calculateRem(138px) 0;

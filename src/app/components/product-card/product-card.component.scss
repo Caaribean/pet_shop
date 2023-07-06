@@ -12,6 +12,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            cursor: pointer;
         }
         &__title {
             @include m.text-middle;
