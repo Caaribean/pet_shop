@@ -58,14 +58,6 @@ export class PetService {
         return this.allPets.find(pet => pet.id === id);
     }
 
-    public filterByColor(color: any): Pet[] {
-        return this.allPets.filter(pet => pet.color === color);
-    }
-
-    public filterByBreed(breed: any) {
-        return this.allPets.filter(pet => pet.breed === breed);
-    }
-
     public getRequiredNumberPets(number: number) {
         return this.allPets.slice(0, number);
     }
