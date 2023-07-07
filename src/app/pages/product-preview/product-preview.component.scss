@@ -80,6 +80,11 @@
         &__price {
             @include m.text-price;
             margin-bottom: f.calculateRem(18px);
+            display: inline-block;
+
+            &::first-letter {
+                padding-right: f.calculateRem(2px);
+            }
         }
 
         &__features {

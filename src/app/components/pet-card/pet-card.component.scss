@@ -37,6 +37,11 @@
         &__price {
             @include m.text-number-price;
             margin-top: f.calculateRem(4px);
+            display: inline-block;
+
+            &::first-letter {
+                padding-right: f.calculateRem(2px);
+            }
         }
     }
 }

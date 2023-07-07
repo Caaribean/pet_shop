@@ -32,7 +32,7 @@
                 <span class="section__pet-container__txt">{{singlePet?.name}}</span>
             </div>
             <h2 class="section__pet-container__title">{{singlePet?.name}}</h2>
-            <h3 class="section__pet-container__price">{{singlePet?.price}}</h3>
+            <h3 class="section__pet-container__price">{{singlePet?.price | currency:"USD"}}</h3>
             <div class="section__pet-container__features">
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.gender' | translate}}</span>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.age' | translate}}</span>
-                    <span class="section__pet-container__features__txt--value">{{singlePet?.age}}</span>
+                    <span class="section__pet-container__features__txt--value">{{singlePet?.age + ' months'}}</span>
                 </div>
                 <div class="wrapper">
                     <span class="section__pet-container__features__txt">{{'characteristics.size' | translate}}</span>
