@@ -14,55 +14,19 @@
         <div class="section-pets__filters__title">{{'filters.title' | translate}}</div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.gender' | translate}}</span>
-            <label class="section-pets__filters__category__option">
-                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.male' | translate}}
-            </label>
-            <label class="section-pets__filters__category__option">
-                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.female' | translate}}
+            <label *ngFor="let gender of listOfGenders" class="section-pets__filters__category__option">
+                <input (change)="updateFilters(gender, filtersOfGender)" class="checkbox" type="checkbox"
+                    name="checkbox">{{'filters.'+gender |
+                translate}}
             </label>
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.color' | translate}}</span>
             <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color red"></span>
-                    {{'filters.red' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color apricot"></span>
-                    {{'filters.apricot' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color black"></span>
-                    {{'filters.black' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color black-white"></span>
-                    {{'filters.blackWhite' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color silver"></span>
-                    {{'filters.silver' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color tan"></span>
-                    {{'filters.tan' | translate}}
+                <label *ngFor="let color of listOfColors" class="section-pets__filters__category__option">
+                    <input (change)="updateFilters(color,filtersOfColor)" class="checkbox" type="checkbox" name="checkbox">
+                    <span [ngClass]="color" class="section-pets__filters__category__color red"></span>
+                    {{('filters.'+color) | translate}} 
                 </label>
             </div>
         </div>
@@ -75,16 +39,12 @@
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.breed' | translate}}</span>
-            <label class="section-pets__filters__category__option">
-                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.small' | translate}}
-            </label>
-            <label class="section-pets__filters__category__option">
-                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.medium' | translate}}
-            </label>
-            <label class="section-pets__filters__category__option">
-                <input class="checkbox" type="checkbox" name="checkbox">{{'filters.large' | translate}}
+            <label *ngFor="let breed of listOfBreeds" class="section-pets__filters__category__option">
+                <input (change)="updateFilters(breed,filtersOfBreed)" class="checkbox" type="checkbox"
+                    name="checkbox">{{('filters.'+breed) | translate}}
             </label>
         </div>
+        <button class="btn-dark" (click)="filter()">{{'buttons.filter' | translate}}</button>
     </div>
     <div class="box col-9">
         <span class="section-pets__txt">{{'sectionWithSmallPets.title' | translate}}</span>

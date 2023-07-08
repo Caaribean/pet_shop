@@ -2,7 +2,7 @@ export enum Color {
     Red = 'red',
     Apricot = 'apricot',
     Black = 'black',
-    BlackWhite = 'black&white',
+    BlackWhite = 'blackwhite', 
     Silver = 'silver',
     Tan = 'tan'
 }

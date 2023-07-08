@@ -21,7 +21,7 @@
                 <span class="section__product-container__txt">{{singleProduct?.name}}</span>
             </div>
             <h2 class="section__product-container__title">{{singleProduct?.name}}</h2>
-            <h3 class="section__product-container__price">{{singleProduct?.price}}</h3>
+            <h3 class="section__product-container__price">{{singleProduct?.price | currency:"USD"}}</h3>
             <div class="section__product-container__features"> 
                 <div class="wrapper">
                     <span class="section__product-container__features__txt">{{'characteristics.type' |

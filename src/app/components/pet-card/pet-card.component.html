@@ -8,7 +8,7 @@
         <span class="section-pets__product-card__box-txt__txt--bold">-</span>
         <span class="section-pets__product-card__box-txt__txt--medium">{{'characteristics.age' |
             translate}}</span>
-        <span class="section-pets__product-card__box-txt__txt--bold">{{pet?.age}}</span>
+        <span class="section-pets__product-card__box-txt__txt--bold">{{pet?.age + ' months'}}</span>
     </div>
-    <span class="section-pets__product-card__price">{{pet?.price}}</span>
+    <span class="section-pets__product-card__price">{{pet?.price | currency:'USD'}}</span>
 </div>

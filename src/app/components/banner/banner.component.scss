@@ -1,7 +1,6 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use '../../../styles/functions.scss' as f;
-
+@use "../../../styles/functions.scss" as f;
 
 .banner {
     display: flex;
@@ -82,7 +81,7 @@
         }
 
         .banner__box-txt__header--small {
-            color: v.$white; 
+            color: v.$white;
         }
 
         .banner__box-txt__txt {
@@ -90,7 +89,21 @@
         }
 
         .banner__box-txt__btn--dark {
-            @include m.button-white;
+            display: none; 
+        }
+    }
+
+    &.toys {
+        background-image: url("../../../assets/img/toys.png");
+        background-size: cover;
+        background-position: center;
+
+        .banner__box-txt {
+            align-items: end;
+        }
+
+        .banner__box-txt__btn--dark {
+            display: none; 
         }
     }
 

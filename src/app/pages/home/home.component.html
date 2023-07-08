@@ -1,60 +1,64 @@
-<div class="section-welcome">
-    <div class="section-welcome__box-txt col-5">
-        <h1 class="section-welcome__box-txt__header">{{'sectionWelcome.title' | translate}}</h1>
-        <h2 class="section-welcome__box-txt__header--small">{{'sectionWelcome.subTitle' | translate}}</h2>
-        <span class="section-welcome__box-txt__txt">{{'sectionWelcome.text' | translate}}</span>
-        <button class="section-welcome__box-txt__btn--dark">{{'buttons.explore' | translate}}</button>
+<div class="container">
+    <div class="section-welcome yellow">
+        <div class="section-welcome__box-txt col-5">
+            <h1 class="section-welcome__box-txt__header">{{'sectionWelcome.title' | translate}}</h1>
+            <h2 class="section-welcome__box-txt__header--small">{{'sectionWelcome.subTitle' | translate}}</h2>
+            <span class="section-welcome__box-txt__txt">{{'sectionWelcome.text' | translate}}</span>
+            <a routerLink="pets">
+                <button class="section-welcome__box-txt__btn--dark">{{'buttons.explore' | translate}}</button>
+            </a>
+        </div>
+        <div class="section-welcome__box-img col-7">
+            <img class="section-welcome__box-img__img" src="../assets/img/woman-dog.png" alt="">
+        </div>
     </div>
-    <div class="section-welcome__box-img col-7">
-        <img class="section-welcome__box-img__img" src="../assets/img/woman-dog.png" alt="">
+    <div class="section">
+        <app-short-list
+            [addClassButton]="'button-exist'"
+            [title]="'shortList.titleHome'"
+            [text]="'shortList.text'"
+            [countOfItems]="8"
+        ></app-short-list>
     </div>
-</div>
-<div class="section">
-    <app-short-list
-        [addClassButton]="'button-exist'"
-        [title]="'shortList.titleHome'"
-        [text]="'shortList.text'"
-        [countOfItems]="8"
-    ></app-short-list>
-</div>
-<div class="section">
-    <app-banner
-        [className]="'blue'"
-        [title]="'bannerBlue.title'"
-        [subtitle]="'bannerBlue.subTitle'"
-        [text]="'bannerBlue.text'"
-    ></app-banner>
-</div>
-<div class="section">
-    <app-short-list
-        [addClassButton]="'button-exist'"
-        [title]="'shortList.titleProducts'"
-        [text]="'shortList.textProducts'"
-        [countOfItems]="0"
-        [countOfProducts]="8"
-    ></app-short-list>
-</div>
-<div class="section">
-    <app-banner
-        [className]="'orange'"
-        [title]="'bannerOrange.title'"
-        [subtitle]="'bannerOrange.subTitle'"
-        [text]="'bannerOrange.text'"
-        [img]="'../assets/img/icon-paw.png'"
-    ></app-banner>
-</div>
-<div class="section sellers">
-    <div class="section__sellers-txt">
-        <span class="section__sellers-txt__txt--small">{{'petSellers.text' | translate}}</span>
-        <span class="section__sellers-txt__txt--big">{{'petSellers.textBold' | translate}}</span>
+    <div class="section">
+        <app-banner
+            [className]="'blue'"
+            [title]="'bannerBlue.title'"
+            [subtitle]="'bannerBlue.subTitle'"
+            [text]="'bannerBlue.text'"
+        ></app-banner>
     </div>
-    <div class="section__sellers">
-        <img class="section__sellers__img" src="../assets/img/logo-sheba.png" alt="">
-        <img class="section__sellers__img" src="../assets/img/logo-whiskas.png" alt="">
-        <img class="section__sellers__img" src="../assets/img/logo-bakers.png" alt="">
-        <img class="section__sellers__img" src="../assets/img/logo-felix.png" alt="">
-        <img class="section__sellers__img" src="../assets/img/logo-goodboy.png" alt="">
-        <img class="section__sellers__img" src="../assets/img/logo-butchers.png" alt="">
-        <img class="section__sellers__img" src="../assets/img/logo-pedigree.png" alt="">
+    <div class="section">
+        <app-short-list
+            [addClassButton]="'button-exist'"
+            [title]="'shortList.titleProducts'"
+            [text]="'shortList.textProducts'"
+            [countOfItems]="0"
+            [countOfProducts]="8"
+        ></app-short-list>
+    </div>
+    <div class="section">
+        <app-banner
+            [className]="'orange'"
+            [title]="'bannerOrange.title'"
+            [subtitle]="'bannerOrange.subTitle'"
+            [text]="'bannerOrange.text'"
+            [img]="'../assets/img/icon-paw.png'"
+        ></app-banner>
+    </div>
+    <div class="section sellers">
+        <div class="section__sellers-txt">
+            <span class="section__sellers-txt__txt--small">{{'petSellers.text' | translate}}</span>
+            <span class="section__sellers-txt__txt--big">{{'petSellers.textBold' | translate}}</span>
+        </div>
+        <div class="section__sellers">
+            <img class="section__sellers__img" src="../assets/img/logo-sheba.png" alt="">
+            <img class="section__sellers__img" src="../assets/img/logo-whiskas.png" alt="">
+            <img class="section__sellers__img" src="../assets/img/logo-bakers.png" alt="">
+            <img class="section__sellers__img" src="../assets/img/logo-felix.png" alt="">
+            <img class="section__sellers__img" src="../assets/img/logo-goodboy.png" alt="">
+            <img class="section__sellers__img" src="../assets/img/logo-butchers.png" alt="">
+            <img class="section__sellers__img" src="../assets/img/logo-pedigree.png" alt="">
+        </div>
     </div>
 </div>

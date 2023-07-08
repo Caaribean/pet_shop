@@ -2,6 +2,11 @@
 @use "../../../styles/variables.scss" as v;
 @use "../../../styles/functions.scss" as f;
 
+.section {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+}
+
 .section-pets {
     background-color: v.$white;
     padding: 0 f.calculateRem(138px) 0;
@@ -82,6 +87,12 @@
                     border-width: 0 0 f.calculateRem(1px);
                     border-color: v.$gray;
                     background: transparent;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -131,5 +142,11 @@
 
     .box {
         margin-bottom: f.calculateRem(14px);
+    }
+
+    .btn-dark {
+        @include m.button-dark; 
+        text-transform: uppercase;
+        margin-top: f.calculateRem(10px);
     }
 }

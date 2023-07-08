@@ -29,6 +29,11 @@ export class ProductService {
         new Product(18, 'Hair bow', 10, ProductType.Accessories),
     ];
 
+    public filter(productsFilters: string[]): Product[] {
+        return this.allProducts
+            .filter(product => productsFilters.length ? productsFilters.findIndex(x => x === product.type) !== -1 : true);
+    }
+
     public getAllProducts(): Product[] {
         return this.allProducts;
     }
