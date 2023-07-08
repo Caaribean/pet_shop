@@ -15,18 +15,13 @@ export class PetsComponent {
   public listOfColors = Object.values(Color);
   public listOfBreeds = Object.values(Breed);
   public listOfGenders = Object.values(Gender);
-  //to do listOfGenders
-  //todo listOfBreeds 
 
   public filtersOfGender: string[] = [];
   public filtersOfBreed: string[] = [];
   public filtersOfColor: string[] = [];
-  //filtry dla kolorów
 
   constructor(private petService: PetService) {
     this.listOfPets = this.petService.getAllPets();
-    console.log(this.listOfColors)
-    console.log(this.listOfBreeds)
   }
 
   updateFilters(value: string, listOfFiters: string[]) {

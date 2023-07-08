@@ -25,45 +25,10 @@
             <div class="category-box">
                 <label *ngFor="let color of listOfColors" class="section-pets__filters__category__option">
                     <input (change)="updateFilters(color,filtersOfColor)" class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color red"></span>
+                    <span [ngClass]="color" class="section-pets__filters__category__color red"></span>
                     {{('filters.'+color) | translate}} 
                 </label>
             </div>
-            <!-- <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color apricot"></span>
-                    {{'filters.apricot' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color black"></span>
-                    {{'filters.black' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color black-white"></span>
-                    {{'filters.blackWhite' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color silver"></span>
-                    {{'filters.silver' | translate}}
-                </label>
-            </div>
-            <div class="category-box">
-                <label class="section-pets__filters__category__option">
-                    <input class="checkbox" type="checkbox" name="checkbox">
-                    <span class="section-pets__filters__category__color tan"></span>
-                    {{'filters.tan' | translate}}
-                </label>
-            </div> -->
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.price' | translate}}</span>
