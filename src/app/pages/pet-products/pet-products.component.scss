@@ -87,6 +87,12 @@
                     border-width: 0 0 f.calculateRem(1px);
                     border-color: v.$gray;
                     background: transparent;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
                 }
             }
         }
