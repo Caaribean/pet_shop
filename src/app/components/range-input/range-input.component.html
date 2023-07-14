@@ -1,0 +1,7 @@
+<span class="section-pets__filters__category__title">{{'filters.price' | translate}}</span>
+<div class="section-pets__filters__category__options">
+    <input [(ngModel)]="minValue" (change)="onInputChange()" class="section-pets__filters__category__options__input"
+        type="number" placeholder="Min">
+    <input [(ngModel)]="maxValue" class="section-pets__filters__category__options__input" type="number"
+        placeholder="Max">
+</div>

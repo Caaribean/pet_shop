@@ -46,12 +46,13 @@ export class PetService {
     }
 
 
-    public filter(genderFilters: string[], breedFilters: string[], colorFilters: string[]): Pet[] {
+    public filter(genderFilters: string[], breedFilters: string[], colorFilters: string[], minValue: number | null, maxValue: number | null): Pet[] {
         return this.allPets
             .filter(pet => genderFilters.length ? genderFilters.findIndex(x => x === pet.gender) !== -1 : true)
             .filter(pet => breedFilters.length ? breedFilters.findIndex(x => x === pet.breed) !== -1 : true)
-            .filter(pet => colorFilters.length ? colorFilters.findIndex(x => x === pet.color) !== -1 : true);
-
+            .filter(pet => colorFilters.length ? colorFilters.findIndex(x => x === pet.color) !== -1 : true)
+            .filter(pet => minValue ? pet.price >= minValue : true)
+            .filter(pet => maxValue ? pet.price <= maxValue : true);
     }
 
     public getPetById(id: number) {

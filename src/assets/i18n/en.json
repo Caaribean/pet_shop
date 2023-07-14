@@ -60,11 +60,11 @@
     },
     "sectionWithSmallPets": {
       "title": "Small Dog",
-      "text": "52 puppies"
+      "text": "puppies"
     },  
     "sectionWithPetProducts": {
       "title": "Products for pets",
-      "text": "18 products"
+      "text": "products"
     }, 
     "filters": {
       "title": "Filter",

@@ -24,18 +24,17 @@
             <span class="section-pets__filters__category__title">{{'filters.color' | translate}}</span>
             <div class="category-box">
                 <label *ngFor="let color of listOfColors" class="section-pets__filters__category__option">
-                    <input (change)="updateFilters(color,filtersOfColor)" class="checkbox" type="checkbox" name="checkbox">
+                    <input (change)="updateFilters(color,filtersOfColor)" class="checkbox" type="checkbox"
+                        name="checkbox">
                     <span [ngClass]="color" class="section-pets__filters__category__color red"></span>
-                    {{('filters.'+color) | translate}} 
+                    {{('filters.'+color) | translate}}
                 </label>
             </div>
         </div>
         <div class="section-pets__filters__category">
-            <span class="section-pets__filters__category__title">{{'filters.price' | translate}}</span>
-            <div class="section-pets__filters__category__options">
-                <input class="section-pets__filters__category__options__input" type="number" placeholder="Min">
-                <input class="section-pets__filters__category__options__input" type="number" placeholder="Max">
-            </div>
+            ///
+            <app-range-input (onRangeChange)="getRangeValue($event)"></app-range-input>
+            ///
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.breed' | translate}}</span>
@@ -47,13 +46,20 @@
         <button class="btn-dark" (click)="filter()">{{'buttons.filter' | translate}}</button>
     </div>
     <div class="box col-9">
-        <span class="section-pets__txt">{{'sectionWithSmallPets.title' | translate}}</span>
-        <span class="section-pets__txt--small">{{'sectionWithSmallPets.text' | translate}}</span>
+        <span class="section-pets__txt">{{ 'sectionWithSmallPets.title' | translate}}</span>
+        <span class="section-pets__txt--small">{{listOfPets.length +' '+ ('sectionWithSmallPets.text' |
+            translate)}}</span>
         <div class="pets-wrapper">
-            <div *ngFor="let pet of listOfPets">
+            <div
+                *ngFor="let pet of listOfPets | slice: (pageNumber-1) * pageSize : (pageNumber-1) * pageSize + pageSize">
                 <app-pet-card [pet]="pet"></app-pet-card>
             </div>
         </div>
+
+        <ngb-pagination [pageSize]="pageSize" [collectionSize]="listOfPets.length" [(page)]="pageNumber"
+            aria-label="Default pagination"></ngb-pagination>
+
+
         <div class="section-pets__pagination">
             <img class="section-pets__pagination__icon" src="../../../assets/img/arrow-left.png">
             <a class="section-pets__pagination__page-number"></a>
