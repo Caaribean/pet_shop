@@ -24,7 +24,7 @@ export class PetsComponent {
   public priceRange: PriceRange = new PriceRange(null, null);
 
   public pageNumber: number = 1;
-  public pageSize: number = 8;
+  public pageSize: number = 6;
 
   constructor(private petService: PetService) {
     this.listOfPets = this.petService.getAllPets();

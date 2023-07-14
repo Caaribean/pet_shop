@@ -24,7 +24,7 @@
     </div>
     <div class="box col-9">
         <span class="section-pets__txt">{{'sectionWithPetProducts.title' | translate}}</span>
-        <span class="section-pets__txt--small">{{'sectionWithPetProducts.text' | translate}}</span>
+        <span class="section-pets__txt--small">{{listOfProducts.length +' '+('sectionWithPetProducts.text' | translate)}}</span>
         <div class="pets-wrapper">
             <div *ngFor="let product of listOfProducts">
                 <app-product-card [product]="product"></app-product-card>

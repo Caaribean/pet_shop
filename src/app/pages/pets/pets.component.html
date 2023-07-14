@@ -3,8 +3,6 @@
         <span class="section__txt">{{'additionalText.home' | translate}}</span>
         <img class="section__icon" src="../../../assets/img/icon-arrow.png" alt="">
         <span class="section__txt">{{'additionalText.dog' | translate}}</span>
-        <img class="section__icon" src="../../../assets/img/icon-arrow.png" alt="">
-        <span class="section__txt">{{'additionalText.smallDog' | translate}}</span>
     </div>
     <app-banner [className]="'light'" [title]="'bannerBlue.title'" [subtitle]="'bannerBlue.subTitle'"
         [text]="'bannerBlue.text'"></app-banner>
@@ -31,10 +29,8 @@
                 </label>
             </div>
         </div>
-        <div class="section-pets__filters__category">
-            ///
+        <div class="section-pets__filters__category margins">
             <app-range-input (onRangeChange)="getRangeValue($event)"></app-range-input>
-            ///
         </div>
         <div class="section-pets__filters__category">
             <span class="section-pets__filters__category__title">{{'filters.breed' | translate}}</span>
@@ -50,10 +46,11 @@
         <span class="section-pets__txt--small">{{listOfPets.length +' '+ ('sectionWithSmallPets.text' |
             translate)}}</span>
         <div class="pets-wrapper">
+            <div class="float">
             <div
                 *ngFor="let pet of listOfPets | slice: (pageNumber-1) * pageSize : (pageNumber-1) * pageSize + pageSize">
                 <app-pet-card [pet]="pet"></app-pet-card>
-            </div>
+            </div></div>
         </div>
 
         <ngb-pagination [pageSize]="pageSize" [collectionSize]="listOfPets.length" [(page)]="pageNumber"

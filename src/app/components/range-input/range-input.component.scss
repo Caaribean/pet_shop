@@ -1,0 +1,52 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+@use "../../../styles/functions.scss" as f;
+
+.section-pets {
+    background-color: v.$white;
+    padding: 0 f.calculateRem(138px) 0;
+    display: flex;
+    padding-top: f.calculateRem(35px);
+
+    &__filters {
+        &__title {
+            @include m.text-subtitle;
+        }
+
+        &__category {
+            display: flex;
+            flex-direction: column;
+            border-bottom: f.calculateRem(1px) solid v.$gray;
+            padding-bottom: f.calculateRem(10px);
+
+            &__title {
+                @include m.text-title-category;
+                margin-bottom: f.calculateRem(10px);
+                margin-top: f.calculateRem(14px);
+            }
+
+            &__options {
+                display: flex;
+                gap: f.calculateRem(20px);
+
+                &__input {
+                    @include m.text-thin;
+                    width: 40%;
+                    outline: 0;
+                    border-width: 0 0 f.calculateRem(1px);
+                    border-color: v.$gray;
+                    background: transparent;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+  
+

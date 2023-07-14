@@ -146,7 +146,6 @@
 
     .btn-dark {
         @include m.button-dark; 
-        text-transform: uppercase;
         margin-top: f.calculateRem(10px);
     }
 }
