@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { ProductService } from "src/app/services/product.service";
 import { Product } from "src/app/models/product.model";
 import { ProductType } from "src/app/enums/product-type";
+import { PriceRange } from "src/app/models/range.model";
 
 @Component({
   selector: 'app-pet-products',
@@ -13,6 +14,11 @@ export class PetProductsComponent {
   public listOfProductType = Object.values(ProductType);
 
   public filtersOfProductType: string[] = [];
+
+  public priceRange: PriceRange = new PriceRange(null, null);
+
+  public pageNumber: number = 1;
+  public pageSize: number = 6;
  
   constructor(private productService: ProductService) {
     this.listOfProducts = this.productService.getAllProducts();
@@ -25,9 +31,13 @@ export class PetProductsComponent {
       listOfFiters.push(value);
     }
   }
+ 
+  getRangeValue(event: PriceRange) {
+    this.priceRange = event;
+  }
 
   filter() {
-    this.listOfProducts = this.productService.filter(this.filtersOfProductType);
+    this.listOfProducts = this.productService.filter(this.filtersOfProductType, this.priceRange?.minValue, this.priceRange?.maxValue);
   }
 
 }  

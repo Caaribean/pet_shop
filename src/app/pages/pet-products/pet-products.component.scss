@@ -95,6 +95,11 @@
                     }
                 }
             }
+
+            &.margins {
+                margin-bottom: f.calculateRem(10px);
+                margin-top: f.calculateRem(14px);
+            }
         }
     }
 
@@ -147,5 +152,10 @@
     .btn-dark {
         @include m.button-dark; 
         margin-top: f.calculateRem(10px);
+    }
+
+    .float {
+        display: block;
+        width: 100%;
     }
 }

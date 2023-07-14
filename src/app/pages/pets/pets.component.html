@@ -47,11 +47,12 @@
             translate)}}</span>
         <div class="pets-wrapper">
             <div class="float">
-            <div
+                <div
                 *ngFor="let pet of listOfPets | slice: (pageNumber-1) * pageSize : (pageNumber-1) * pageSize + pageSize">
                 <app-pet-card [pet]="pet"></app-pet-card>
-            </div></div>
+            </div>
         </div>
+    </div>
 
         <ngb-pagination [pageSize]="pageSize" [collectionSize]="listOfPets.length" [(page)]="pageNumber"
             aria-label="Default pagination"></ngb-pagination>

@@ -13,12 +13,8 @@
                {{('filters.'+type) | translate}}
             </label>
         </div>
-        <div class="section-pets__filters__category">
-            <span class="section-pets__filters__category__title">{{'filters.price' | translate}}</span>
-            <div class="section-pets__filters__category__options">
-                <input class="section-pets__filters__category__options__input" type="number" placeholder="Min">
-                <input class="section-pets__filters__category__options__input" type="number" placeholder="Max">
-            </div>
+        <div class="section-pets__filters__category margins">
+            <app-range-input (onRangeChange)="getRangeValue($event)"></app-range-input>
         </div>
         <button class="btn-dark" (click)="filter()">{{'buttons.filter' | translate}}</button>
     </div>
@@ -26,10 +22,13 @@
         <span class="section-pets__txt">{{'sectionWithPetProducts.title' | translate}}</span>
         <span class="section-pets__txt--small">{{listOfProducts.length +' '+('sectionWithPetProducts.text' | translate)}}</span>
         <div class="pets-wrapper">
-            <div *ngFor="let product of listOfProducts">
+            <div class="float">
+            <div *ngFor="let product of listOfProducts | slice: (pageNumber-1) * pageSize : (pageNumber-1) * pageSize + pageSize">
                 <app-product-card [product]="product"></app-product-card>
-            </div>
+            </div></div>
         </div>
+        <ngb-pagination [pageSize]="pageSize" [collectionSize]="listOfProducts.length" [(page)]="pageNumber"
+            aria-label="Default pagination"></ngb-pagination>
         <div class="section-pets__pagination">
             <img class="section-pets__pagination__icon" src="../../../assets/img/arrow-left.png">
             <a class="section-pets__pagination__page-number"></a>
