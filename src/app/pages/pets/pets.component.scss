@@ -129,13 +129,17 @@
         @include m.text-thin;
     }
 
-    &__pagination {
+    /* &__pagination {
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: f.calculateRem(30px);
+        //align-items: center;
+        //justify-content: flex-end;
+        //gap: f.calculateRem(30px);
         padding-top: f.calculateRem(40px);
         padding-bottom: f.calculateRem(60px);
+
+        .page-item {
+            background-color: red;
+        }
 
         &__icon {
             width: f.calculateRem(24px);
@@ -153,7 +157,7 @@
             background: v.$dark-blue;
             border-radius: f.calculateRem(8px);
         }
-    }
+    } */
 
     .pets-wrapper {
         display: flex;
@@ -180,4 +184,10 @@
         display: block;
         width: 100%;
     }
+}
+
+ngb-pagination {
+    display: flex;
+    padding-top: f.calculateRem(40px);
+    padding-bottom: f.calculateRem(60px);
 }

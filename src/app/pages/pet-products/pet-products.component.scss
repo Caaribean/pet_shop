@@ -112,7 +112,7 @@
         @include m.text-thin;
     }
 
-    &__pagination {
+    /* &__pagination {
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -136,7 +136,7 @@
             background: v.$dark-blue;
             border-radius: f.calculateRem(8px);
         }
-    }
+    } */
 
     .pets-wrapper {
         display: flex;
@@ -150,7 +150,7 @@
     }
 
     .btn-dark {
-        @include m.button-dark; 
+        @include m.button-dark;
         margin-top: f.calculateRem(10px);
     }
 
@@ -158,4 +158,10 @@
         display: block;
         width: 100%;
     }
+}
+
+ngb-pagination {
+    display: flex;
+    padding-top: f.calculateRem(40px);
+    padding-bottom: f.calculateRem(60px);
 }
