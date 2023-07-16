@@ -6,11 +6,11 @@
     &__product-card {
         @include m.box-card;
         float: left;
-        margin-right: 30px;
+        margin-right: f.calculateRem(30px);
 
         &__img {
-            width: 250px;
-            height: 264px;
+            width: f.calculateRem(250px);
+            height: f.calculateRem(264px);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;

@@ -157,16 +157,5 @@
 }
 
 ngb-pagination {
-    display: flex;
-    padding-top: f.calculateRem(40px);
-    padding-bottom: f.calculateRem(60px);
-
-    ::ng-deep a {
-        color: black;
-        background-color: transparent;
-        font-size: f.calculateRem(16px);
-        font-weight: bold;
-        border: none;
-        border-color: transparent;
-    }
+    @include m.pagination;
 }
