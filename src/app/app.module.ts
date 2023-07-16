@@ -20,6 +20,8 @@ import { YesNoPipe } from './pipe/yes-no.pipe';
 import { ProductPreviewComponent } from './pages/product-preview/product-preview.component';
 import { ProductService } from './services/product.service';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { FormsModule } from '@angular/forms';
+import { RangeInputComponent } from './components/range-input/range-input.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -39,12 +41,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     ShortListComponent,
     YesNoPipe,
     ProductPreviewComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    RangeInputComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

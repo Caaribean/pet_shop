@@ -170,5 +170,5 @@
 }
 
 .container {
-    max-width: 1180px;
+    max-width: f.calculateRem(1180px);
 }

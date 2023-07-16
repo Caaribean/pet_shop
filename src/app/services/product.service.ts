@@ -29,9 +29,11 @@ export class ProductService {
         new Product(18, 'Hair bow', 10, ProductType.Accessories),
     ];
 
-    public filter(productsFilters: string[]): Product[] {
+    public filter(productsFilters: string[], minValue: number | null, maxValue: number | null): Product[] {
         return this.allProducts
-            .filter(product => productsFilters.length ? productsFilters.findIndex(x => x === product.type) !== -1 : true);
+            .filter(product => productsFilters.length ? productsFilters.findIndex(x => x === product.type) !== -1 : true)
+            .filter(pet => minValue ? pet.price >= minValue : true)
+            .filter(pet => maxValue ? pet.price <= maxValue : true);
     }
 
     public getAllProducts(): Product[] {

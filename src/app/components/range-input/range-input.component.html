@@ -1,0 +1,8 @@
+
+<span class="range__title">{{'filters.price' | translate}}</span>
+<div class="range__options">
+    <input [(ngModel)]="minValue" (change)="onInputChange()" class="range__options__input"
+        type="number" placeholder="Min">
+    <input [(ngModel)]="maxValue" class="range__options__input" type="number"
+        placeholder="Max">
+</div>

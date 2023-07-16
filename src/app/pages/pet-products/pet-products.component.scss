@@ -1,6 +1,6 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use "../../../styles/functions.scss" as f;
+@use "../../../styles/functions.scss" as f; 
 
 .section {
     background-color: v.$white;
@@ -95,6 +95,11 @@
                     }
                 }
             }
+
+            &.margins {
+                margin-bottom: f.calculateRem(10px);
+                margin-top: f.calculateRem(14px);
+            }
         }
     }
 
@@ -105,32 +110,6 @@
 
     &__txt--small {
         @include m.text-thin;
-    }
-
-    &__pagination {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: f.calculateRem(30px);
-        padding-top: f.calculateRem(40px);
-        padding-bottom: f.calculateRem(60px);
-
-        &__icon {
-            width: f.calculateRem(24px);
-            height: f.calculateRem(24px);
-        }
-
-        &__page-number {
-            @include m.text-numbers;
-        }
-
-        &__page-number--checked {
-            @include m.text-numbers;
-            color: v.$white;
-            padding: f.calculateRem(6px) f.calculateRem(13px) f.calculateRem(4px);
-            background: v.$dark-blue;
-            border-radius: f.calculateRem(8px);
-        }
     }
 
     .pets-wrapper {
@@ -145,8 +124,16 @@
     }
 
     .btn-dark {
-        @include m.button-dark; 
-        text-transform: uppercase;
+        @include m.button-dark;
         margin-top: f.calculateRem(10px);
     }
+
+    .float {
+        display: block;
+        width: 100%;
+    }
+}
+
+ngb-pagination {
+    @include m.pagination;
 }

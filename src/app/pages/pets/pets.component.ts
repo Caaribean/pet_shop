@@ -3,6 +3,7 @@ import { Breed } from "src/app/enums/breed";
 import { Color } from "src/app/enums/color";
 import { Gender } from "src/app/enums/gender";
 import { Pet } from "src/app/models/pet.model";
+import { PriceRange } from "src/app/models/range.model";
 import { PetService } from "src/app/services/pet.service";
 
 @Component({
@@ -20,6 +21,11 @@ export class PetsComponent {
   public filtersOfBreed: string[] = [];
   public filtersOfColor: string[] = [];
 
+  public priceRange: PriceRange = new PriceRange(null, null);
+
+  public pageNumber: number = 1;
+  public pageSize: number = 6;
+
   constructor(private petService: PetService) {
     this.listOfPets = this.petService.getAllPets();
   }
@@ -32,8 +38,12 @@ export class PetsComponent {
     }
   }
 
-  filter() {
-    this.listOfPets = this.petService.filter(this.filtersOfGender, this.filtersOfBreed, this.filtersOfColor);
+  getRangeValue(event: PriceRange) {
+    this.priceRange = event;
   }
 
+  filter() {
+    this.pageNumber = 1;
+    this.listOfPets = this.petService.filter(this.filtersOfGender, this.filtersOfBreed, this.filtersOfColor, this.priceRange?.minValue, this.priceRange?.maxValue);
+  }
 }
