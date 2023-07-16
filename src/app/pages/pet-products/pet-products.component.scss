@@ -112,32 +112,6 @@
         @include m.text-thin;
     }
 
-    /* &__pagination {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: f.calculateRem(30px);
-        padding-top: f.calculateRem(40px);
-        padding-bottom: f.calculateRem(60px);
-
-        &__icon {
-            width: f.calculateRem(24px);
-            height: f.calculateRem(24px);
-        }
-
-        &__page-number {
-            @include m.text-numbers;
-        }
-
-        &__page-number--checked {
-            @include m.text-numbers;
-            color: v.$white;
-            padding: f.calculateRem(6px) f.calculateRem(13px) f.calculateRem(4px);
-            background: v.$dark-blue;
-            border-radius: f.calculateRem(8px);
-        }
-    } */
-
     .pets-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -164,4 +138,13 @@ ngb-pagination {
     display: flex;
     padding-top: f.calculateRem(40px);
     padding-bottom: f.calculateRem(60px);
+
+    ::ng-deep a {
+        color: black;
+        background-color: transparent;
+        font-size: f.calculateRem(16px);
+        font-weight: bold;
+        border: none;
+        border-color: transparent;
+    }
 }
