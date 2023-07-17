@@ -37,10 +37,15 @@
 @mixin text-middle {
     font-style: normal;
     font-weight: 700;
-    font-size: f.calculateRem(16px);
-    line-height: f.calculateRem(24px);
+    font-size: f.calculateRem(14px);
+    line-height: f.calculateRem(20px);
     color: v.$dark-blue;
     text-decoration: none;
+
+    @include md {
+        font-size: f.calculateRem(16px);
+        line-height: f.calculateRem(24px);
+    }
 }
 
 @mixin text-header-big {
@@ -53,6 +58,10 @@
     color: v.$very-dark-blue;
 
     @include md {
+        font-size: f.calculateRem(54px);
+    }
+
+    @include lg {
         font-size: f.calculateRem(60px);
     }
 }
@@ -66,6 +75,11 @@
     color: v.$very-dark-blue;
 
     @include md {
+        font-size: f.calculateRem(40px);
+        line-height: f.calculateRem(60px);
+    }
+
+    @include lg {
         font-size: f.calculateRem(46px);
         line-height: f.calculateRem(60px);
     }
@@ -107,10 +121,15 @@
     font-family: GilroyBold;
     font-style: normal;
     font-weight: 700;
-    font-size: f.calculateRem(24px);
-    line-height: f.calculateRem(36px);
+    font-size: f.calculateRem(20px);
+    line-height: f.calculateRem(32px);
     text-transform: capitalize;
     color: v.$dark-blue;
+
+    @include md {
+        font-size: f.calculateRem(24px);
+        line-height: f.calculateRem(36px);
+    }
 }
 
 @mixin text-small {
@@ -132,8 +151,8 @@
 @mixin text-number-price {
     font-style: normal;
     font-weight: 700;
-    font-size: f.calculateRem(14px);
-    line-height: f.calculateRem(20px);
+    font-size: f.calculateRem(16px);
+    line-height: f.calculateRem(24px);
     color: v.$black;
 }
 
@@ -214,11 +233,15 @@
 }
 
 @mixin box-card {
-    max-width: f.calculateRem(264px);
+    max-width: f.calculateRem(220px);
     background: v.$white;
     box-shadow: v.$shadow-white;
     border-radius: f.calculateRem(12px);
     padding: f.calculateRem(8px) f.calculateRem(8px) f.calculateRem(20px);
+
+    @include lg {
+        max-width: f.calculateRem(264px);
+    }
 }
 
 @mixin input-email {

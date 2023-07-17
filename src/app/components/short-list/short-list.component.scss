@@ -26,12 +26,22 @@
 .products-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 28px;
     padding-bottom: f.calculateRem(60px);
+
+    @include m.md {
+        justify-content: space-between;
+        gap: 0;
+    }
 }
 
 .button-exist {
     @include m.button-light;
+    display: none;
+
+    @include m.md {
+        display: block;
+    }
 }
 
 .button-no-exist {

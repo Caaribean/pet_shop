@@ -14,9 +14,13 @@
         box-shadow: v.$shadow-section-welcome;
         padding: 0 f.calculateRem(16px);
 
-        @include m.md {
-            padding: 0 f.calculateRem(138px);
+        @include m.lg {
+            padding: 0 f.calculateRem(75px);
             flex-direction: row;
+        }
+
+        @include m.xl {
+            padding: 0 f.calculateRem(138px);
         }
 
         &__box-txt {
@@ -44,6 +48,10 @@
             &__txt {
                 @include m.text-basic;
                 margin-bottom: f.calculateRem(32px);
+
+                @include m.sm {
+                    max-width: 80%;
+                }
             }
 
             &__btn--dark {
@@ -68,7 +76,7 @@
         &__box-img {
             margin-top: 25px;
 
-            @include m.md {
+            @include m.lg {
                 position: relative;
                 margin-top: 0;
             }
@@ -78,16 +86,16 @@
 
                 @include m.md {
                     width: 80%;
-                    position: absolute;
-                    bottom: 0;
                 }
 
                 @include m.lg {
                     width: 100%;
+                    position: absolute;
+                    bottom: 0;
                 }
 
                 @include m.xl {
-                    width: 70%;
+                    width: 100%;
                 }
             }
         }
