@@ -1,6 +1,39 @@
 @use "../styles/variables.scss" as v;
 @use "../styles/functions.scss" as f;
 
+//
+//BREAKPOINTS
+//
+@mixin xs {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: 578px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
 @mixin text-middle {
     font-style: normal;
     font-weight: 700;
@@ -14,19 +47,28 @@
     font-family: GilroyBold;
     font-style: normal;
     font-weight: 800;
-    font-size: f.calculateRem(60px);
+    font-size: f.calculateRem(46px);
     line-height: f.calculateRem(68px);
     text-transform: capitalize;
     color: v.$very-dark-blue;
+
+    @include md {
+        font-size: f.calculateRem(60px);
+    }
 }
 
 @mixin text-header-small {
     font-style: normal;
     font-weight: 700;
-    font-size: f.calculateRem(46px);
-    line-height: f.calculateRem(60px);
+    font-size: f.calculateRem(28px);
+    line-height: f.calculateRem(38px);
     text-transform: capitalize;
     color: v.$very-dark-blue;
+
+    @include md {
+        font-size: f.calculateRem(46px);
+        line-height: f.calculateRem(60px);
+    }
 }
 
 @mixin text-header-thin {
@@ -51,9 +93,14 @@
 @mixin text-basic {
     font-style: normal;
     font-weight: 500;
-    font-size: f.calculateRem(16px);
-    line-height: f.calculateRem(24px);
+    font-size: f.calculateRem(12px);
+    line-height: f.calculateRem(18px);
     color: v.$dark;
+
+    @include md {
+        font-size: f.calculateRem(16px);
+        line-height: f.calculateRem(24px);
+    }
 }
 
 @mixin text-subtitle {
@@ -148,7 +195,8 @@
     font-size: f.calculateRem(14px);
     line-height: f.calculateRem(20px);
     color: v.$dark-blue;
-    padding: f.calculateRem(12px) f.calculateRem(28px);
+    padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
+    //padding: f.calculateRem(12px) f.calculateRem(28px);
     border: f.calculateRem(1.5px) solid v.$dark-blue;
     border-radius: f.calculateRem(57px);
     background-color: transparent;

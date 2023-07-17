@@ -9,13 +9,23 @@
     .section-welcome {
         background-color: v.$light-yellow;
         max-width: fit-content;
-        padding: 0 f.calculateRem(138px);
         display: flex;
+        flex-direction: column;
         box-shadow: v.$shadow-section-welcome;
+        padding: 0 f.calculateRem(16px);
+
+        @include m.md {
+            padding: 0 f.calculateRem(138px);
+            flex-direction: row;
+        }
 
         &__box-txt {
             display: flex;
             flex-direction: column;
+
+            @include m.lg {
+                padding-bottom: 100px;
+            }
 
             &__header {
                 @include m.text-header-big;
@@ -24,7 +34,11 @@
 
             &__header--small {
                 @include m.text-header-small;
-                margin-bottom: f.calculateRem(24px);
+                margin-bottom: f.calculateRem(12px);
+
+                @include m.md {
+                    margin-bottom: f.calculateRem(24px);
+                }
             }
 
             &__txt {
@@ -36,11 +50,45 @@
                 @include m.button-dark;
                 max-width: f.calculateRem(163px);
             }
+
+            &__btn--intro {
+                @include m.button-light;
+
+                @include m.md {
+                    display: none;
+                }
+            }
+
+            .btn-wrapper {
+                display: flex;
+                gap: 16px;
+            }
         }
 
         &__box-img {
+            margin-top: 25px;
+
+            @include m.md {
+                position: relative;
+                margin-top: 0;
+            }
+
             &__img {
                 width: 100%;
+
+                @include m.md {
+                    width: 80%;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                @include m.lg {
+                    width: 100%;
+                }
+
+                @include m.xl {
+                    width: 70%;
+                }
             }
         }
     }

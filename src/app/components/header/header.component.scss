@@ -1,34 +1,72 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use '../../../styles/functions.scss' as f;
+@use "../../../styles/functions.scss" as f;
 
 .header {
+    padding: 28px 14px 35px 10px;
     background-color: v.$light-yellow;
-    padding: f.calculateRem(28px) f.calculateRem(138px) f.calculateRem(16px);
 
-    &__navmenu {
-        display: flex;
-        justify-content: center;
+    @include m.md {
+        padding: f.calculateRem(28px) f.calculateRem(130px);
+    }
 
+    &__navmenu--phone {
         &__list {
             display: flex;
             flex-wrap: wrap;
-            gap: f.calculateRem(48px);
+            justify-content: space-between;
             list-style-type: none;
 
             &__item {
-
                 &__logo {
-                    width: f.calculateRem(115px);
-                    height: f.calculateRem(40px);
+                    width: f.calculateRem(92px);
+                    height: f.calculateRem(32px);
                 }
 
-                &__txt {
-                    @include m.text-middle;
+                &__hamburger {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                &__loupe {
+                    width: 23px;
+                    height: 23px;
                 }
             }
         }
-    } 
+
+        @include m.md {
+            display: none;
+        }
+    }
+
+    &__navmenu {
+        display: none;
+
+        @include m.md {
+            display: flex;
+            justify-content: center;
+
+            &__list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                list-style-type: none;
+                gap: 48px;
+
+                &__item {
+                    &__logo {
+                        width: f.calculateRem(115px);
+                        height: f.calculateRem(40px);
+                    }
+
+                    &__txt {
+                        @include m.text-middle;
+                    }
+                }
+            }
+        }
+    }
 
     &.bg-color-white {
         background-color: v.$white;
