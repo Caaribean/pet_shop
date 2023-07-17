@@ -263,12 +263,28 @@
 
         &__sellers {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 15px;
             padding-top: f.calculateRem(25px);
 
+            @include m.sm {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            @include m.lg {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
             &__img {
-                max-width: f.calculateRem(151px);
+                max-width: f.calculateRem(100px);
+                @include m.lg {
+                    max-width: f.calculateRem(151px);
+                }
             }
         }
 

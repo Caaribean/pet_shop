@@ -254,7 +254,11 @@
     border: f.calculateRem(1px) solid v.$dark-gray;
     border-radius: f.calculateRem(8px);
     padding: f.calculateRem(14px) f.calculateRem(28px);
-    width: 70%;
+    width: 100%;
+
+    @include lg {
+        width: 70%;
+    }
 }
 
 @mixin pagination {
