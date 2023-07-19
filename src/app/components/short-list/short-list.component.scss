@@ -26,8 +26,12 @@
 .products-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 5px;
     padding-bottom: f.calculateRem(60px);
+
+    @include m.sm {
+        gap: 20px;
+    }
 
     @include m.md {
         justify-content: space-between;

@@ -7,7 +7,15 @@
     <app-banner [className]="'light'" [title]="'bannerBlue.title'" [subtitle]="'bannerBlue.subTitle'"
         [text]="'bannerBlue.text'"></app-banner>
 </div>
+
 <div class="section-pets">
+    <div class="filter-phone">
+        <div class="filter-phone__btn">Sort by: Popular</div>
+        <div class="filter-phone__frame">
+            <img class="filter-phone__frame__icon" src="../../../assets/img/hourglass.png">
+            <span class="filter-phone__frame__txt">Filter</span>
+        </div>
+    </div>
     <div class="section-pets__filters col-3">
         <div class="section-pets__filters__title">{{'filters.title' | translate}}</div>
         <div class="section-pets__filters__category">
@@ -41,7 +49,7 @@
         </div>
         <button class="btn-dark" (click)="filter()">{{'buttons.filter' | translate}}</button>
     </div>
-    <div class="box col-9">
+    <div class="box col-md-9">
         <span class="section-pets__txt">{{ 'sectionWithSmallPets.title' | translate}}</span>
         <span class="section-pets__txt--small">{{listOfPets.length +' '+ ('sectionWithSmallPets.text' |
             translate)}}</span>

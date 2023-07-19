@@ -118,7 +118,6 @@
 }
 
 @mixin text-subtitle {
-    font-family: GilroyBold;
     font-style: normal;
     font-weight: 700;
     font-size: f.calculateRem(20px);
@@ -127,6 +126,7 @@
     color: v.$dark-blue;
 
     @include md {
+        font-family: GilroyBold;
         font-size: f.calculateRem(24px);
         line-height: f.calculateRem(36px);
     }
@@ -159,13 +159,25 @@
 @mixin text-thin {
     font-style: normal;
     font-weight: 500;
-    font-size: f.calculateRem(14px);
-    line-height: f.calculateRem(20px);
+    font-size: f.calculateRem(12px);
+    line-height: f.calculateRem(18px);
+    color: v.$very-dark-gray;
+
+    @include md {
+        font-size: f.calculateRem(14px);
+        line-height: f.calculateRem(20px);
+    }
+}
+
+@mixin text-thin-xs {
+    font-style: normal;
+    font-weight: 400;
+    font-size: f.calculateRem(10px);
+    line-height: f.calculateRem(16px);
     color: v.$very-dark-gray;
 }
 
 @mixin text-numbers {
-    font-family: GilroyBold;
     font-style: normal;
     font-weight: 700;
     font-size: f.calculateRem(18px);
@@ -215,7 +227,6 @@
     line-height: f.calculateRem(20px);
     color: v.$dark-blue;
     padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
-    //padding: f.calculateRem(12px) f.calculateRem(28px);
     border: f.calculateRem(1.5px) solid v.$dark-blue;
     border-radius: f.calculateRem(57px);
     background-color: transparent;
@@ -265,6 +276,11 @@
     display: flex;
     padding-top: f.calculateRem(40px);
     padding-bottom: f.calculateRem(60px);
+    justify-content: center;
+
+    @include md {
+            justify-content: flex-start;
+    }
 
     ::ng-deep a {
         color: black;

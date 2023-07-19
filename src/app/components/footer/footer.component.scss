@@ -39,6 +39,11 @@
             @include m.text-subtitle;
             color: v.$white;
             max-width: f.calculateRem(398px);
+            margin-bottom: 16px;
+
+            @include m.md {
+                margin-bottom: 0;
+            }
         }
 
         &__form {
@@ -124,7 +129,12 @@
         }
 
         &__txt {
-            @include m.text-thin;
+            @include m.text-thin-xs;
+            order: 2;
+
+            @include m.md {
+                @include m.text-thin;
+            }
         }
 
         &__box-txt {
