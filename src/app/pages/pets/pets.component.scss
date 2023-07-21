@@ -159,15 +159,7 @@
         padding-bottom: 25px;
 
         &__btn {
-            @include m.button-light;
-            color: v.$very-dark-gray;
-            border-color: v.$very-dark-gray;
-            background-image: url("../../../assets/img/arrow-down.png");
-            padding: 10px 35px 8px 20px;
-            background-repeat: no-repeat;
-            background-position: right 5px center;
-            background-size: 15%;
-            cursor: pointer;
+            @include m.button-arrow;
         }
 
         &__frame {

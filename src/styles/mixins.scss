@@ -34,6 +34,12 @@
     }
 }
 
+/* @mixin slider {
+  @media (max-width: 768px) {
+    @content;
+  }
+} */
+
 @mixin text-middle {
     font-style: normal;
     font-weight: 700;
@@ -132,6 +138,16 @@
     }
 }
 
+@mixin text-subtitle-bold {
+    font-style: normal;
+    font-weight: 700;
+    font-family: GilroyBold;
+    font-size: f.calculateRem(24px);
+    line-height: f.calculateRem(36px);
+    text-transform: capitalize;
+    color: v.$dark-blue;
+}
+
 @mixin text-small {
     font-style: normal;
     font-weight: 500;
@@ -202,6 +218,7 @@
 }
 
 @mixin text-price {
+    font-family: GilroyBold;
     font-size: f.calculateRem(20px);
     font-weight: 700;
     line-height: f.calculateRem(32px);
@@ -218,6 +235,7 @@
     font-size: f.calculateRem(16px);
     line-height: f.calculateRem(24px);
     color: v.$white;
+    cursor: pointer;
 }
 
 @mixin button-light {
@@ -230,6 +248,7 @@
     border: f.calculateRem(1.5px) solid v.$dark-blue;
     border-radius: f.calculateRem(57px);
     background-color: transparent;
+    cursor: pointer;
 }
 
 @mixin button-white {
@@ -241,6 +260,41 @@
     padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px);
     background: v.$white;
     border-radius: f.calculateRem(57px);
+    cursor: pointer;
+}
+
+@mixin button-chat {
+    font-family: GilroyBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 10px 30px 10px 60px;
+    color: v.$dark-blue;
+    border: f.calculateRem(2px) solid v.$dark-blue;
+    border-radius: f.calculateRem(57px);
+    background-image: url("../../../assets/img/chat-icon.png");
+    background-repeat: no-repeat;
+    background-position: left 25px center;
+    background-size: 12%;
+    cursor: pointer;
+}
+
+@mixin button-arrow {
+    font-style: normal;
+    font-weight: 500;
+    font-size: f.calculateRem(14px);
+    line-height: f.calculateRem(20px);
+    color: v.$very-dark-gray;
+    padding: 10px 35px 8px 20px;
+    border: f.calculateRem(1.5px) solid v.$very-dark-gray;
+    border-radius: f.calculateRem(57px);
+    background-color: transparent;
+    background-image: url("../../../assets/img/arrow-down.png");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 15%;
+    cursor: pointer;
 }
 
 @mixin box-card {
@@ -279,7 +333,7 @@
     justify-content: center;
 
     @include md {
-            justify-content: flex-start;
+        justify-content: flex-start;
     }
 
     ::ng-deep a {
