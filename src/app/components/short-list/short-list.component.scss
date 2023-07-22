@@ -37,6 +37,16 @@
         justify-content: space-between;
         gap: 0;
     }
+
+    .float {
+        flex-wrap: wrap;
+        display: flex;
+
+        @include m.md {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .button-exist {

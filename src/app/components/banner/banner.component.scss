@@ -42,16 +42,50 @@
         &__btn--dark {
             @include m.button-dark;
         }
+        /* 
+        &__btn--light {
+            @include m.button-intro;
+
+            @include m.md {
+                display: none;
+            }
+        }
+
+        .btn-box {
+            display: flex;
+            gap: 16px;
+        } */
     }
 
     &.blue {
-        background: v.$dark-blue;
-        background-image: url("../../../assets/img/banner-kiss.png");
-        background-size: cover;
-        background-position: bottom;
+        background-image: url("../../../assets/img/dog-kiss.png");
+        background-color: v.$light-yellow;
+        background-position: bottom 5px center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        height: 600px;
+        //background: v.$dark-blue;
+        //background-image: url("../../../assets/img/banner-kiss.png");
 
         .banner__box-txt {
-            align-items: end;
+            align-items: center;
+            justify-content: flex-start;
+            @include m.md {
+                align-items: end;
+            }
+        }
+
+        @include m.sm {
+            height: 600px;
+            background-size: 50%;
+        }
+
+        @include m.md {
+            background: v.$dark-blue;
+            background-image: url("../../../assets/img/banner-kiss.png");
+            background-size: cover;
+            background-position: bottom;
+            height: 378px;
         }
     }
 
@@ -89,7 +123,7 @@
         }
 
         .banner__box-txt__btn--dark {
-            display: none; 
+            display: none;
         }
     }
 
@@ -103,7 +137,7 @@
         }
 
         .banner__box-txt__btn--dark {
-            display: none; 
+            display: none;
         }
     }
 
