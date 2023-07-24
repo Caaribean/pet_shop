@@ -1,40 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { NgbCarousel, NgbSlideEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-image-slider',
     templateUrl: './image-slider.component.html',
     styleUrls: ['./image-slider.component.scss']
 })
-export class ImageSliderComponent implements OnInit {
-    
-    images: string[] = [
-        `../assets/img/dog/1/customer/1.png`,
-        `../assets/img/dog/2/customer/2.png`,
-        `../assets/img/dog/3/customer/3.png`,
-        `../assets/img/dog/4/customer/4.png`,
-        `../assets/img/dog/5/customer/5.png`
-    ];
+export class ImageSliderComponent {
+    @Input() images: String[] | undefined;
+    @ViewChild('carousel', { static: true }) carousel: NgbCarousel | undefined;
 
-    carouselConfig = {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000, 
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-        ]
-    };
+    public interval = 2000;
 
-    constructor() { }
+    // onSlide(slideEvent: NgbSlideEvent) {
+    //     if (
+    //         this.unpauseOnArrow &&
+    //         slideEvent.paused &&
+    //         (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
+    //     ) {
+    //         this.togglePaused();
+    //     }
+    //     if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+    //         this.togglePaused();
+    //     }
+    // }
 
-    ngOnInit(): void {
-    }
 }
