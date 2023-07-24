@@ -270,17 +270,17 @@
 
 @mixin button-chat {
     font-family: GilroyBold;
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 700;
-    line-height: 24px;
-    padding: 10px 30px 10px 60px;
+    line-height: f.calculateRem(24px);
+    padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px) f.calculateRem(60px);
     color: v.$dark-blue;
     border: f.calculateRem(2px) solid v.$dark-blue;
     border-radius: f.calculateRem(57px);
     background-image: url("../../../assets/img/chat-icon.png");
     background-repeat: no-repeat;
-    background-position: left 25px center;
+    background-position: left f.calculateRem(25px) center;
     background-size: 12%;
     cursor: pointer;
 }
@@ -291,29 +291,29 @@
     font-size: f.calculateRem(14px);
     line-height: f.calculateRem(20px);
     color: v.$very-dark-gray;
-    padding: 10px 35px 8px 20px;
+    padding: f.calculateRem(10px) f.calculateRem(35px) f.calculateRem(8px) f.calculateRem(20px);
     border: f.calculateRem(1.5px) solid v.$very-dark-gray;
     border-radius: f.calculateRem(57px);
     background-color: transparent;
     background-image: url("../../../assets/img/arrow-down.png");
     background-repeat: no-repeat;
-    background-position: right 5px center;
+    background-position: right f.calculateRem(5px) center;
     background-size: 15%;
     cursor: pointer;
 }
 
 @mixin button-intro {
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: f.calculateRem(24px);
     color: v.$dark-blue;
-    padding: 10px 30px 10px 60px;
+    padding: f.calculateRem(10px) f.calculateRem(30px) f.calculateRem(10px) f.calculateRem(60px);
     border: f.calculateRem(2px) solid v.$dark-blue;
     border-radius: f.calculateRem(57px);
     background-image: url("../../../assets/img/icon-intro.png");
     background-repeat: no-repeat;
-    background-position: left 25px center;
+    background-position: left f.calculateRem(25px) center;
     background-size: 12%;
     background-color: transparent;
     cursor: pointer;

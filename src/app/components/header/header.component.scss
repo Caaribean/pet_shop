@@ -3,7 +3,7 @@
 @use "../../../styles/functions.scss" as f;
 
 .header {
-    padding: 28px 14px 35px 10px;
+    padding: f.calculateRem(28px) f.calculateRem(14px) f.calculateRem(35px) f.calculateRem(10px);
     background-color: v.$light-yellow;
 
     @include m.md {
@@ -24,13 +24,13 @@
                 }
 
                 &__hamburger {
-                    width: 32px;
-                    height: 32px;
+                    width: f.calculateRem(32px);
+                    height: f.calculateRem(32px);
                 }
 
                 &__loupe {
-                    width: 23px;
-                    height: 23px;
+                    width: f.calculateRem(23px);
+                    height: f.calculateRem(23px);
                 }
             }
         }
@@ -52,7 +52,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 list-style-type: none;
-                gap: 48px;
+                gap: f.calculateRem(48px);
 
                 &__item {
                     &__logo {

@@ -4,7 +4,6 @@
 
 .section {
     background-color: v.$white;
-    //padding: 0 f.calculateRem(16px);
     padding: 0;
 
     @include m.lg {
@@ -19,8 +18,6 @@
         display: flex;
         gap: f.calculateRem(34px);
         flex-wrap: wrap;
-        /*  border-radius: f.calculateRem(20px);
-        border: f.calculateRem(1px) solid v.$light-gray; */
         background: v.$white;
 
         @include m.md {
@@ -147,7 +144,7 @@
         .btn-box {
             display: flex;
             justify-content: space-between;
-            margin: 16px 0 19px;
+            margin: f.calculateRem(16px) 0 f.calculateRem(19px);
 
             @include m.md {
                 display: none;
@@ -167,7 +164,7 @@
         .share-box {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 17px;
+            margin-bottom: f.calculateRem(17px);
 
             @include m.md {
                 display: none;
@@ -179,8 +176,8 @@
             }
 
             &__icon {
-                width: 20px;
-                height: 20px;
+                width: f.calculateRem(20px);
+                height: f.calculateRem(20px);
             }
 
             &__txt--small {
@@ -189,7 +186,7 @@
 
             .wrapper {
                 display: flex;
-                gap: 8px;
+                gap: f.calculateRem(8px);
                 cursor: pointer;
             }
         }
@@ -213,10 +210,22 @@
             border-radius: f.calculateRem(10px);
         }
 
+        .img-box-phone {
+            display: block;
+
+            @include m.md {
+                display: none;
+            }
+        }
+
         .img-box {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: f.calculateRem(10px);
+            display: none;
+
+            @include m.md {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: f.calculateRem(10px);
+            }
         }
     }
 
@@ -249,5 +258,5 @@
 }
 
 .container {
-    max-width: f.calculateRem(1180px);
+    max-width: f.calculateRem(1200px);
 }

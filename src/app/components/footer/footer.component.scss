@@ -39,7 +39,7 @@
             @include m.text-subtitle;
             color: v.$white;
             max-width: f.calculateRem(398px);
-            margin-bottom: 16px;
+            margin-bottom: f.calculateRem(16px);
 
             @include m.md {
                 margin-bottom: 0;
@@ -80,7 +80,7 @@
         justify-content: space-between;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: f.calculateRem(20px);
         margin-bottom: f.calculateRem(40px);
         border-bottom: f.calculateRem(1px) solid v.$very-dark-gray;
         padding-bottom: f.calculateRem(40px);
@@ -116,7 +116,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: f.calculateRem(15px);
         justify-content: space-between;
 
         @include m.md {

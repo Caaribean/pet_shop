@@ -30,14 +30,14 @@
                 <span class="section__pet-container__txt">{{singlePet?.name}}</span>
             </div>
             <div class="btn-box">
-                <div class="btn-box__btn--dark">Contact us</div>
-                <div class="btn-box__btn--light">Chat with Monito</div>
+                <button class="btn-box__btn--dark">{{'buttons.contactUs' | translate}}</button>
+                <button class="btn-box__btn--light">{{'buttons.chatWithMonito' | translate}}</button>
             </div>
             <div class="share-box">
-                <div class="share-box__txt">Information</div>
+                <div class="share-box__txt">{{'additionalText.information' | translate}}</div>
                 <div class="wrapper">
                     <img class="share-box__icon" src="../../../assets/img/share-icon.png">
-                    <div class="share-box__txt--small">Share</div>
+                    <div class="share-box__txt--small">{{'additionalText.share' | translate}}</div>
                 </div>
             </div>
             <h2 class="section__pet-container__title">{{singlePet?.name}}</h2>
@@ -87,7 +87,10 @@
         </div>
     </div>
     <div class="section__pet-customers">
-        <h2 class="section__pet-customers__title">{{'additionalText.headerCustomers' | translate}}r</h2>
+        <h2 class="section__pet-customers__title">{{'additionalText.headerCustomers' | translate}}</h2>
+        <div class="img-box-phone">
+            <app-image-slider></app-image-slider>
+        </div>
         <div class="img-box">
             <div *ngFor="let photo of customersPhotos" [ngStyle]="{'background-image': ' url(' + photo + ')'}"
                 class="section__pet-customers__img"></div>

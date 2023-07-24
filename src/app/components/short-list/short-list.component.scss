@@ -26,11 +26,11 @@
 .products-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: f.calculateRem(5px);
     padding-bottom: f.calculateRem(60px);
 
     @include m.sm {
-        gap: 20px;
+        gap: f.calculateRem(20px);
     }
 
     @include m.md {
@@ -51,11 +51,6 @@
 
 .button-exist {
     @include m.button-light;
-    display: none;
-
-    @include m.md {
-        display: block;
-    }
 }
 
 .button-no-exist {
