@@ -6,10 +6,12 @@
     <a routerLink="pets"><button [class]="addClassButton">{{'buttons.view' | translate}}</button></a>
 </div>
 <div class="products-wrapper">
+    <div class="float">
     <div *ngFor="let pet of petService.getRequiredNumberPets(countOfItems)">
         <app-pet-card [pet]="pet"></app-pet-card>
-     </div>
+     </div></div>
+     <div class="float">
     <div *ngFor="let product of productService.getRequiredNumberProducts(countOfProducts)">
         <app-product-card [product]="product"></app-product-card>
-     </div>
+     </div></div>
 </div>

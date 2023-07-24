@@ -1,97 +1,120 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use "../../../styles/functions.scss" as f; 
+@use "../../../styles/functions.scss" as f;
 
 .section {
     background-color: v.$white;
-    padding: 0 f.calculateRem(138px) 0;
+    padding: 0 f.calculateRem(16px);
+
+    @include m.lg {
+        padding: 0 f.calculateRem(75px);
+    }
+
+    @include m.xl {
+        padding: 0 f.calculateRem(138px);
+    }
 }
 
 .section-pets {
     background-color: v.$white;
-    padding: 0 f.calculateRem(138px) 0;
-    display: flex;
-    padding-top: f.calculateRem(35px);
+    padding: f.calculateRem(35px) f.calculateRem(16px) 0;
+
+    @include m.md {
+        display: flex;
+    }
+
+    @include m.lg {
+        padding: f.calculateRem(35px) f.calculateRem(75px) 0;
+    }
+
+    @include m.xl {
+        padding: f.calculateRem(35px) f.calculateRem(138px) 0;
+    }
 
     &__filters {
-        &__title {
-            @include m.text-subtitle;
-        }
+        display: none;
 
-        &__category {
-            display: flex;
-            flex-direction: column;
-            border-bottom: f.calculateRem(1px) solid v.$gray;
-            padding-bottom: f.calculateRem(10px);
-
+        @include m.md {
+            display: block;
             &__title {
-                @include m.text-title-category;
-                margin-bottom: f.calculateRem(10px);
-                margin-top: f.calculateRem(14px);
+                @include m.text-subtitle;
             }
 
-            &__color {
-                width: f.calculateRem(15px);
-                height: f.calculateRem(15px);
-                border-radius: f.calculateRem(10px);
-                display: inline-block;
-
-                &.red {
-                    background: v.$red;
-                }
-
-                &.apricot {
-                    background: v.$apricot;
-                }
-
-                &.black {
-                    background: v.$very-black;
-                }
-
-                &.black-white {
-                    background: v.$black-white;
-                }
-
-                &.silver {
-                    background: v.$silver;
-                }
-
-                &.tan {
-                    background: v.$tan;
-                }
-            }
-
-            &__option {
-                @include m.text-thin;
-                color: v.$black;
-                margin-bottom: f.calculateRem(8px);
-
-                .checkbox {
-                    width: f.calculateRem(16px);
-                    height: f.calculateRem(16px);
-                    background: v.$light;
-                    border: f.calculateRem(1px) solid v.$gray;
-                    border-radius: f.calculateRem(4px);
-                    margin-right: f.calculateRem(5px);
-                }
-            }
-
-            &__options {
+            &__category {
                 display: flex;
-                gap: f.calculateRem(20px);
+                flex-direction: column;
+                border-bottom: f.calculateRem(1px) solid v.$gray;
+                padding-bottom: f.calculateRem(10px);
 
-                &__input {
+                &__title {
+                    @include m.text-title-category;
+                    margin-bottom: f.calculateRem(10px);
+                    margin-top: f.calculateRem(14px);
+                }
+
+                &__color {
+                    width: f.calculateRem(15px);
+                    height: f.calculateRem(15px);
+                    border-radius: f.calculateRem(10px);
+                    display: inline-block;
+
+                    &.red {
+                        background: v.$red;
+                    }
+
+                    &.apricot {
+                        background: v.$apricot;
+                    }
+
+                    &.black {
+                        background: v.$very-black;
+                    }
+
+                    &.black-white {
+                        background: v.$black-white;
+                    }
+
+                    &.silver {
+                        background: v.$silver;
+                    }
+
+                    &.tan {
+                        background: v.$tan;
+                    }
+                }
+
+                &__option {
                     @include m.text-thin;
-                    width: 40%;
-                    outline: 0;
-                    border-width: 0 0 f.calculateRem(1px);
-                    border-color: v.$gray;
-                    background: transparent;
+                    color: v.$black;
+                    margin-bottom: f.calculateRem(8px);
 
-                    &::-webkit-outer-spin-button,
-                    &::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
-                        margin: 0;
+                    .checkbox {
+                        width: f.calculateRem(16px);
+                        height: f.calculateRem(16px);
+                        background: v.$light;
+                        border: f.calculateRem(1px) solid v.$gray;
+                        border-radius: f.calculateRem(4px);
+                        margin-right: f.calculateRem(5px);
+                    }
+                }
+
+                &__options {
+                    display: flex;
+                    gap: f.calculateRem(20px);
+
+                    &__input {
+                        @include m.text-thin;
+                        width: 40%;
+                        outline: 0;
+                        border-width: 0 0 f.calculateRem(1px);
+                        border-color: v.$gray;
+                        background: transparent;
+
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
                     }
                 }
             }
@@ -112,6 +135,44 @@
         @include m.text-thin;
     }
 
+    .filter-phone {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: f.calculateRem(25px);
+
+        &__btn {
+            @include m.button-light;
+            color: v.$very-dark-gray;
+            border-color: v.$very-dark-gray;
+            background-image: url("../../../assets/img/arrow-down.png");
+            padding: f.calculateRem(10px) f.calculateRem(35px) f.calculateRem(8px) f.calculateRem(20px);
+            background-repeat: no-repeat;
+            background-position: right f.calculateRem(5px) center;
+            background-size: 15%;
+            cursor: pointer;
+        }
+
+        &__frame {
+            display: flex;
+            gap: f.calculateRem(8px);
+            cursor: pointer;
+
+            &__icon {
+                width: f.calculateRem(24px);
+                height: f.calculateRem(24px);
+            }
+
+            &__txt {
+                @include m.text-number-price;
+                color: v.$very-dark-blue;
+            }
+        }
+
+        @include m.md {
+            display: none;
+        }
+    }
+
     .pets-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -129,8 +190,13 @@
     }
 
     .float {
-        display: block;
-        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+
+        @include m.md {
+            display: block;
+            width: 100%;
+        }
     }
 }
 

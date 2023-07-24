@@ -1,0 +1,14 @@
+@use "../../../styles/functions.scss" as f;
+
+ngb-carousel {
+    margin: 0 auto;
+}
+
+.slide {
+    width: 100%;
+    height: f.calculateRem(340px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: f.calculateRem(10px);
+}

@@ -1,0 +1,5 @@
+<ngb-carousel #carousel [interval]="interval">
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+    <div [ngStyle]="{'background-image': ' url(' + img + ')'}" class="slide"></div>
+  </ng-template>
+</ngb-carousel>

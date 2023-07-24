@@ -26,8 +26,27 @@
 .products-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: f.calculateRem(5px);
     padding-bottom: f.calculateRem(60px);
+
+    @include m.sm {
+        gap: f.calculateRem(20px);
+    }
+
+    @include m.md {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .float {
+        flex-wrap: wrap;
+        display: flex;
+
+        @include m.md {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .button-exist {

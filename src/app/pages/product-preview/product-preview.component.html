@@ -18,6 +18,17 @@
                 <img class="section__product-container__icon" src="../../../assets/img/icon-arrow.png">
                 <span class="section__product-container__txt">{{singleProduct?.name}}</span>
             </div>
+            <div class="btn-box">
+                <div class="btn-box__btn--dark">{{'buttons.contactUs' | translate}}</div>
+                <div class="btn-box__btn--light">{{'buttons.chatWithMonito' | translate}}</div>
+            </div>
+            <div class="share-box">
+                <div class="share-box__txt">{{'additionalText.information' | translate}}</div>
+                <div class="wrapper">
+                    <img class="share-box__icon" src="../../../assets/img/share-icon.png">
+                    <div class="share-box__txt--small">{{'additionalText.share' | translate}}</div>
+                </div>
+            </div>
             <h2 class="section__product-container__title">{{singleProduct?.name}}</h2>
             <h3 class="section__product-container__price">{{singleProduct?.price | currency:"USD"}}</h3>
             <div class="section__product-container__features"> 

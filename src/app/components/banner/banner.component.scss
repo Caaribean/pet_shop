@@ -17,9 +17,15 @@
 
         &__header {
             @include m.text-header-big;
-            font-size: f.calculateRem(52px);
             color: v.$dark-blue;
             margin-bottom: f.calculateRem(2px);
+            font-size: f.calculateRem(36px);
+            line-height: f.calculateRem(54px);
+
+            @include m.md {
+                font-size: f.calculateRem(52px);
+                line-height: f.calculateRem(68px);
+            }
         }
 
         &__header--small {
@@ -37,59 +43,161 @@
             color: v.$dark;
             margin-bottom: f.calculateRem(24px);
             max-width: f.calculateRem(394px);
+            text-align: center;
+
+            @include m.md {
+                text-align: left;
+            }
         }
 
         &__btn--dark {
             @include m.button-dark;
         }
+        /* 
+        &__btn--light {
+            @include m.button-intro;
+
+            @include m.md {
+                display: none;
+            }
+        }
+
+        .btn-box {
+            display: flex;
+            gap: 16px;
+        } */
     }
 
     &.blue {
-        background: v.$dark-blue;
-        background-image: url("../../../assets/img/banner-kiss.png");
-        background-size: cover;
-        background-position: bottom;
+        background-image: url("../../../assets/img/dog-kiss.png");
+        background-color: v.$light-yellow;
+        background-position: bottom center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        height: f.calculateRem(600px);
+        width: 80%;
+        margin: 0 auto;
 
         .banner__box-txt {
-            align-items: end;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+
+            @include m.md {
+                align-items: end;
+                text-align: left;
+            }
+        }
+
+        @include m.sm {
+            height: f.calculateRem(500px);
+            background-size: 60%;
+            width: 60%;
+        }
+
+        @include m.md {
+            height: f.calculateRem(600px);
+            background: v.$dark-blue;
+            background-image: url("../../../assets/img/banner-kiss.png");
+            background-size: cover;
+            background-position: bottom;
+            height: f.calculateRem(378px);
+            width: 100%;
         }
     }
 
     &.orange {
         background: v.$orange;
-        background-image: url("../../../assets/img/banner-paw.png");
-        background-size: cover;
-        background-position: bottom;
+        background-image: url("../../../assets/img/paw.png");
+        background-position: bottom center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        height: f.calculateRem(600px);
+        width: 100%;
+        margin: 0 auto;
 
         .banner__box-txt {
-            align-items: start;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+
+            @include m.md {
+                align-items: start;
+                text-align: left;
+            }
+        }
+        @include m.sm {
+            height: f.calculateRem(500px);
+            background-size: 80%;
+            width: 60%;
+        }
+
+        @include m.md {
+            height: f.calculateRem(600px);
+            background: v.$orange;
+            background-image: url("../../../assets/img/banner-paw.png");
+            background-size: cover;
+            background-position: bottom;
+            height: f.calculateRem(378px);
+            width: 100%;
         }
     }
 
     &.light {
         background: v.$light-yellow;
-        background-image: url("../../../assets/img/banner-pets.png");
-        background-size: cover;
-        background-position: bottom;
+        background-image: url("../../../assets/img/pets.png");
+        background-position: bottom center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        margin: 0 auto;
+
+        @include m.md {
+            background: v.$light-yellow;
+            background-image: url("../../../assets/img/banner-pets.png");
+            background-size: cover;
+            background-position: bottom;
+        }
 
         .banner__box-txt {
-            align-items: end;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+
+            @include m.md {
+                align-items: end;
+            }
         }
 
         .banner__box-txt__header {
             @include m.text-header-white;
+            font-size: f.calculateRem(42px);
+            line-height: f.calculateRem(60px);
+            color: v.$very-dark-blue;
+
+            @include m.md {
+                font-size: f.calculateRem(52px);
+                line-height: f.calculateRem(68px);
+                color: v.$white;
+            }
         }
 
         .banner__box-txt__header--small {
-            color: v.$white;
+            color: v.$very-dark-blue;
+            @include m.md {
+                color: v.$white;
+            }
         }
 
         .banner__box-txt__txt {
-            color: v.$white;
+            color: v.$very-dark-blue;
+            @include m.md {
+                color: v.$white;
+            }
         }
 
         .banner__box-txt__btn--dark {
-            display: none; 
+            display: none;
         }
     }
 
@@ -103,7 +211,7 @@
         }
 
         .banner__box-txt__btn--dark {
-            display: none; 
+            display: none;
         }
     }
 

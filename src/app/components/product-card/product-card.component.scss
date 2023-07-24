@@ -9,12 +9,17 @@
         margin-right: f.calculateRem(30px);
 
         &__img {
-            width: f.calculateRem(250px);
-            height: f.calculateRem(264px);
+            width: f.calculateRem(190px);
+            height: f.calculateRem(200px);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             cursor: pointer;
+
+            @include m.lg {
+                width: f.calculateRem(250px);
+                height: f.calculateRem(264px);
+            }
         }
         &__title {
             @include m.text-middle;

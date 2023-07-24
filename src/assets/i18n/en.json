@@ -49,14 +49,20 @@
       "explore": "Explore Now",
       "view": "View more",
       "subscribe": "Subscribe",
-      "filter": "Filter"
+      "filter": "Filter",
+      "viewIntro": "View Intro",
+      "contactUs": "Contact us",
+      "chatWithMonito": "Chat with Monito",
+      "sortBy": "Sort by: Popular"
     },
     "additionalText": {
       "home": "Home",
       "dog": "Dog",
       "smallDog": "Small Dog",
       "largeDog": "Large Dog",
-      "headerCustomers": "Our lovely customer"
+      "headerCustomers": "Our lovely customer",
+      "information": "Information",
+      "share": "Share"
     },
     "sectionWithSmallPets": {
       "title": "All Pets",
@@ -64,7 +70,8 @@
     },  
     "sectionWithPetProducts": {
       "title": "Products for pets",
-      "text": "products"
+      "text": "products",
+      "filter": "Filter"
     }, 
     "filters": {
       "title": "Filter",

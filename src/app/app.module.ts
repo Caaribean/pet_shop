@@ -22,6 +22,8 @@ import { ProductService } from './services/product.service';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FormsModule } from '@angular/forms';
 import { RangeInputComponent } from './components/range-input/range-input.component';
+import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -42,7 +44,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     YesNoPipe,
     ProductPreviewComponent,
     ProductCardComponent,
-    RangeInputComponent
+    RangeInputComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule,

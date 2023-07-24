@@ -1,11 +1,19 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-@use '../../../styles/functions.scss' as f;
+@use "../../../styles/functions.scss" as f;
 
 .footer {
     background: v.$linear-gradient;
     border-radius: f.calculateRem(40px) 0;
-    padding: f.calculateRem(80px) f.calculateRem(130px) f.calculateRem(40px);
+    padding: f.calculateRem(80px) f.calculateRem(16px) f.calculateRem(40px);
+
+    @include m.lg {
+        padding: f.calculateRem(80px) f.calculateRem(70px) f.calculateRem(40px);
+    }
+
+    @include m.xl {
+        padding: f.calculateRem(80px) f.calculateRem(138px) f.calculateRem(40px);
+    }
 
     &__newsletter {
         background: v.$dark-blue;
@@ -13,28 +21,55 @@
         padding: f.calculateRem(32px);
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         margin-bottom: f.calculateRem(40px);
+        width: 90%;
+
+        @include m.sm {
+            width: 70%;
+            margin: 0 auto f.calculateRem(40px);
+        }
+
+        @include m.md {
+            width: 90%;
+            flex-direction: row;
+        }
 
         &__txt {
-            @include m.text-subtitle; 
+            @include m.text-subtitle;
             color: v.$white;
             max-width: f.calculateRem(398px);
+            margin-bottom: f.calculateRem(16px);
+
+            @include m.md {
+                margin-bottom: 0;
+            }
         }
 
         &__form {
-            width: f.calculateRem(707px);
+            max-width: f.calculateRem(350px);
             background: v.$light;
             border-radius: f.calculateRem(14px);
             padding: f.calculateRem(12px);
             display: flex;
             gap: f.calculateRem(12px);
+            flex-direction: column;
+
+            @include m.md {
+                max-width: f.calculateRem(600px);
+            }
+
+            @include m.lg {
+                flex-direction: row;
+                width: f.calculateRem(707px);
+            }
 
             &__input {
-                @include m.input-email; 
+                @include m.input-email;
             }
 
             &__btn--dark {
-                @include m.button-dark; 
+                @include m.button-dark;
                 border-radius: f.calculateRem(8px);
             }
         }
@@ -43,16 +78,24 @@
     &__innerfooter {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: f.calculateRem(20px);
         margin-bottom: f.calculateRem(40px);
         border-bottom: f.calculateRem(1px) solid v.$very-dark-gray;
         padding-bottom: f.calculateRem(40px);
+
+        @include m.md {
+            flex-direction: row;
+            gap: 0;
+        }
 
         &__links {
             display: flex;
             gap: f.calculateRem(60px);
 
             &__txt {
-                @include m.text-basic; 
+                @include m.text-basic;
                 color: v.$black;
                 text-decoration: none;
             }
@@ -71,14 +114,27 @@
 
     &__copy {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: f.calculateRem(15px);
         justify-content: space-between;
+
+        @include m.md {
+            flex-direction: row;
+            gap: 0;
+        }
 
         &__img {
             max-width: f.calculateRem(115px);
         }
 
         &__txt {
-            @include m.text-thin; 
+            @include m.text-thin-xs;
+            order: 2;
+
+            @include m.md {
+                @include m.text-thin;
+            }
         }
 
         &__box-txt {
@@ -86,7 +142,7 @@
             gap: f.calculateRem(20px);
 
             &__txt {
-                @include m.text-thin; 
+                @include m.text-thin;
             }
         }
     }
