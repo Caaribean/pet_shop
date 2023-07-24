@@ -23,7 +23,6 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { FormsModule } from '@angular/forms';
 import { RangeInputComponent } from './components/range-input/range-input.component';
 import { ImageSliderComponent } from './components/image-slider/image-slider.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -50,7 +49,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
-    SlickCarouselModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
